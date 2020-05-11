@@ -1,51 +1,65 @@
-
-/* .item {
+.item img{
+    width: 100%;
+}
+.item .anhduoi{
     position: relative;
-} */
-/* .item .anhtren {
+    height: 330px;
+    transition: 0.4s;
+}
+.item:hover .h_lopmo{
+    opacity: 0.7;
+}
+.item:hover .h_3icon{
+    opacity: 0.7;
+    position: absolute;
+    top: 45%;
+    left: 28%;
+    z-index: 3;
+}
+.h_3icon nav ul li a:hover{
+    color: red;
+}
+.item:hover .anhduoi{
+    top: 0;
+}
+.h_3icon{
+    position: absolute;
+    top: 55%;
+    left: 28%;
+    z-index: 3;
+    opacity: 0;
+    transition: 0.4s;
+    
+}
+
+.h_3icon nav ul li{
+    float: left;
+    border: 1px solid black;
+    padding: 5px;
+    margin-right: 1px;
+}
+.h_3icon nav ul li a{
+    display: inline-block;
+    height: 16px;
+    color: black;
+}
+.h_cuoi{
+    border-right: 1px solid black;
+}
+nav ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    padding: 5px;
+}
+.h_lopmo{
+    width: 100%;
+    height: 330px;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
-    width: 100%;
-    height: auto;
-} */
-/* .item .anhduoi img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-} */
-
-.item:hover .h_lopmo{
-    opacity: 0.7;
-}
-
-
-/* .item .anhtren .bien-mat-len-tren{
-    animation: bien-mat-len-tren 0.6s ease-in-out;
-}
-@-webkit-keyframes bien-mat-len-tren{
-        0% {
-            top:0%;
-            visibility: visible;
-            opacity: 1;
-        }
-        100% {
-            top:-100%;
-            visibility: hidden;
-            opacity: 0;
-        }
-} */
-.h_lopmo{
-    width: 100%;
-    /* height: auto; */
-    /* position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3; */
     background-color: white;
     transition: 0.4s;
     opacity: 0;
@@ -53,8 +67,6 @@
 .item{
     text-align: center;
     margin-bottom: 20px;
-    margin-right: 10px;
-    
 }
 .item a{
     text-decoration: none;
@@ -92,5 +104,5 @@
 .responsive {
     width: 100%;
     max-width: 400px;
-    height: auto;
+    height: 330px;
 }
