@@ -14,11 +14,9 @@ body {
 	color: #626262;
 	font-family: Gilroy;
 	line-height: 1.618;
-  font-family: Teko-Regular;
-  src: url(../fonts/teko/Teko-Regular.ttf);
 }
 @font-face {
-  font-family: Teko-Bold;
+  font-family: Teko-Bold;Regular
   src: url(../fonts/teko/Teko-Bold.ttf);
 }
 @font-face {
