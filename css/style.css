@@ -1,6 +1,6 @@
-*{
-	margin:0px;
-	padding:0px;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 @font-face {
   	font-family: Teko;
@@ -14,8 +14,27 @@ body {
 	color: #626262;
 	font-family: Gilroy;
 	line-height: 1.618;
+  font-family: Teko-Regular;
+  src: url(../fonts/teko/Teko-Regular.ttf);
 }
-.clearfix{
-	overflow: hidden;
-	clear:both;
+@font-face {
+  font-family: Teko-Bold;
+  src: url(../fonts/teko/Teko-Bold.ttf);
+}
+@font-face {
+  font-family: Teko-Light;
+  src: url(../fonts/teko/Teko-Light.ttf);
+}
+@font-face {
+  font-family: Teko-SemiBold;
+  src: url(../fonts/teko/Teko-SemiBold.ttf);
+}
+@font-face {
+  font-family: Teko-Medium;
+  src: url(../fonts/teko/Teko-Medium.ttf);
+}
+
+.clearfix {
+  overflow: hidden;
+  clear: both;
 }
