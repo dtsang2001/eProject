@@ -1,0 +1,12 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+@font-face {
+  font-family: Teko;
+  src: url(../fonts/teko/Teko-Regular.ttf);
+}
+.clearfix{
+	overflow: hidden;
+	clear:both;
+}

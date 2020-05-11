@@ -1,0 +1,46 @@
+
+.h_tilte{
+    text-align: center;
+}
+.tabs-wrapper {
+    width: 100%;
+
+}
+input
+{
+    position: absolute;
+    right: 100%;
+}
+.tabs {
+   
+}
+.tabs label {
+    border: 1px solid black;
+    background: #BABABA;
+    float:left;
+    font-family: Teko;
+}
+.firstlabel {
+
+}
+.lastlabel {
+}
+.tabs, .tabs-main-content {
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px 10px;
+}
+.tabs-main-content {
+    background: green;
+}
+.tabs label {
+    display: block;
+}
+input:checked + .tabs-content
+{
+    display: block;
+}
+.tabs-content
+{
+    display: none;
+}
