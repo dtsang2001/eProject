@@ -1,0 +1,120 @@
+
+.slides {
+    position: static;
+}
+
+.my-nav{
+    position: absolute;
+    top: 0;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: white;
+    border-radius: none;
+}
+
+.my-nav .nav-slogan {
+    background-color: #252525;
+    padding: 14px 28px;
+}
+
+.my-nav .nav-slogan .site-welcome {
+    color: white;
+    font-size: 14px;
+}
+
+.my-nav .nav-site {
+    background-color: white;
+}
+
+.flex-container {
+    display: flex;
+    align-items: stretch;
+    background-color: #f1f1f1;
+}
+  
+.flex-container > div {
+    /* background-color: DodgerBlue; */
+    color: white;
+    text-align: center;
+    line-height: 75px;
+}
+
+.nav-logo {
+    flex-grow: 4;
+    border-right: 1px solid #e0e0e0;
+}
+
+.nav-block{
+    flex-grow: 6;
+    display: flex;
+    flex-direction: column;
+    background-color: DodgerBlue;
+}
+
+.nav-block > div {
+    background-color: #f1f1f1;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+.nav-menu{
+    /* height: 30px; */
+    padding: .5em .4em;
+    border-bottom: 1px solid #e0e0e0;
+}
+.menu-block li{
+    padding: .3em .8em;
+}
+
+.menu-block li a {
+    padding: .2em;
+    font-size: 16px;
+    font-weight: 900;
+    color: black;
+}
+
+.menu-block li a:hover{
+    background-color: transparent;
+    color: red;
+}
+
+.menu-block li a i{
+    font-size: 22px;
+}
+
+.active a{
+    color: red !important;
+    border-bottom: 3px solid red;
+}
+
+.cart{
+    position: static;
+}
+
+.cart span{
+    font-family: Gilroy;
+    position: absolute;
+    color: white;
+    line-height: 18px;
+    background-color: red;    
+    font-size: 11px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: -6px;
+    left: 20px;
+}
+
+.price-amount{
+    font-weight: 600;
+}
+
+.nav-search{
+
+}
