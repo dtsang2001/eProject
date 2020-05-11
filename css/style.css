@@ -3,11 +3,20 @@
   padding: 0px;
 }
 @font-face {
-  font-family: Teko-Regular;
-  src: url(../fonts/teko/Teko-Regular.ttf);
+  	font-family: Teko;
+  	src: url(../fonts/teko/Teko-Regular.ttf);
 }
 @font-face {
-  font-family: Teko-Bold;
+	font-family: Gilroy;
+	src: url(../fonts/Gilroy/Gilroy-Light.otf);
+}
+body {
+	color: #626262;
+	font-family: Gilroy;
+	line-height: 1.618;
+}
+@font-face {
+  font-family: Teko-Bold;Regular
   src: url(../fonts/teko/Teko-Bold.ttf);
 }
 @font-face {
