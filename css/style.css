@@ -3,8 +3,17 @@
 	padding:0px;
 }
 @font-face {
-  font-family: Teko;
-  src: url(../fonts/teko/Teko-Regular.ttf);
+  	font-family: Teko;
+  	src: url(../fonts/teko/Teko-Regular.ttf);
+}
+@font-face {
+	font-family: Gilroy;
+	src: url(../fonts/Gilroy/Gilroy-Light.otf);
+}
+body {
+	color: #626262;
+	font-family: Gilroy;
+	line-height: 1.618;
 }
 .clearfix{
 	overflow: hidden;
