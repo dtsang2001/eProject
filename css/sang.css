@@ -275,6 +275,10 @@
     text-decoration: underline;
 }
 
+.text-widget a:hover{
+    color: #fff;
+}
+
 .header-child .block-widget-wrap .img-hover-zoom img{
     width: 100%;
     height: 350px;
