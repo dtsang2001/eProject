@@ -101,6 +101,8 @@ a{
     text-align: center;
     margin-bottom: 20px;
     /* float: left; */
+    border: 1px solid #ebebeb;
+    padding-bottom: 6px;
 }
 .item a{
     text-decoration: none;
@@ -130,10 +132,11 @@ a{
     padding: 10px;
     display: inline-block;
     width: 100px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 .item .h_add a:hover{
     background-color: red;
+    transition: all 0.4s ease;
 }
 /* .responsive {
     width: 100%;
