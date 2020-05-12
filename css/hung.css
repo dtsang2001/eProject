@@ -1,3 +1,4 @@
+
 .item img{
     width: 100%;
 }
@@ -5,30 +6,41 @@
     position: relative;
     height: 330px;
     transition: 0.4s;
+    overflow: hidden;
 }
 .item:hover .h_lopmo{
     opacity: 0.7;
+    transition: all 0.3s ease;
 }
 .item:hover .h_3icon{
     opacity: 0.7;
     position: absolute;
     top: 45%;
     left: 28%;
-    z-index: 3;
+    z-index: 4;
+    transition: all 0.3s ease;
 }
 .h_3icon nav ul li a:hover{
     color: red;
+    transition: all 0.3s ease;
 }
-.item:hover .anhduoi{
-    top: 0;
+.item:hover .h_anhtren{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 2;
+}
+
+.item:hover .h_anhduoi {
+    top: 500px;
 }
 .h_3icon{
     position: absolute;
     top: 55%;
     left: 28%;
-    z-index: 3;
+    z-index: 4;
     opacity: 0;
-    transition: 0.4s;
+    transition: all 0.4s ease;
     
 }
 
@@ -47,6 +59,26 @@
 .h_cuoi{
     border-right: 1px solid black;
 }
+.h_anhtren{
+    position: absolute;
+    top:-350px;
+    left: 0;
+    z-index: 2;
+    transition: all 0.4s ease;
+}
+.h_anhtren img{
+    height: 330px;
+}
+.h_anhduoi{
+    position: absolute;
+    top:0px;
+    left: 0;
+    z-index: 1;
+    transition: 0.4s;
+}
+.h_anhduoi img{
+    height: 330px;
+}
 nav ul li{
     list-style: none;
 }
@@ -60,7 +92,7 @@ a{
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
     background-color: white;
     transition: 0.4s;
     opacity: 0;
@@ -68,6 +100,7 @@ a{
 .item{
     text-align: center;
     margin-bottom: 20px;
+    /* float: left; */
 }
 .item a{
     text-decoration: none;
@@ -102,8 +135,93 @@ a{
 .item .h_add a:hover{
     background-color: red;
 }
-.responsive {
+/* .responsive {
     width: 100%;
     max-width: 400px;
     height: 330px;
+} */
+@media only screen and (max-width: 600px) {
+    .h_3icon{
+        position: absolute;
+        top: 55%;
+        left: 28%;
+        z-index: 4;
+        opacity: 0;
+        transition: 0.4s;     
+    }
+    .item:hover .h_3icon{
+        opacity: 0.7;
+        position: absolute;
+        top: 45%;
+        left: 28%;
+        z-index: 4;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .h_3icon{
+        position: absolute;
+        top: 55%;
+        left: 25%;
+        z-index: 4;
+        opacity: 0;
+        transition: 0.4s;     
+    }
+    .item:hover .h_3icon{
+        opacity: 0.7;
+        position: absolute;
+        top: 45%;
+        left: 25%;
+        z-index: 4;
+    }
+  }
+  @media only screen and (max-width: 1200px) {
+    .h_3icon{
+        position: absolute;
+        top: 55%;
+        left: 22%;
+        z-index: 4;
+        opacity: 0;
+        transition: 0.4s;     
+    }
+    .item:hover .h_3icon{
+        opacity: 0.7;
+        position: absolute;
+        top: 45%;
+        left: 22%;
+        z-index: 4;
+    }
+  }
+
+.h_titleproduct{
+    background-image: url(images/hungimges/text_products.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 150px;
+    padding:15px;
+    
+}
+#h_section{
+    margin-top: 50px;
+}
+.h_titleproduct ul{
+    text-align: center;
+}
+.h_titleproduct ul li{
+    list-style: none;
+    display: inline-block;
+}
+.h_titleproduct ul li a{
+    text-decoration: none;
+    padding: 5px;
+    font-family: Teko-Medium;
+    font-size: 40px;
+    color: black;
+    cursor: pointer;
+}
+.h_titleproduct ul li a:hover{
+    color: red;
+    transition: all 0.3s ease;
+}
+.h_titleproduct .selected{
+    color: red;
 }
