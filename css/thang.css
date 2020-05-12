@@ -1,8 +1,7 @@
 .footer-bs {
     background-color: #3c3d41;
-	padding: 60px 40px;
+	padding: 60px 40px 0px 40px;
 	color: rgba(255,255,255,1.00);
-	margin-bottom: 20px;
 	border-bottom-right-radius: 6px;
 	border-top-left-radius: 0px;
 	border-bottom-left-radius: 6px;
@@ -97,7 +96,30 @@
 .t_titlecat{
 	text-align: center;
 }
-.footer-brand .call-outline{
+.footer-brand i{
 	float: left;
 	margin-right: 20px;
+}
+
+.footer-two{
+	padding: 40px;
+}
+
+.footer-copyright{
+	text-align: center;
+}
+
+.footer-icon{
+	text-align: center;
+}
+
+.footer-icon i{
+	font-size: 25px;
+	padding: 10px;
+}
+
+.footer-payment img{
+	/* width: px; */
+	display: block;
+	margin: 0 auto;
 }
