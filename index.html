@@ -22,12 +22,6 @@
     <link rel="stylesheet" href="css/nam.css">
     <link rel="stylesheet" href="css/thang.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
 </head>
 
 <body>
@@ -42,7 +36,36 @@
             
             <div class="slides">
                 <div class="car-slides">
-                    <img src="./images/rev_sliderhome3_1-1.jpg" alt="slides" width="100%">
+                    
+                    <div id="carousel-id" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-id" data-slide-to="0" class=""></li>
+                            <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+                            <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img alt="First slide" src="images/rev_sliderhome3-1.jpg">
+                                <div class="container">
+                                    
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img alt="Second slide" src="images/rev_sliderhome3_1-1.jpg">
+                                <div class="container">
+                                    
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img alt="Third slide" src="images/rev_sliderhome3_1-1.jpg">
+                                <div class="container">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                        <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </div>
                 </div>
 
                 <div class="my-nav">
@@ -52,7 +75,9 @@
 
                     <div class="nav-site">
                         <div class="flex-container">
-                            <div class="nav-logo">1</div>
+                            <div class="nav-logo">
+                                <img src="images/logo.png" alt="">
+                            </div>
                                 <div class="nav-block">
                                 <div class="nav-menu clearfix">
 
@@ -76,7 +101,8 @@
                                         </ul>
                                         
                                         <ul class="nav navbar-nav navbar-right menu-block ">
-                                            <li style="padding-right: 0;">
+
+                                            <li class="hover-down" style="padding-right: 0;">
                                                 <a href="#"><i class="fas fa-user"></i></a>
                                             </li>
                                             <li>
@@ -96,18 +122,75 @@
 
                                 </div>
                                 <div class="nav-search clearfix">
-                                    1
                                     <form method="get">
-                                        <!-- <label class="screen-reader-text" for="nav-search-field">Search for:</label> -->
-                                        <!-- <input type="text" class="search-field" placeholder="Search products…" value="" name="s"> -->
-                                        <!-- <button type="submit" value="Search">Search</button> -->
+                                        <label class="screen-reader-text"><i class="ion-ios-search"></i></label>
+                                        <input type="text" class="search-field" placeholder="Search products…" value="" name="s">
+                                        <button type="submit" class="btn-site" value="Search">Search</button>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                
+                <div class="row header-child">
+                    
+                    <div class="block-column-wrap col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class="block-widget-wrap">
+                            <div class="img-hover-zoom">
+                                <img src="images/rev_sliderhome3-1.jpg" alt="This zooms-in really well and smooth">
+                            </div>
+
+                            <div class="text-widget">
+                                <p>Special Products</p>
+                                <div class="main-text-widget">
+                                    <h2>KEEP YOUR FEET</h2>
+                                    <h2><b>COOL AND Comfy</b></h2>
+                                </div>
+                                <a href="#"><b>Shop Now</b></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block-column-wrap col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class="block-widget-wrap">
+                            <div class="img-hover-zoom">
+                                <img src="images/rev_sliderhome3-1.jpg" alt="This zooms-in really well and smooth">
+                            </div>   
+                            
+                            <div class="text-widget">
+                                <p>Special Products</p>
+                                <div class="main-text-widget">
+                                    <h2>KEEP YOUR FEET</h2>
+                                    <h2><b>COOL AND Comfy</b></h2>
+                                </div>
+                                <a href="#"><b>Shop Now</b></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block-column-wrap col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class="block-widget-wrap">
+                            <div class="img-hover-zoom">
+                                <img src="images/rev_sliderhome3-1.jpg" alt="This zooms-in really well and smooth">
+                            </div>
+
+                            <div class="text-widget">
+                                <p>Special Products</p>
+                                <div class="main-text-widget">
+                                    <h2>KEEP YOUR FEET</h2>
+                                    <h2 ><b>COOL AND Comfy</b></h2>
+                                </div>
+                                <a href="#"><b>Shop Now</b></a>
+                            </div>
+                        </div>
+                    </div>
                     
                 </div>
+                
             </div>
 
     </header>

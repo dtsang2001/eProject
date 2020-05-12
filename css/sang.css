@@ -1,4 +1,51 @@
 
+.btn-site{
+    outline: none;
+    padding: 18px;
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+    border-radius: 3px;
+    background-color: #ef3636;
+    border-color: #ef3636;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.btn-site-outline{
+    outline: none;
+    padding: 18px;
+    font-size: 13px;
+    font-weight: 700;
+    border: 3px solid #ef3636;
+    border-radius: 3px;
+    background-color: transparent;
+    border-radius: 5px;
+    color: #ef3636;
+}
+
+.hover-down a{
+    position: relative;
+}
+
+.hover-down div{
+    /* display: none; */
+    text-align: left;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    /* opacity: 0; */
+    z-index: 1000;
+    /* margin-top: 20px; */
+    background: #000;
+}
+
+.hover-down a:hover + div{
+    height: 100px;
+    display: block;
+    background-color: #252525;
+}
+
 .slides {
     position: static;
 }
@@ -15,6 +62,31 @@
     margin-right: 30px;
     background-color: white;
     border-radius: none;
+}
+
+.carousel-inner .item{
+    margin: 0;
+}
+.carousel-inner .item img{
+    height: 891px;
+    object-fit: cover;
+}
+.carousel-control.right,
+.carousel-control.left{
+    background: transparent;
+}
+.carousel-control:focus, .carousel-control:hover {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: .9;
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+    left: 30%;
+}
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+    right: 30%;
 }
 
 .my-nav .nav-slogan {
@@ -34,7 +106,6 @@
 .flex-container {
     display: flex;
     align-items: stretch;
-    background-color: #f1f1f1;
 }
   
 .flex-container > div {
@@ -45,21 +116,24 @@
 }
 
 .nav-logo {
-    flex-grow: 4;
+    flex-grow: 1;
     border-right: 1px solid #e0e0e0;
+    line-height: 0px;
+}
+
+.nav-logo img{
+    width: 175px;
+    padding: 10px;
 }
 
 .nav-block{
-    flex-grow: 6;
+    flex-grow: 9;
     display: flex;
     flex-direction: column;
-    background-color: DodgerBlue;
 }
 
 .nav-block > div {
-    background-color: #f1f1f1;
     text-align: center;
-    line-height: 75px;
     font-size: 30px;
 }
 
@@ -116,5 +190,110 @@
 }
 
 .nav-search{
+    height: auto;
+    text-align: center;
+    line-height: 0;
+    width: 100%;
+}
 
+.nav-search form input{
+    padding: 16px 80px 16px 40px;
+    width: 100%;
+    line-height: 1;
+    border: none;
+    font-size: 14px;
+    background-color: #fff;
+    color: #606060;
+    position: static;
+    outline: none;
+}
+
+.nav-search form label{
+    position: absolute;
+    left: 1;
+    margin-top: 12px;
+    margin-left: 12px;
+    font-weight: 400;
+    font-size: 23px;
+    color: #ef3636;
+}
+
+.nav-search form button{
+    position: absolute;
+    right: 0;
+    margin-top: 6px;
+    margin-right: 10px;
+}
+
+.header-child{
+    padding: 7px 14px;
+}
+
+.header-child .block-column-wrap{
+    padding: 7px;
+}
+
+.header-child .block-widget-wrap{
+    position: static;
+}
+
+.header-child .block-widget-wrap .text-widget{
+    position: absolute;
+    top: 0;
+}
+
+.text-widget{
+    padding: 60px;
+    width: 100%;
+}
+
+.text-widget p{
+    text-align: right;
+    color: #969696;
+    font-size: 16px;
+}
+
+.text-widget .main-text-widget h2{
+    text-align: right;
+    font-family: Teko;
+    font-size: 40px;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    background-color: transparent;
+}
+
+.text-widget .main-text-widget h2 b{
+    letter-spacing: 3px;
+}
+
+.text-widget a{
+    margin-top: 40px;
+    float: right;
+    outline: none;
+    color: #000;
+    text-decoration: underline;
+}
+
+.header-child .block-widget-wrap .img-hover-zoom img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.img-hover-zoom {
+    height: 300px;
+    overflow: hidden;
+}
+
+.img-hover-zoom img {
+    transition: transform .5s ease;
+}
+
+.block-widget-wrap:hover img {
+    transform: scale(1.5) rotate(15deg);
+}
+
+.block-widget-wrap:hover h2 {
+    color: #ef3636;
 }
