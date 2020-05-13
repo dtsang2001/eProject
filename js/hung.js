@@ -11,9 +11,7 @@ $(function(){
             $(this).on('click', function(){
                 for(var i=0; i<isotopeButton.length; i++) {
                     $(isotopeButton[i]).removeClass('selected');
-                }
-    
-                
+                }   
             });
         })
         // $(this).addClass("selected");   
@@ -31,5 +29,17 @@ $(function(){
 
     //=====================================================tooltip 3 nút
     $('[data-hieuung="tooltip"]').tooltip();
+
+    // ====================================================Code cho nút filter mở ra trang shop
+    $('.nut_mo_ra_menu').click(function(){
+        console.log('hello');
+        $('#menu').addClass('traisang');
+        return false;
+    });
+    $('.h_rowduoi').click(function(){
+        console.log('hello');
+        $('#menu').removeClass('traisang');
+        return false;
+    });
     
 });

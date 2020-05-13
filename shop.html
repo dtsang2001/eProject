@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+    <!-- Ionicons -->
+    <link
+      rel="stylesheet"
+      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link href="./plugins/bootstrap-3/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sang.css" />
+    <link rel="stylesheet" href="css/hung.css" />
+    <link rel="stylesheet" href="css/nam.css" />
+    <link rel="stylesheet" href="css/thang.css" />
+  </head>
+  <body>
+    <!-- Hung -->
+    <section>
+        <div class="container-fuild">
+            <div class="row h_rowtren h-hide">
+                <div class="h_titleshop ">
+                    <div class="h_titleshop_left">
+                        <a href="">Shop</a>
+                    </div>
+                    <div class="h_titleshop_right">
+                        <a href=""><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        <span><i class="fa fa-angle-right" aria-hidden="true"></i></span> Shop
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row h_rowduoi">
+                    <!-- danh sách danh mục ở dạng đầy đủ -->
+                    <div class="col-md-3 h-hide">
+                      <h4>Product categories</h4>
+                      <div class="h_listcate">
+                        <nav>
+                          <ul>
+                            <li><a href="">Beauty & Health</a></li>
+                            <li><a href="">Clothing</a></li>
+                            <li><a href="">Electronics & Computer</a></li>
+                            <li><a href="">Food & Grocery</a></li>
+                            <li><a href="">Furnlture</a></li>
+                            <li><a href="">Garden & Kitchen </a></li>
+                            <li><a href="">grgrgg</a></li>
+                            <li><a href="">grgrg</a></li>
+                            <li><a href="">fefefef</a></li>
+                            <li><a href="">fefefff</a></li>
+                          </ul>
+                        </nav>
+                      </div>
+                      <h4>Filter By Color</h4>
+                      <div class="h_listcolor clearfix">
+                        <nav>
+                          <ul>
+                            <li>
+                              <a href="" data-hieuung="tooltip" title="Black" class="color-label" style="background: #000000">
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" data-hieuung="tooltip" title="Blue" class="color-label" style="background: #1e73be">
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" data-hieuung="tooltip" title="Gray" class="color-label" style="background: #d6d6d6">
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" data-hieuung="tooltip" title="Green" class="color-label" style="background: #81d742">
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" data-hieuung="tooltip" title="Orange" class="color-label" style="background: #dd9933">
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" data-hieuung="tooltip" title="Purple" class="color-label" style="background: #8224e3">
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" data-hieuung="tooltip" title="Red" class="color-label" style="background: #ef3636">
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" data-hieuung="tooltip" title="White" class="color-label" style="background: #ffffff">
+                              </a>
+                            </li>
+                            <li>
+                              <a href="" data-hieuung="tooltip" title="Yellow" class="color-label" style="background: #eeee22">
+                              </a>
+                            </li>  
+                          </ul>
+                        </nav>
+                      </div>
+                      <h4>Filter By Size</h4>
+                      <div class="h_listsize">
+                        <nav>
+                          <ul>
+                            <li><a href="">L</a></li>
+                            <li><a href="">M</a></li>
+                            <li><a href="">S</a></li>
+                            <li><a href="">XL</a></li>
+                          </ul>
+                        </nav>
+                      </div>  
+                    </div>
+
+                    <!-- Danh sách danh mục ở dạng cái nút filter -->
+                    <div class="menutrai h-show" id="menu">
+
+                        <h4>Close <i class="fas fa-times"></i></h4>
+                      <div class="h_listcate">
+                          <h3>Product category</h3>
+                        <nav>
+                          <ul>
+                            <li><a href="">Beauty & Health</a></li>
+                            <li><a href="">Clothing</a></li>
+                            <li><a href="">Electronics & Computer</a></li>
+                            <li><a href="">Food & Grocery</a></li>
+                            <li><a href="">Furnlture</a></li>
+                            <li><a href="">Garden & Kitchen </a></li>
+                            <li><a href="">grgrgg</a></li>
+                            <li><a href="">grgrg</a></li>
+                            <li><a href="">fefefef</a></li>
+                            <li><a href="">fefefff</a></li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+
+
+                    <div class="col-md-9">
+                      <div class="h_right_content_hearder clearfix">
+
+                        <div class="h_right_content_hearder_left h-hide">
+                          <p>Showing 1-12 of 40 results</p>
+                        </div>
+
+                        <div class="h_right_content_hearder_left h-show">
+                            <a href="" class="nut_mo_ra_menu">
+                                <i class="fa fa-filter" aria-hidden="true"></i>
+                                <span> Filter</span>
+                            </a>
+                        </div>
+
+                        <div class="h_right_content_hearder_right">
+                          <a href=""><i class="fa fa-th-large" aria-hidden="true"></i></a>
+                          <a href=""><i class="fa fa-th-list" aria-hidden="true"></i></a>
+                          <select name="" id="">
+                            <option value="">Default sorting</option>
+                            <option value="">Sort by popularlty</option>
+                            <option value="">Sort by average rating</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="h_right_content_content">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6 col-xs-12 itemx">
+                            <div class="item ">
+                            
+                              <div class="anhduoi">
+                                  <div class="h_anhtren">
+                                      <img src="images/hungimges/product-03.jpg" alt="">
+                                  </div>
+                                  <div class="h_3icon">
+                                      <nav>
+                                          <ul>
+                                              <li class="nut1" data-hieuung="tooltip" title="Add to wishlist"><a href=""><i class='far fa-heart' style='font-size:18px'></i></a></li>
+                                              <li class="nut2" data-hieuung="tooltip" title="Quick view"><a href=""><i class="fas fa-eye" style='font-size:18px'></i></a></li>
+                                              <li class="nut3" data-hieuung="tooltip" title="Add to cart"><a href=""><i class='fas fa-shopping-cart' style='font-size:18px'></i></a></li>
+                                          <ul>
+                                      </nav>
+                                  </div>
+                                  <div class="h_lopmo"></div>
+                                  <div class="h_anhduoi">
+                                      <img src="images/hungimges/product-05.jpg" class="responsive" alt="">
+                                  </div>
+                              </div>
+                              <div class="h_namecate"><a href="">Shose</a></div>
+                              <div class="h_namepro"><a href="">Nike</a></div>
+                              <div class="h_price"><a href="">145.93</a></div>
+                              <div class="h_add"><a href="">Add Cart</a></div>
+                          </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12 itemx">
+                            <div class="item ">
+                            
+                              <div class="anhduoi">
+                                  <div class="h_anhtren">
+                                      <img src="images/hungimges/product-03.jpg" alt="">
+                                  </div>
+                                  <div class="h_3icon">
+                                      <nav>
+                                          <ul>
+                                              <li class="nut1" data-hieuung="tooltip" title="Add to wishlist"><a href=""><i class='far fa-heart' style='font-size:18px'></i></a></li>
+                                              <li class="nut2" data-hieuung="tooltip" title="Quick view"><a href=""><i class="fas fa-eye" style='font-size:18px'></i></a></li>
+                                              <li class="nut3" data-hieuung="tooltip" title="Add to cart"><a href=""><i class='fas fa-shopping-cart' style='font-size:18px'></i></a></li>
+                                          <ul>
+                                      </nav>
+                                  </div>
+                                  <div class="h_lopmo"></div>
+                                  <div class="h_anhduoi">
+                                      <img src="images/hungimges/product-05.jpg" class="responsive" alt="">
+                                  </div>
+                              </div>
+                              <div class="h_namecate"><a href="">Shose</a></div>
+                              <div class="h_namepro"><a href="">Nike</a></div>
+                              <div class="h_price"><a href="">145.93</a></div>
+                              <div class="h_add"><a href="">Add Cart</a></div>
+                          </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12 itemx">
+                            <div class="item ">
+                            
+                              <div class="anhduoi">
+                                  <div class="h_anhtren">
+                                      <img src="images/hungimges/product-03.jpg" alt="">
+                                  </div>
+                                  <div class="h_3icon">
+                                      <nav>
+                                          <ul>
+                                              <li class="nut1" data-hieuung="tooltip" title="Add to wishlist"><a href=""><i class='far fa-heart' style='font-size:18px'></i></a></li>
+                                              <li class="nut2" data-hieuung="tooltip" title="Quick view"><a href=""><i class="fas fa-eye" style='font-size:18px'></i></a></li>
+                                              <li class="nut3" data-hieuung="tooltip" title="Add to cart"><a href=""><i class='fas fa-shopping-cart' style='font-size:18px'></i></a></li>
+                                          <ul>
+                                      </nav>
+                                  </div>
+                                  <div class="h_lopmo"></div>
+                                  <div class="h_anhduoi">
+                                      <img src="images/hungimges/product-05.jpg" class="responsive" alt="">
+                                  </div>
+                              </div>
+                              <div class="h_namecate"><a href="">Shose</a></div>
+                              <div class="h_namepro"><a href="">Nike</a></div>
+                              <div class="h_price"><a href="">145.93</a></div>
+                              <div class="h_add"><a href="">Add Cart</a></div>
+                          </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12 itemx">
+                            <div class="item ">
+                            
+                              <div class="anhduoi">
+                                  <div class="h_anhtren">
+                                      <img src="images/hungimges/product-03.jpg" alt="">
+                                  </div>
+                                  <div class="h_3icon">
+                                      <nav>
+                                          <ul>
+                                              <li class="nut1" data-hieuung="tooltip" title="Add to wishlist"><a href=""><i class='far fa-heart' style='font-size:18px'></i></a></li>
+                                              <li class="nut2" data-hieuung="tooltip" title="Quick view"><a href=""><i class="fas fa-eye" style='font-size:18px'></i></a></li>
+                                              <li class="nut3" data-hieuung="tooltip" title="Add to cart"><a href=""><i class='fas fa-shopping-cart' style='font-size:18px'></i></a></li>
+                                          <ul>
+                                      </nav>
+                                  </div>
+                                  <div class="h_lopmo"></div>
+                                  <div class="h_anhduoi">
+                                      <img src="images/hungimges/product-05.jpg" class="responsive" alt="">
+                                  </div>
+                              </div>
+                              <div class="h_namecate"><a href="">Shose</a></div>
+                              <div class="h_namepro"><a href="">Nike</a></div>
+                              <div class="h_price"><a href="">145.93</a></div>
+                              <div class="h_add"><a href="">Add Cart</a></div>
+                          </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12 itemx">
+                            <div class="item ">
+                            
+                              <div class="anhduoi">
+                                  <div class="h_anhtren">
+                                      <img src="images/hungimges/product-03.jpg" alt="">
+                                  </div>
+                                  <div class="h_3icon">
+                                      <nav>
+                                          <ul>
+                                              <li class="nut1" data-hieuung="tooltip" title="Add to wishlist"><a href=""><i class='far fa-heart' style='font-size:18px'></i></a></li>
+                                              <li class="nut2" data-hieuung="tooltip" title="Quick view"><a href=""><i class="fas fa-eye" style='font-size:18px'></i></a></li>
+                                              <li class="nut3" data-hieuung="tooltip" title="Add to cart"><a href=""><i class='fas fa-shopping-cart' style='font-size:18px'></i></a></li>
+                                          <ul>
+                                      </nav>
+                                  </div>
+                                  <div class="h_lopmo"></div>
+                                  <div class="h_anhduoi">
+                                      <img src="images/hungimges/product-05.jpg" class="responsive" alt="">
+                                  </div>
+                              </div>
+                              <div class="h_namecate"><a href="">Shose</a></div>
+                              <div class="h_namepro"><a href="">Nike</a></div>
+                              <div class="h_price"><a href="">145.93</a></div>
+                              <div class="h_add"><a href="">Add Cart</a></div>
+                          </div>
+                          </div>
+                          <div class="col-md-4 col-sm-6 col-xs-12 itemx">
+                            <div class="item ">
+                            
+                              <div class="anhduoi">
+                                  <div class="h_anhtren">
+                                      <img src="images/hungimges/product-03.jpg" alt="">
+                                  </div>
+                                  <div class="h_3icon">
+                                      <nav>
+                                          <ul>
+                                              <li class="nut1" data-hieuung="tooltip" title="Add to wishlist"><a href=""><i class='far fa-heart' style='font-size:18px'></i></a></li>
+                                              <li class="nut2" data-hieuung="tooltip" title="Quick view"><a href=""><i class="fas fa-eye" style='font-size:18px'></i></a></li>
+                                              <li class="nut3" data-hieuung="tooltip" title="Add to cart"><a href=""><i class='fas fa-shopping-cart' style='font-size:18px'></i></a></li>
+                                          <ul>
+                                      </nav>
+                                  </div>
+                                  <div class="h_lopmo"></div>
+                                  <div class="h_anhduoi">
+                                      <img src="images/hungimges/product-05.jpg" class="responsive" alt="">
+                                  </div>
+                              </div>
+                              <div class="h_namecate"><a href="">Shose</a></div>
+                              <div class="h_namepro"><a href="">Nike</a></div>
+                              <div class="h_price"><a href="">145.93</a></div>
+                              <div class="h_add"><a href="">Add Cart</a></div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="h_right_content_pagination">
+                        <nav>
+                            <ul>
+                                <li class="selected_pagination"><a href="" >1</a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li><a href="">4</a></li>
+                                <li><a href="">NEXT&gt;</a></li>
+                            </ul>
+                        </nav>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Hưng js -->
+    <script src="js/hung.js"></script>
+  </body>
+</html>
