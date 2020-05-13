@@ -10,7 +10,10 @@
 	font-family: Gilroy;
 	src: url(../fonts/Gilroy/Gilroy-Light.otf);
 }
-
+@font-face {
+	font-family: Gilroy-Bold;
+	src: url(../fonts/Gilroy/Gilroy-ExtraBold.otf);
+}
 @font-face {
   font-family: Teko-Bold;
   src: url(../fonts/teko/Teko-Bold.ttf);
@@ -34,10 +37,12 @@
 body {
 	color: #626262;
 	font-family: Gilroy;
-	line-height: 1.618;
+  line-height: 1.618;
+  background-color: #F6F6F6;
 }
 .clearfix {
   overflow: hidden;
   clear: both;
 }
+
 

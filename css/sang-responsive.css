@@ -1,0 +1,81 @@
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .slides .my-nav{
+        margin: 0;
+    }
+
+    .nav-fixed .nav-menu-main{
+        display: none;
+    }
+
+    .nav-fixed .nav-icon-main{
+        display: none;
+    }
+
+    .nav-fixed .nav-icon-cart,
+    .nav-fixed .nav-icon-bars{
+        display: inline-block;
+    }
+
+    .nav-fixed .nav-icon-cart .price-amount{
+        display: none;
+    }
+
+    .nav-responsive{
+        display: flex;
+        align-items: stretch;
+    }
+
+    .nav-responsive .navbar-header{
+        flex-grow: 9;
+        padding: 7px;
+        display: inline-block;
+    }
+
+    .nav-responsive .navbar-right{
+        flex-grow: 1;
+    }
+
+    .nav-fixed{
+        padding-left: 20px;
+        padding-right: 20px;
+        transform: .4s;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-inner .item img{
+        height: 750px;
+        object-fit: cover;
+    }
+
+    .slides .my-nav{
+        /* display: none; */
+    }
+
+    .slides .my-nav .nav-slogan{
+        display: none;
+    }
+
+    .slides .my-nav .nav-logo{
+        display: none;
+    }
+
+    .nav-fixed .nav-menu-main{
+        display: none;
+    }
+
+    .nav-fixed{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    
+}

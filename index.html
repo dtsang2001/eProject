@@ -18,6 +18,7 @@
     <link href="./plugins/bootstrap-3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sang.css">
+    <link rel="stylesheet" href="css/sang-responsive.css">
     <link rel="stylesheet" href="css/hung.css">
     <link rel="stylesheet" href="css/nam.css">
     <link rel="stylesheet" href="css/thang.css">
@@ -25,10 +26,68 @@
 </head>
 
 <body>
-
+    
         <!-- SANG -->
-        <nav>
-            
+        <nav class="nav-fixed" id="nav-fixed">
+            <div class="clearfix">
+                <div class="nav-block">
+                    <div class="nav-menu clearfix">
+
+                        <div class="nav-responsive clearfix">
+
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="#">
+                                    <img src="images/logo-text.png" alt="" width="150px">
+                                </a>
+                            </div>
+
+                            <ul class="nav navbar-nav menu-block nav-menu-main">
+                                <li class="active">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">Shop</a>
+                                </li>
+                                <li>
+                                    <a href="#">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="#">About</a>
+                                </li>
+                            </ul>
+                            
+                            <ul class="nav navbar-nav navbar-right menu-block ">
+
+                                <li class="nav-icon-main" style="padding-right: 0;">
+                                    <a href="#"><i class="fas fa-search"></i></a>
+                                </li>
+                                <li class="hover-down nav-icon-main" style="padding-right: 0;">
+                                    <a href="#"><i class="fas fa-user"></i></a>
+                                </li>
+                                <li class="nav-icon-main nav-icon-cart" >
+                                    <a href="javascript:void(0)">
+                                        <i class="fas fa-shopping-basket cart">
+                                            <span>0</span>
+                                        </i>
+                                        
+                                        <span class="price-amount">
+                                            <span class="price-currency-symbol">$</span>
+                                            0.00
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="nav-icon-main nav-icon-bars" style="padding-left: 0px;">
+                                    <a href="#"><i class="fas fa-bars"></i></a>
+                                </li>
+                            </ul>
+                    </div>                                      
+
+                    </div>
+                </div>
+            </div>
         </nav>
 
         <!-- SANG -->
@@ -78,7 +137,7 @@
                             <div class="nav-logo">
                                 <img src="images/logo.png" alt="">
                             </div>
-                                <div class="nav-block">
+                                <div class="nav-block block-flex">
                                 <div class="nav-menu clearfix">
 
                                     <div class="">
@@ -105,8 +164,8 @@
                                             <li class="hover-down" style="padding-right: 0;">
                                                 <a href="#"><i class="fas fa-user"></i></a>
                                             </li>
-                                            <li>
-                                                <a href="#">
+                                            <li class="nav-icon-cart">
+                                                <a href="javascript:void(0)">
                                                     <i class="fas fa-shopping-basket cart">
                                                         <span>0</span>
                                                     </i>
@@ -138,7 +197,7 @@
                 
                 <div class="row header-child">
                     
-                    <div class="block-column-wrap col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="block-column-wrap col-xs-12 col-sm-6 col-md-6 col-lg-4">
                         <div class="block-widget-wrap">
                             <div class="img-hover-zoom">
                                 <img src="images/rev_sliderhome3-1.jpg" alt="This zooms-in really well and smooth">
@@ -155,7 +214,7 @@
                         </div>
                     </div>
 
-                    <div class="block-column-wrap col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="block-column-wrap col-xs-12 col-sm-6 col-md-6 col-lg-4">
                         <div class="block-widget-wrap">
                             <div class="img-hover-zoom">
                                 <img src="images/rev_sliderhome3-1.jpg" alt="This zooms-in really well and smooth">
@@ -172,7 +231,7 @@
                         </div>
                     </div>
 
-                    <div class="block-column-wrap col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="block-column-wrap col-xs-12 col-sm-12 col-md-12 col-lg-4">
                         <div class="block-widget-wrap">
                             <div class="img-hover-zoom">
                                 <img src="images/rev_sliderhome3-1.jpg" alt="This zooms-in really well and smooth">
@@ -192,8 +251,167 @@
                 </div>
                 
             </div>
-
     </header>
+
+    <div class="side-nav-cart">
+
+        <div class="side-list-cart">
+
+            <div class="side-header clearfix">
+                <h4>shopping cart</h4>
+                <a href="javascript:void(0)" class="close-side">
+                    <span>close</span>                        
+                </a>
+            </div>
+
+            <!-- <p class="cart-empty">No products in the cart.</p> -->
+
+            <div id="list-cart" class="list-cart-child clearfix">
+                <ul>
+
+                    <li>
+                        <div>
+                            <a href="">
+                                <b class="ion-ios-close-outline"></b>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="images/hungimges/product-01.jpg" alt="">
+                        </div>
+                        <div class="cart-info-product">
+                            <h4>Nike React Metcon AMP</h4>
+                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <a href="">
+                                <b class="ion-ios-close-outline"></b>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="images/hungimges/product-04.jpg" alt="">
+                        </div>
+                        <div class="cart-info-product">
+                            <h4>Nike React Metcon AMP</h4>
+                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <a href="">
+                                <b class="ion-ios-close-outline"></b>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="images/hungimges/product-04.jpg" alt="">
+                        </div>
+                        <div class="cart-info-product">
+                            <h4>Nike React Metcon AMP</h4>
+                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <a href="">
+                                <b class="ion-ios-close-outline"></b>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="images/hungimges/product-04.jpg" alt="">
+                        </div>
+                        <div class="cart-info-product">
+                            <h4>Nike React Metcon AMP</h4>
+                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <a href="">
+                                <b class="ion-ios-close-outline"></b>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="images/hungimges/product-04.jpg" alt="">
+                        </div>
+                        <div class="cart-info-product">
+                            <h4>Nike React Metcon AMP</h4>
+                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <a href="">
+                                <b class="ion-ios-close-outline"></b>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="images/hungimges/product-04.jpg" alt="">
+                        </div>
+                        <div class="cart-info-product">
+                            <h4>Nike React Metcon AMP</h4>
+                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <a href="">
+                                <b class="ion-ios-close-outline"></b>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="images/hungimges/product-04.jpg" alt="">
+                        </div>
+                        <div class="cart-info-product">
+                            <h4>Nike React Metcon AMP</h4>
+                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <a href="">
+                                <b class="ion-ios-close-outline"></b>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="images/hungimges/product-04.jpg" alt="">
+                        </div>
+                        <div class="cart-info-product">
+                            <h4>Nike React Metcon AMP</h4>
+                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <a href="">
+                                <b class="ion-ios-close-outline"></b>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="images/hungimges/product-04.jpg" alt="">
+                        </div>
+                        <div class="cart-info-product">
+                            <h4>Nike React Metcon AMP</h4>
+                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footed-cart clearfix">
+                <h4>subtotal <span>$15.25</span></h4>
+                <button class="btn-site">View cart</button>
+            </div>
+        </div>
+    </div>
 
     <!-- HUNG -->
     <section id="h_section">
@@ -528,6 +746,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Hưng js -->
     <script src="js/hung.js"></script>
+    <!-- Sang js -->
+    <script src="js/sang.js"></script>
 
 </body>
 
