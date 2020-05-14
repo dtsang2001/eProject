@@ -22,3 +22,8 @@
         width: 100%;
     }
 }
+@media only screen and (max-width: 1000px){
+    .t_frame{
+        display: inline;
+    }
+}
