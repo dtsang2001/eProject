@@ -45,17 +45,41 @@ $(function(){
 
     // =======================================================slide ranger
 
-    // $( "#slider-range" ).slider({
-    //     range: true,
-    //     min: 0,
-    //     max: 500,
-    //     values: [ 75, 300 ],
-    //     slide: function( event, ui ) {
-    //         $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-    //     }
-    // });
-    // $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-    //     " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+    $( "#slider-range" ).slider({
+        range: true,
+        min: 0,
+        max: 500,
+        values: [ 75, 300 ],
+        slide: function( event, ui ) {
+            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+        }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 
+
+    //======================================================== DAR
+    $('.part2 .h_title_DAR ul li a').click(function () {  
+        // console.log('hello');
+        
+
+        var danhmuc2 = $(this).data('class');
+        console.log(danhmuc2);
+        $('.part2 .h_title_DAR ul li a').removeClass("selected");
+        $(this).addClass('selected');
+        $('#productDetail .h_content_DAR .itemkhoi').each(function(){
+            if($(this).hasClass(danhmuc2)){
+                $(this).show();
+            }else{
+                $(this).hide();
+            }
+        });
+        return false;
+    })
+    //========================================================= Rating
+
+    $('.h_content_DAR .h_comment_post .h_fivestar a').click(function(){
+        console.log('hello');
+    });
     
 });

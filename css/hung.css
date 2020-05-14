@@ -530,6 +530,9 @@ table {
     width: 100%;
     height: 500px;
 }
+#productDetail .h_khungto_left img{
+    width: 100%;
+}
 #productDetail .h_khungto_right{
     padding:0px 15px;
 }
@@ -582,11 +585,117 @@ table {
 .h_product_meta span a{
     text-decoration: none;
     text-transform: uppercase;
-    color: black;
+    color: #999;
 }
 .h_product_meta span i{
     margin-right: 5px;
     display: inline-block;
     padding-right: 5px;
+    cursor: pointer;
+}
+.h_product_meta span i:hover{
+    color: red;
 }
 
+#productDetail .h_khung_anh_nho nav ul li{
+    float: left;
+    width: 25%;
+    height: 120px;
+    padding: 5px;
+
+}
+#productDetail .h_khung_anh_nho nav ul li .h_anhduoinho{
+    position: relative;
+}
+#productDetail .h_khung_anh_nho nav ul li img{
+    width: 100%;
+}
+#productDetail .h_khung_anh_nho nav ul li .h_lopmo_anhnho{
+    background-color: white;
+    height: 120px;
+    opacity: 0.5;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    width: 100%;
+}
+#productDetail .h_khung_anh_nho nav ul li .h_lopmo_anhnho:hover{
+    background-color: white;
+    height: 120px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    width: 100%;
+}
+#productDetail .part1{
+    margin-bottom: 80px;
+}
+#productDetail .part2 .h_title_DAR{
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+#productDetail .part2 nav ul li{
+    display: inline-block;
+}
+#productDetail .part2 nav ul li a{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    /* font-weight: 700; */
+    font-family: Teko-Medium;
+}
+#productDetail .part2 nav ul li span{
+    display: inline-block;
+}
+#productDetail .part2 .h_title_DAR{
+    border-bottom: 1px solid black;
+}
+#productDetail .part2 .h_content_DAR{
+    
+    margin:40px 0px;
+}
+#productDetail .part2 .selected{
+    color: red;
+}
+.h_content_DAR .h_review .h_fivestar{
+    width: 100%;
+    margin: 0px;
+}
+.h_content_DAR .h_review .h_fivestar i{
+    font-size: 11px;
+    float: right;
+}
+.h_content_DAR .h_review .h_cmt{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.h_content_DAR .h_review .h_cmt .h_cmt_avartar{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    float: left;
+}
+.h_content_DAR .h_review .h_cmt .h_cmt_right{
+    float: right;
+    width: 85%;
+}
+.h_content_DAR .h_review .h_cmt .h_cmt_avartar img{
+    width: 100%;
+}
+.h_content_DAR .h_comment_post .h_fivestar i{
+    font-size: 11px;
+    float: left;
+}
+/* .h_content_DAR .h_comment_post .h_fivestar i:hover{
+    color: #f93;
+} */
+.h_content_DAR .h_comment_post .h_fivestar .active{
+    color: #f93;
+}
+.h_content_DAR .h_comment_post .h_fivestar a{
+    color: gray;
+}
