@@ -245,7 +245,7 @@ a{
 
 /* ==========================trang shop============================ */
 .h_rowtren{
-    background-color: black;
+    background-color: #252525;
     height: 100px;
     width: 100%;
 }
@@ -256,8 +256,10 @@ a{
 .h_titleshop_left a{
     text-decoration: none;
     color: white;
-    font-size: 30px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 35px;
+    line-height: 50px;
+    font-family: Teko;
+    text-transform: uppercase;
 }
 .h_titleshop_right{
     float: right;

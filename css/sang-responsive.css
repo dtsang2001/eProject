@@ -38,7 +38,7 @@
     }
 
     .nav-responsive .navbar-right{
-        flex-grow: 1;
+        /* flex-grow: 1; */
     }
 
     .nav-fixed{
@@ -52,10 +52,6 @@
     .carousel-inner .item img{
         height: 750px;
         object-fit: cover;
-    }
-
-    .slides .my-nav{
-        /* display: none; */
     }
 
     .slides .my-nav .nav-slogan{
@@ -76,6 +72,12 @@
     }
 }
 
-@media only screen and (max-width: 480px) {
-    
+@media only screen and (max-width: 600px) {
+    .slides .my-nav{
+        display: none;
+    }
+
+    #nav-fixed{
+        display: blocks;
+    }
 }

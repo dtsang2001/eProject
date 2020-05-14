@@ -63,28 +63,6 @@
     color: #ef3636;
 }
 
-.hover-down a{
-    position: relative;
-}
-
-.hover-down div{
-    /* display: none; */
-    text-align: left;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    /* opacity: 0; */
-    z-index: 1000;
-    /* margin-top: 20px; */
-    background: #000;
-}
-
-.hover-down a:hover + div{
-    height: 100px;
-    display: block;
-    background-color: #252525;
-}
-
 .slides {
     position: static;
 }
@@ -454,17 +432,17 @@
 }
   
   /* Track */
-::-webkit-scrollbar-track {
+.list-cart-child ul::-webkit-scrollbar-track {
     background: #f1f1f1; 
 }
    
   /* Handle */
-  .list-cart-child ul::-webkit-scrollbar-thumb {
+.list-cart-child ul::-webkit-scrollbar-thumb {
     background: #888; 
 }
   
   /* Handle on hover */
-  .list-cart-child ul::-webkit-scrollbar-thumb:hover {
+.list-cart-child ul::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
 
@@ -513,3 +491,101 @@
     padding: 10px;
     height: 100%;
 }
+
+.modal-header{
+    border-bottom: 2px solid #EB4D36;
+}
+
+.modal-header button{
+    font-family: Gilroy-Bold;
+    text-transform: uppercase;
+    right: 10px;
+    font-size: 16px;
+    margin-left: 50px;
+    color: #555;
+    padding: 10px;
+}
+
+.modal-header h4{
+    font-family: Teko-Medium;
+    text-transform: uppercase;
+    font-size: 26px;
+    color: #252525;
+}
+
+.modal-body{
+    padding: 20px 40px;
+}
+
+.modal-body label{
+    display: block;
+}
+
+.modal-body label span{
+    color: #EB4D36;
+}
+
+.modal-body input{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #6060604f;
+}
+
+.modal-body button{
+    padding: 10px;
+    width: 100%;
+    font-family: Gilroy-Bold;
+    margin-bottom: 10px;
+}
+
+.modal-body button:hover{
+    background-color: red;
+    color: white;
+}
+
+.modal-body form p{
+    margin-top: 10px;
+}
+
+.modal-body form p a{
+    color: #EB4D36;
+}
+
+/* css view cart */
+
+.cart-totals{
+    padding: 15px 35px 30px;
+    border: 6px solid;
+    border-color: #ebebeb;
+}
+
+.cart-totals h2{
+    font-family: Gilroy-Bold;
+    text-transform: uppercase;
+    color: #252525;
+    font-size: 21px;
+    margin: 0;
+    padding: 10px 0 15px 0;
+    display: block;
+    border-bottom: 2px solid #6060604f;
+}
+
+.cart-totals table{
+    width: 100%;
+}
+
+.cart-totals .cart-subtotal{
+    width: 100%;
+    border-bottom: 1px solid #6060604f;
+    color: #252525;
+}
+
+.cart-totals .cart-subtotal td{
+    float: right;
+    padding: 15px;
+    font-family: Gilroy-Bold;
+    font-size: 18px;
+}
+

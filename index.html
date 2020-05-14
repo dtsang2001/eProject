@@ -65,7 +65,7 @@
                                     <a href="#"><i class="fas fa-search"></i></a>
                                 </li>
                                 <li class="hover-down nav-icon-main" style="padding-right: 0;">
-                                    <a href="#"><i class="fas fa-user"></i></a>
+                                    <a data-toggle="modal" data-target="#modal-user"><i class="fas fa-user"></i></a>
                                 </li>
                                 <li class="nav-icon-main nav-icon-cart" >
                                     <a href="javascript:void(0)">
@@ -161,8 +161,8 @@
                                         
                                         <ul class="nav navbar-nav navbar-right menu-block ">
 
-                                            <li class="hover-down" style="padding-right: 0;">
-                                                <a href="#"><i class="fas fa-user"></i></a>
+                                            <li style="padding-right: 0;">
+                                                <a href="" data-toggle="modal" data-target="#modal-user"><i class="fas fa-user"></i></a>
                                             </li>
                                             <li class="nav-icon-cart">
                                                 <a href="javascript:void(0)">
@@ -252,6 +252,43 @@
                 
             </div>
     </header>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-user" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Sign in</h4>
+                </div>
+                <div class="modal-body">
+                    
+                    <form action="" method="POST" role="form">
+                    
+                        <div class="form-group">
+                            <label for="">Username or email <span>*</span></label>
+                            <input type="text" name="username" placeholder="...">
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="">Password <span>*</span></label>
+                            <input type="password" name="password" placeholder="...">
+                        </div>
+
+                        <p><a href="">
+                            Lost your password?
+                        </a></p>
+                    
+                        <button type="submit" class="btn-site">Login</button>
+
+                        <button type="submit" class="btn-site-outline">Create account</button>
+                        
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="side-nav-cart">
 

@@ -18,11 +18,14 @@ $( () => {
 
     });
 
+    
+
     $('.close-side').click( () => {
         $('.side-nav-cart').css({"width" : "0px"});
-    })
+    });
     
     $('.nav-icon-cart').click( () => {
         $('.side-nav-cart').css({"width" : "350px"});
-    })
+    });
+    
 });
