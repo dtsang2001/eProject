@@ -18,14 +18,23 @@ $( () => {
 
     });
 
+    // const close_cart;
+
+    $('.close-side-cart').click( () => {
+        $('.side-nav-cart').removeClass('size-side');
+    });
+
+    $('.nav-icon-cart').click( () => {
+        $('.side-nav-cart').addClass('size-side');
+    });
     
 
-    $('.close-side').click( () => {
-        $('.side-nav-cart').css({"width" : "0px"});
+    $('.close-side-mobile-menu').click( () => {
+        $('.side-nav-menu-mobile').removeClass('size-side');
     });
-    
-    $('.nav-icon-cart').click( () => {
-        $('.side-nav-cart').css({"width" : "350px"});
-    });
+
+    $('.nav-icon-bars').click( () => {
+        $('.side-nav-menu-mobile').addClass('size-side');
+    });                             
     
 });

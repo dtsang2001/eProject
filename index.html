@@ -18,19 +18,18 @@
     <link href="./plugins/bootstrap-3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sang.css">
-    <link rel="stylesheet" href="css/sang-responsive.css">
-    
     <link rel="stylesheet" href="css/hung.css">
     <link rel="stylesheet" href="css/nam.css">
     <link rel="stylesheet" href="css/thang.css">
     <link rel="stylesheet" href="css/thang-responsive.css">
+    <link rel="stylesheet" href="css/sang-responsive.css">
     
 
 </head>
 
 <body>
-    
         <!-- SANG -->
+
         <nav class="nav-fixed" id="nav-fixed">
             <div class="clearfix">
                 <div class="nav-block">
@@ -65,7 +64,7 @@
                             <ul class="nav navbar-nav navbar-right menu-block ">
 
                                 <li class="nav-icon-main" style="padding-right: 0;">
-                                    <a href="#"><i class="fas fa-search"></i></a>
+                                    <a href="#" data-toggle="modal" data-target="#modal-search"><i class="fas fa-search"></i></a>
                                 </li>
                                 <li class="hover-down nav-icon-main" style="padding-right: 0;">
                                     <a data-toggle="modal" data-target="#modal-user"><i class="fas fa-user"></i></a>
@@ -83,7 +82,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-icon-main nav-icon-bars" style="padding-left: 0px;">
-                                    <a href="#"><i class="fas fa-bars"></i></a>
+                                    <a href="javascript:void(0)"><i class="fas fa-bars"></i></a>
                                 </li>
                             </ul>
                     </div>                                      
@@ -100,11 +99,6 @@
                 <div class="car-slides">
                     
                     <div id="carousel-id" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carousel-id" data-slide-to="0" class=""></li>
-                            <li data-target="#carousel-id" data-slide-to="1" class=""></li>
-                            <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
-                        </ol>
                         <div class="carousel-inner">
                             <div class="item active">
                                 <img alt="First slide" src="images/rev_sliderhome3-1.jpg">
@@ -142,9 +136,11 @@
                             </div>
                                 <div class="nav-block block-flex">
                                 <div class="nav-menu clearfix">
-
+                                    <div class="logo-mobile">
+                                        <img src="images/logo-text.png" alt="">
+                                    </div>
                                     <div class="">
-                                        <ul class="nav navbar-nav menu-block">
+                                        <ul class="nav navbar-nav menu-block hide-mobile">
                                             <li class="active">
                                                 <a href="#">Home</a>
                                             </li>
@@ -163,8 +159,10 @@
                                         </ul>
                                         
                                         <ul class="nav navbar-nav navbar-right menu-block ">
-
-                                            <li style="padding-right: 0;">
+                                            <li class="nav-icon-search" style="padding-right: 0;">
+                                                <a href="" data-toggle="modal" data-target="#modal-search"><i class="fas fa-search"></i></a>
+                                            </li>
+                                            <li class="nav-icon-user" style="padding-right: 0;">
                                                 <a href="" data-toggle="modal" data-target="#modal-user"><i class="fas fa-user"></i></a>
                                             </li>
                                             <li class="nav-icon-cart">
@@ -178,6 +176,9 @@
                                                         0.00
                                                     </span>
                                                 </a>
+                                            </li>
+                                            <li class="nav-icon-main nav-icon-bars" style="padding-left: 0px;">
+                                                <a href="javascript:void(0)"><i class="fas fa-bars"></i></a>
                                             </li>
                                         </ul>
                                    </div>                                      
@@ -196,7 +197,7 @@
                 </div>
             </div>
 
-            <div class="container-fluid">
+            <div>
                 
                 <div class="row header-child">
                     
@@ -256,7 +257,7 @@
             </div>
     </header>
 
-    <!-- Modal -->
+    <!-- Modal Login -->
     <div class="modal fade" id="modal-user" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -264,9 +265,9 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">close</span></button>
                     <h4 class="modal-title" id="myModalLabel">Sign in</h4>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body modal-user">
                     
-                    <form action="" method="POST" role="form">
+                    <form class="form-site" action="" method="POST" role="form">
                     
                         <div class="form-group">
                             <label for="">Username or email <span>*</span></label>
@@ -293,13 +294,36 @@
         </div>
     </div>
 
-    <div class="side-nav-cart">
+    <!-- Modal Seach -->
+    <div class="modal fade" id="modal-search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Seach</h4>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="nav-search clearfix">
+                        <form method="get">
+                            <label class="screen-reader-text"><i class="ion-ios-search"></i></label>
+                            <input type="text" class="search-field" placeholder="Search products…" value="" name="s">
+                            <button type="submit" class="btn-site" value="Search">Search</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="side-nav-cart side-nav">
 
         <div class="side-list-cart">
 
             <div class="side-header clearfix">
                 <h4>shopping cart</h4>
-                <a href="javascript:void(0)" class="close-side">
+                <a href="javascript:void(0)" class="close-side-cart">
                     <span>close</span>                        
                 </a>
             </div>
@@ -453,9 +477,59 @@
         </div>
     </div>
 
+    <div class="side-nav-menu-mobile side-nav">
+
+        <div class="side-list-cart">
+
+            <div class="side-header clearfix">
+                <h4>Menu</h4>
+                <a href="javascript:void(0)" class="close-side-mobile-menu">
+                    <span>close</span>                        
+                </a>
+            </div>
+
+            <div class="side-menu-mobile">
+                <ul class="nav navbar-nav menu-block">
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Shop</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="" data-toggle="modal" data-target="#modal-user">Login</a>
+                    </li>
+                    <li>
+                        <a href="">Cart</a>
+                    </li>
+                    <li>
+                        <div class="nav-search clearfix">
+                            <form method="get">
+                                <!-- <label class="screen-reader-text"><i class="ion-ios-search"></i></label> -->
+                                <input type="text" class="search-field" placeholder="Search..." value="" name="s">
+                                <button type="submit" class="btn-site" value="Search">
+                                    <i class="ion-ios-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <!-- HUNG -->
     <section id="h_section">
-        <div class="container">
+        <div>
             <div class="h_titleproduct" style="background-image: url(images/hungimges/text_products.png);background-position: top center;padding: 25px 0 0 0;">
                 <div class="row clearfix">
                     <ul>
@@ -469,7 +543,8 @@
             </div>
             <div class="h_allproduct">
                 <div class="row clearfix">
-                    <div class="col-md-3 col-sm-4 col-xs-12 itemx kinhram">
+                    
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 itemx kinhram">
                         <div class="item clearfix ">
                             <div class="anhduoi responsive">
                                 <div class="h_anhtren">
@@ -495,7 +570,7 @@
                             <div class="h_add clearfix"><a href="">Add Cart</a></div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12 itemx kinhcan">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 itemx kinhcan">
                         <div class="item ">
                             <div class="anhduoi">
                                 <div class="h_anhtren">
@@ -521,7 +596,7 @@
                             <div class="h_add"><a href="">Add Cart</a></div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12 itemx kinhthoitrang">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 itemx kinhthoitrang">
                         <div class="item ">
                             
                             <div class="anhduoi">
@@ -548,7 +623,7 @@
                             <div class="h_add"><a href="">Add Cart</a></div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12 itemx kinhram">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 itemx kinhram">
                         <div class="item ">
                             
                             <div class="anhduoi">
@@ -575,7 +650,7 @@
                             <div class="h_add"><a href="">Add Cart</a></div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12 itemx kinhcan">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 itemx kinhcan">
                         <div class="item ">
                             
                             <div class="anhduoi">
@@ -602,7 +677,7 @@
                             <div class="h_add"><a href="">Add Cart</a></div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12 itemx kinhthoitrang">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 itemx kinhthoitrang">
                         <div class="item ">
                             
                             <div class="anhduoi">
@@ -629,7 +704,7 @@
                             <div class="h_add"><a href="">Add Cart</a></div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12 itemx kinhram">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 itemx kinhram">
                         <div class="item ">
                             
                             <div class="anhduoi">
@@ -656,7 +731,7 @@
                             <div class="h_add"><a href="">Add Cart</a></div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-12 itemx kinhthoitrang">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 itemx kinhthoitrang">
                         <div class="item ">
                             
                             <div class="anhduoi">
@@ -688,21 +763,22 @@
         </div>   
     </section>
 
+    <div class="t_blockquote">
+        <p class="mb-0">NEED-IT-NOW SALE <strong>60% OFF</strong> CLEARANCE IN STORES & ONLINE</p>
+    </div>
+
     <!-- THANG -->
     <section>
-        <blockquote class="t_blockquote">
-            <p class="mb-0">NEED-IT-NOW SALE <strong>60% OFF</strong> CLEARANCE IN STORES & ONLINE</p>
-        </blockquote>
         <div class="t_titlecat clearfix" style="height: 100px;">
             <div class="row">
                 <h3>CATEGORIES</h3>
             </div> 
         </div>
-        <div class="container">
+        <div>
                 
             <div class="row t_header-child">
                 
-                <div class="t_block-column-wrap col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <div class="t_block-column-wrap col-xs-12 col-sm-6 col-md-8 col-lg-8">
                     <div class="res1">
                     <div class="t_block-widget-wrap">
                         <div class="t_img-hover-zoom">
@@ -720,7 +796,7 @@
                     </div>
                 </div>
 
-                <div class="t_block-column-wrap col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="t_block-column-wrap col-xs-12 col-sm-6 col-md-4 col-lg-4">
                     <div class="res2">
                     <div class="t_block-widget-wrap">
                         <div class="t_img-hover-zoom">
@@ -739,7 +815,7 @@
                 </div>
                 </div>
 
-                <div class="t_block-column-wrap col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <div class="t_block-column-wrap col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     <div class="res3">
                     <div class="t_block-widget-wrap">
                         <div class="t_img-hover-zoom">
@@ -757,7 +833,7 @@
                 </div>
                 </div>
 
-                <div class="t_block-column-wrap col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                <div class="t_block-column-wrap col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     <div class="res4">
                     <div class="t_block-widget-wrap">
                         <div class="t_img-hover-zoom">
@@ -788,19 +864,18 @@
 
     <!-- THANG -->
 
-    <!-- Footer -->
     <footer class="footer-bs">
+        
         <div class="row">
-            <div class="col-md-3 footer-brand animated fadeInLeft">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 footer-brand">
                 <h5><strong>CONTACT US</strong></h5>
                 <br>
                 <p>If you have any question, please contact us at Eyeonic.com</p>
                 <div>
-                <i class="ion-android-call"></i>
-                <h3><span style="font-size:15px"><strong>+048</strong>  </span><strong>800 456 789</strong>  </h3>
+                <h3><i class="ion-android-call"></i><span style="font-size:15px"><strong>+048</strong>  </span><strong>800 456 789</strong>  </h3>
             </div>
             </div>
-            <div class="col-md-3 footer-nav animated fadeInUp">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 footer-nav">
                 <h5><strong>STORE LOCATION</strong></h5>
                 <br>
                 
@@ -810,7 +885,7 @@
                     <p>Saturday: 9am – 5pm</p>
                 
             </div>
-            <div class="col-md-3 footer-social animated fadeInDown">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 footer-social">
                 <h5><strong>CATEGORIES</strong></h5>
                 <br>
                 <ul>
@@ -821,7 +896,7 @@
                     <li><a href="#">VR Glasses</a></li>
                 </ul>
             </div>
-            <div class="col-md-3 footer-ns animated fadeInRight">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 footer-ns">
                 <h5><strong>NEWSLETTER</strong> </h5>
                 <br>
                 <p>Subscribe to the weekly newsletter for all the latest updates</p>
@@ -839,15 +914,14 @@
         <hr>
         <div class="row footer-two">
             <div class="col-md-4 footer-copyright">             
-                <p>Copyright © 2020 Eyeonic.com. All Rights Reserved.</p>
-                              
+                <p>Copyright © 2020 Eyeonic.com. All Rights Reserved.</p>                              
             </div>
             
             <div class="col-md-4 footer-icon">
-                <i class="ion-social-facebook"></i>
-                <i class="ion-social-linkedin"></i>
-                <i class="ion-social-twitter"></i>
-                <i class="ion-social-instagram"></i>
+                <a href=""><i class="ion-social-facebook"></i></a>
+                <a href=""><i class="ion-social-linkedin"></i></a>
+                <a href=""><i class="ion-social-twitter"></i></a>
+                <a href=""><i class="ion-social-instagram"></i></a>
             </div>
             
             <div class="col-md-4 footer-payment">             
@@ -855,9 +929,6 @@
             </div>
         </div>
     </footer>
-  
-        
-    <!-- Footer -->
 
 
     <!-- jQuery -->

@@ -4,16 +4,12 @@
 }
 
 @media only screen and (max-width: 1024px) {
-
+ 
     .slides .my-nav{
         margin: 0;
     }
 
     .nav-fixed .nav-menu-main{
-        display: none;
-    }
-
-    .nav-fixed .nav-icon-main{
         display: none;
     }
 
@@ -37,21 +33,31 @@
         display: inline-block;
     }
 
-    .nav-responsive .navbar-right{
-        /* flex-grow: 1; */
-    }
-
     .nav-fixed{
         padding-left: 20px;
         padding-right: 20px;
         transform: .4s;
     }
+
+    /* Thang */
+
+    .t_img-hover-zoom {
+        height: 300px;
+        overflow: hidden;
+    }
 }
 
 @media only screen and (max-width: 768px) {
-    .carousel-inner .item img{
+    .carousel-inner .item{
         height: 750px;
-        object-fit: cover;
+    }
+
+    .my-nav .price-amount{
+        display: none;
+    }
+
+    .my-nav .nav-icon-search{
+        display: inline-block;
     }
 
     .slides .my-nav .nav-slogan{
@@ -70,14 +76,66 @@
         padding-left: 5px;
         padding-right: 5px;
     }
+
+    .my-nav .nav-search{
+        display: none;
+    }
+
+    .my-nav .nav-icon-search:focus .nav-search{
+        display: block;
+    }
 }
 
-@media only screen and (max-width: 600px) {
-    .slides .my-nav{
+@media only screen and (max-width: 620px) {
+
+    .my-nav .nav-menu-main{
         display: none;
     }
 
     #nav-fixed{
-        display: blocks;
+        /* display: block; */
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .nav-fixed .nav-icon-main{
+        display: none;
+    }
+    
+    .logo-mobile{
+        display: block;
+    }
+
+    .nav-fixed .nav-icon-cart,
+    .nav-fixed .nav-icon-bars{
+        display: inline-block;
+    }
+
+    .nav-fixed .navbar-header a{
+        padding: 7px;
+    }
+
+    .size-side{
+        width: 100% ;
+    }
+
+    .my-nav .nav-menu{
+        padding: 0;
+        display: flex;
+    }
+
+    .my-nav .nav-icon-user,
+    .my-nav .nav-icon-search,
+    .my-nav .hide-mobile{
+        display: none;
+    }
+
+    .my-nav ul{
+        margin: 0;
+    }
+
+    .my-nav .nav-icon-cart,
+    .my-nav .nav-icon-bars{
+        display: inline-block;
     }
 }

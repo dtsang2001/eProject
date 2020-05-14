@@ -1,4 +1,14 @@
 
+.logo-mobile{
+    flex-grow: 9;
+    text-align: left;
+    display: none;
+}
+
+.logo-mobile img{
+    width: 140px;
+    padding-left: 20px;
+}
 
 .nav-fixed{
     display: none;
@@ -81,12 +91,17 @@
     border-radius: none;
 }
 
+.my-nav .nav-icon-search{
+    display: none;       
+}
+
 .carousel-inner .item{
     margin: 0;
     padding: 0;
+    height: 891px;
 }
 .carousel-inner .item img{
-    height: 891px;
+    height: 100%;
     object-fit: cover;
 }
 .carousel-control.right,
@@ -227,7 +242,7 @@
 }
 
 .nav-search form input{
-    padding: 16px 80px 16px 40px;
+    padding: 16px 100px 16px 65px;
     width: 100%;
     line-height: 1;
     border: none;
@@ -242,7 +257,7 @@
     position: absolute;
     left: 1;
     margin-top: 12px;
-    margin-left: 12px;
+    margin-left: 36px;
     font-weight: 400;
     font-size: 23px;
     color: #ef3636;
@@ -256,7 +271,7 @@
 }
 
 .header-child{
-    padding: 7px 14px;
+    padding: 7px;
 }
 
 .header-child .block-column-wrap{
@@ -336,6 +351,7 @@
 
 /* Click - show cart */
 
+.side-nav-menu-mobile,
 .side-nav-cart{
     height: 100%;
     width: 0px;
@@ -350,11 +366,11 @@
     box-shadow: -1px -1px 10px grey;
 }
 
-.side-nav-cart .side-header{
+.side-nav .side-header{
     border-bottom: #6060604f 1px solid;
 }
 
-.side-nav-cart .side-header h4{
+.side-nav .side-header h4{
     position: absolute;
     top: 8px;
     font-family: Teko-Medium;
@@ -364,7 +380,7 @@
     font-size: 27px;
 }
 
-.side-nav-cart .side-header a{
+.side-nav .side-header a{
     position: absolute;
     top: 8px;
     font-family: Gilroy-Bold;
@@ -396,6 +412,8 @@
     width: 100%;
     /* bottom: 0; */
     border-top: #6060604f 1px solid;
+    padding-bottom: 30px;
+    padding-top: 10px;
 }
 
 .side-list-cart .footed-cart h4{
@@ -513,19 +531,19 @@
     color: #252525;
 }
 
-.modal-body{
+.modal-user{
     padding: 20px 40px;
 }
 
-.modal-body label{
+.modal-body .form-site label{
     display: block;
 }
 
-.modal-body label span{
+.modal-body .form-site label span{
     color: #EB4D36;
 }
 
-.modal-body input{
+.modal-body .form-site input{
     width: 100%;
     padding: 10px;
     outline: none;
@@ -533,24 +551,57 @@
     border: 1px solid #6060604f;
 }
 
-.modal-body button{
+.modal-body .form-site button{
     padding: 10px;
     width: 100%;
     font-family: Gilroy-Bold;
     margin-bottom: 10px;
 }
 
-.modal-body button:hover{
+.modal-body .form-site button:hover{
     background-color: red;
     color: white;
 }
 
-.modal-body form p{
+.modal-body .form-site p{
     margin-top: 10px;
 }
 
-.modal-body form p a{
+.modal-body .form-site p a{
     color: #EB4D36;
+}
+
+.modal-body .nav-search{
+    border: none;
+}
+
+.modal-body .nav-search label{
+    margin-left: 0px;
+}
+
+.modal-body .nav-search input{
+    padding-left: 30px;
+}
+
+
+.side-menu-mobile ul li{
+    width: 100%;
+    padding: 10px 30px;
+}
+
+.side-menu-mobile .nav-search input{
+    padding-left: 10px;
+}
+
+.side-menu-mobile .nav-search button{
+    right: 20px;
+    padding: 5px 10px;
+    font-size: 20px;
+    font-family: Gilroy-Bold;
+}
+
+.size-side{
+    width: 350px;
 }
 
 /* css view cart */
