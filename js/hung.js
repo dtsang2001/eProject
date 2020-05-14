@@ -1,20 +1,21 @@
 $(function(){
     //viết cho nút
     $('.h_titleproduct ul li a').click(function(event) {
-        // console.log('hello');
+        console.log('hello');
         
         //phát hiện data class của nút được kích
         var danhmuc = $(this).data('class');
 
-        var isotopeButton = $('.h_titleproduct ul li');
-        $(isotopeButton).each(function(){
-            $(this).on('click', function(){
-                for(var i=0; i<isotopeButton.length; i++) {
-                    $(isotopeButton[i]).removeClass('selected');
-                }   
-            });
-        })
-        // $(this).addClass("selected");   
+        // var isotopeButton = $('.h_titleproduct ul li');
+        // $(isotopeButton).each(function(){
+        //     $(this).on('click', function(){
+        //         for(var i=0; i<isotopeButton.length; i++) {
+        //             $(isotopeButton[i]).removeClass('selected');
+        //         }   
+        //     });
+        // })
+        $('.h_titleproduct ul li a').removeClass("selected");
+        $(this).addClass("selected");  
         
         // console.log(danhmuc);
         $('.h_allproduct .itemx').each(function(){
@@ -32,14 +33,29 @@ $(function(){
 
     // ====================================================Code cho nút filter mở ra trang shop
     $('.nut_mo_ra_menu').click(function(){
-        console.log('hello');
+        // console.log('hello');
         $('#menu').addClass('traisang');
         return false;
     });
     $('.h_rowduoi').click(function(){
-        console.log('hello');
+        // console.log('hello');
         $('#menu').removeClass('traisang');
         return false;
     });
+
+    // =======================================================slide ranger
+
+    $( "#slider-range" ).slider({
+        range: true,
+        min: 0,
+        max: 500,
+        values: [ 75, 300 ],
+        slide: function( event, ui ) {
+            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+        }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+
     
 });

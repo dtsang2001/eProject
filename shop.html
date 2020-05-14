@@ -9,6 +9,7 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/jquery-ui.css">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
@@ -61,6 +62,14 @@
                           </ul>
                         </nav>
                       </div>
+                      <h4>Filter By Price</h4>
+                      <div id="slider-range"></div>
+                      <p>
+                        <button type="submit" class="button">Filter</button>
+                        <label for="amount">Price:</label>
+                        <input type="text" id="amount" readonly style="width:80px;border:0; color:red; font-weight:bold;background-color: #F6F6F6">
+                      </p>
+                      <h4></h4>
                       <h4>Filter By Color</h4>
                       <div class="h_listcolor clearfix">
                         <nav>
@@ -119,25 +128,85 @@
 
                     <!-- Danh sách danh mục ở dạng cái nút filter -->
                     <div class="menutrai h-show" id="menu">
-
                         <h4>Close <i class="fas fa-times"></i></h4>
-                      <div class="h_listcate">
-                          <h3>Product category</h3>
-                        <nav>
-                          <ul>
-                            <li><a href="">Beauty & Health</a></li>
-                            <li><a href="">Clothing</a></li>
-                            <li><a href="">Electronics & Computer</a></li>
-                            <li><a href="">Food & Grocery</a></li>
-                            <li><a href="">Furnlture</a></li>
-                            <li><a href="">Garden & Kitchen </a></li>
-                            <li><a href="">grgrgg</a></li>
-                            <li><a href="">grgrg</a></li>
-                            <li><a href="">fefefef</a></li>
-                            <li><a href="">fefefff</a></li>
-                          </ul>
-                        </nav>
-                      </div>
+                        <h3>Product category</h3>
+                        <div class="h_listcate">
+                          <nav>
+                            <ul>
+                              <li><a href="">Beauty & Health</a></li>
+                              <li><a href="">Clothing</a></li>
+                              <li><a href="">Electronics & Computer</a></li>
+                              <li><a href="">Food & Grocery</a></li>
+                              <li><a href="">Furnlture</a></li>
+                              <li><a href="">Garden & Kitchen </a></li>
+                              <li><a href="">grgrgg</a></li>
+                              <li><a href="">grgrg</a></li>
+                              <li><a href="">fefefef</a></li>
+                              <li><a href="">fefefff</a></li>
+                            </ul>
+                          </nav>
+                        </div>
+                        <!-- <h3>Filter By Price</h3>
+                        <div id="slider-range" ></span></div>
+                        <p>
+                          <button type="submit" class="button">Filter</button>
+                          <label for="amount">Price:</label>
+                          <input type="text" id="amount" readonly style="width:80px;border:0; color:red; font-weight:bold;background-color: #F6F6F6">
+                        </p> -->
+                        <h3>Filter By Color</h3>
+                        <div class="h_listcolor clearfix">
+                          <nav>
+                            <ul>
+                              <li>
+                                <a href="" data-hieuung="tooltip" title="Black" class="color-label" style="background: #000000">
+                                </a>
+                              </li>
+                              <li>
+                                <a href="" data-hieuung="tooltip" title="Blue" class="color-label" style="background: #1e73be">
+                                </a>
+                              </li>
+                              <li>
+                                <a href="" data-hieuung="tooltip" title="Gray" class="color-label" style="background: #d6d6d6">
+                                </a>
+                              </li>
+                              <li>
+                                <a href="" data-hieuung="tooltip" title="Green" class="color-label" style="background: #81d742">
+                                </a>
+                              </li>
+                              <li>
+                                <a href="" data-hieuung="tooltip" title="Orange" class="color-label" style="background: #dd9933">
+                                </a>
+                              </li>
+                              <li>
+                                <a href="" data-hieuung="tooltip" title="Purple" class="color-label" style="background: #8224e3">
+                                </a>
+                              </li>
+                              <li>
+                                <a href="" data-hieuung="tooltip" title="Red" class="color-label" style="background: #ef3636">
+                                </a>
+                              </li>
+                              <li>
+                                <a href="" data-hieuung="tooltip" title="White" class="color-label" style="background: #ffffff">
+                                </a>
+                              </li>
+                              <li>
+                                <a href="" data-hieuung="tooltip" title="Yellow" class="color-label" style="background: #eeee22">
+                                </a>
+                              </li>  
+                            </ul>
+                          </nav>
+                        </div>
+                        <h3>Filter By Size</h3>
+                        <div class="h_listsize clearfix">
+                          <nav>
+                            <ul>
+                              <li><a href="">L</a></li>
+                              <li><a href="">M</a></li>
+                              <li><a href="">S</a></li>
+                              <li><a href="">XL</a></li>
+                            </ul>
+                          </nav>
+                        </div>  
                     </div>
 
 
@@ -349,8 +418,10 @@
     </section>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
     <!-- Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- Hưng js -->
     <script src="js/hung.js"></script>
   </body>
