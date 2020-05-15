@@ -15,15 +15,166 @@
     .footer-ns {
         text-align: center;
     }
-    .footer-brand i{
-        /* margin-left: 30px; */
-    }
+    
     .res1{
         width: 100%;
     }
+
+    .t_WCU {
+        width: 80%;
+        margin-left: 0px;
+        padding-left: 0px;
+        text-align: center;
+    }
+    .t_social {
+        padding-right: 200px;
+    }
+    .wcu_container h1{
+        padding-left: 0px;
+    }
+    .wcu_container {
+        padding-left: 90px;
+    }
+
 }
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 980px){
+    .t_WCU {
+        width: 60%;
+        text-align: center;
+    }
+    .t_teamicon{
+        margin-left: 180px;
+    }
+}
+@media only screen and (max-width: 989px){
+    .t_WCU {
+        width: 60%;
+        text-align: center;
+    }
+    .t_teamicon{
+        margin-left: 180px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .t_WCU {
+        width: 75%;
+        text-align: center;
+    }
+    .t_teamicon{
+        margin-left: 185px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .t_WCU {
+        width: 75%;
+        text-align: center;
+    }
+    .t_teamicon{
+        margin-left: 70px;
+    }
+    
+}
+@media only screen and (max-width: 700px){
+    .t_WCU {
+        width: 75%;
+        text-align: center;
+    }
+    .t_teamicon{
+        margin-left: 140px;
+    }
+}
+@media only screen and (max-width: 1068px){
+    .t_WCU {
+        width: 75%;
+        text-align: center;
+    }
+    .t_teamicon{
+        padding-bottom: 30px;
+    }
+    .t_social{
+        padding-left: 40px;
+    }
+    .t_teamicon{
+	    padding-right: 60px;
+    }
+}
+@media only screen and (max-width: 1186px){
+    .t_WCU {
+        width: 75%;
+        text-align: center;
+    }
+    .t_teamicon{
+        padding-right: 60px;
+        padding-bottom: 30px;
+    }
+    .t_social{
+        padding-left: 40px;
+    }
+}
+@media only screen and (max-width: 430px){
+    .t_WCU {
+        width: 80%;
+        margin-left: 0px;
+        padding-left: 0px;
+        text-align: center;
+    }
+    .t_teamicon{
+        margin-left: 25px;
+    }
+    .wcu_container h1{
+        padding-left: 0px;
+    }
+    .wcu_container {
+        padding-left: 90px;
+    }
+        
+}
+@media only screen and (max-width: 400px){
+    .t_WCU {
+        width: 80%;
+        margin-left: 0px;
+        padding-left: 0px;
+        text-align: center;
+    }
+    .t_social {
+        padding-right: 45px;
+    }
+    .wcu_container h1{
+        padding-left: 0px;
+    }
+    .wcu_container {
+        padding-left: 90px;
+    }
+        
+}
+@media only screen and (max-width: 350px){
+    .t_WCU {
+        width: 80%;
+        margin-left: 0px;
+        padding-left: 0px;
+        text-align: center;
+    }
+    .t_social {
+        padding-right: 0px;
+    }
+    .wcu_container h1{
+        padding-left: 0px;
+    }
+    .wcu_container {
+        padding-left: 90px;
+    }
+        
+}
+@media only screen and (max-width: 950px){
+    .t_ctc {
+      padding-left: 30%;
+       
+    }
+        
+}
+@media only screen and (max-width: 500px){
     .t_frame{
-        display: inline;
+        width: 700px;
     }
 }
