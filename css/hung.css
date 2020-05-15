@@ -18,6 +18,7 @@ body{
 .item:hover .h_lopmo{
     opacity: 0.7;
     transition: all 0.3s ease;
+    
 }
 .h_3icon{
     position: absolute;
@@ -117,6 +118,17 @@ a{
 .h_allproduct .col-md-4,.h_allproduct .col-md-3{
     padding: 0px;
     border: 1px solid #ebebeb;
+    background-color: #F6F6F6;
+}
+.h_allproduct .col-md-4:hover{
+    padding: 0px;
+    border: 1px solid #F6F6F6;
+    background-color: white;
+}
+.h_allproduct .col-md-3:hover{
+    padding: 0px;
+    border: 1px solid #F6F6F6;
+    background-color: white;
 }
 .item a{
     text-decoration: none;
@@ -428,6 +440,57 @@ a{
     box-shadow: -1px -1px 10px grey;
     transform: translateX(-400px);
 }
+@media only screen and (max-width: 320px) {
+    .menutrai{
+        /* width: 40%;
+        height: 100%;
+        background-color: white;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        z-index: 10000;
+        transform: translateX(-400px);
+        transition: 0.4s; */
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        overflow-x: hidden;
+        transition: all 0.4s ease-in-out;
+        padding-top: 60px;
+        box-shadow: -1px -1px 10px grey;
+        transform: translateX(-400px);
+    }
+}   
+@media only screen and (min-width: 321px) {
+    .menutrai{
+        /* width: 40%;
+        height: 100%;
+        background-color: white;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        z-index: 10000;
+        transform: translateX(-400px);
+        transition: 0.4s; */
+        height: 100%;
+        width: 50%;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        overflow-x: hidden;
+        transition: all 0.4s ease-in-out;
+        padding-top: 60px;
+        box-shadow: -1px -1px 10px grey;
+        transform: translateX(-400px);
+    }
+}   
+
 #menu::-webkit-scrollbar{
     width: 4px;
 }
@@ -513,6 +576,9 @@ table {
 
 
 /* ======================================Trang productDetail ==================================== */
+#productDetail{
+    width: 100%;
+}
 #productDetail .h_titleshop{
     text-align: center;
     
@@ -525,10 +591,12 @@ table {
 }
 #productDetail .h_rowtren{
     padding-top: 14px;
+    height: auto;
+    padding-bottom: 14px;
 }
 #productDetail .h_khungto_left{
     width: 100%;
-    height: 500px;
+    height: 600px;
 }
 #productDetail .h_khungto_left img{
     width: 100%;
@@ -545,7 +613,7 @@ table {
 }
 #productDetail .h_fivestar{
     font-size: 10px;
-    padding: 10px 0px;
+    padding: 0px 0px;
 }
 #productDetail span{
     font-size: 12px;
@@ -611,9 +679,9 @@ table {
     width: 100%;
 }
 #productDetail .h_khung_anh_nho nav ul li .h_lopmo_anhnho{
-    background-color: white;
-    height: 120px;
-    opacity: 0.5;
+    background-color: rgb(179, 178, 178);
+    height: 100%;
+    opacity: 0.7;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -698,4 +766,186 @@ table {
 }
 .h_content_DAR .h_comment_post .h_fivestar a{
     color: gray;
+}
+.h_review .h_comment_post .h_comment_post_rating p{
+    margin: 0px;
+}
+.h_review .h_comment_post .h_comment_post_rating textarea{
+    width: 70%;
+    max-width: 540px;
+    margin:20px 0px;
+    overflow: hidden;
+    clear: both;
+}
+.h_review .h_comment_post .h_comment_post_rating .h_comment_name{
+    width: 47%;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    
+}
+.h_review .h_comment_post .h_comment_post_rating .h_comment_email{
+    width: 47%;
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+.h_review .h_comment_post .h_comment_post_rating .h_comment_name label{
+    margin: 0px;
+}
+.h_review .h_comment_post .h_comment_post_rating .h_comment_email label{
+    margin: 0px;
+}
+.h_review .h_comment_post .h_comment_post_rating .h_comment_name input{
+    width: 100% !important;
+    height: 40px;
+}
+.h_review .h_comment_post .h_comment_post_rating .h_comment_email input{
+    width: 100% ;
+    height: 40px;
+}
+.h_review .h_comment_post .h_comment_post_rating .h_form_submit input{
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: #ef3636;
+    color: white;
+    font-weight: 700;
+}
+.h_review .h_comment_post .h_comment_post_rating .h_form_submit{
+    margin-top:20px;
+}
+.h_review .h_comment_post .h_comment_post_rating .h_form_submit .h_comment_checkbox{
+    display: block;
+    float: none;
+}
+
+
+/* css cho phần zoom ảnh */
+.tile {
+    position: relative;   
+    overflow: hidden;
+}
+.photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform .5s ease-out;
+}
+.txt{
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 10%;
+    left: 0;
+    font-family: 'Roboto Slab', serif;
+    font-size: 9px;
+    line-height: 12px;
+    text-align: center;
+    cursor: default;
+}
+
+.x {
+    font-size: 32px;
+    line-height: 32px;
+}
+#productDetail .part2 .h_content_DAR{
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+}
+#productDetail .part3 .h_tite_relate {
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    /* font-weight: 700; */
+    font-family: Teko-Medium;
+    padding-bottom: 40px;
+}
+
+#productDetail .part3 .h_related_product .col-md-4{
+    padding: 0px;
+    border: 1px solid #ebebeb;
+    background-color: #F6F6F6;
+}
+#productDetail .part3 .h_related_product .col-md-3{
+    padding: 0px;
+    border: 1px solid #ebebeb;
+    background-color: #F6F6F6;
+}
+#productDetail .part3 .h_related_product .col-md-4:hover{
+    padding: 0px;
+    border: 1px solid #F6F6F6;
+    background-color: white;
+}
+#productDetail .part3 .h_related_product .col-md-3:hover{
+    padding: 0px;
+    border: 1px solid #F6F6F6;
+    background-color: white;
+}
+
+
+/* Trang register */
+#login .h_form_register{
+    width: 40%;
+    height: 400px;
+    background-color: #f6f6f6;
+    margin: auto;
+    padding:10px 15px;
+}
+#login .h_form_register h2{
+    margin: 0px;
+    padding: 15px 0px;
+}
+#login .h_form_register p span{
+    color: red;
+}
+#login .h_form_register p{
+    margin-top: 10px;
+    padding: 10px 0px;
+}
+#login .h_form_register input{
+    width: 100%;
+    padding: 0.6180469716em;
+    background-color: #ffffff;
+    color: #626262;
+    border: 2px solid;
+    border-color: #ebebeb;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    font-weight: normal;
+    border-radius: 3px;
+    outline: 0;
+    padding: 10px 0px;
+}
+#login .h_form_register button{
+    width: 100%;
+    padding: 10px 0px;
+    margin: 10px 0px;
+}
+#login .h_form_register .h_Login_lost nav ul li{
+    float: right;
+}
+#login .h_form_register .h_Login_lost nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+#login .h_form_register .h_Login_lost nav ul li a:hover{
+    text-decoration: none;
+    color: red;
+}
+#login .h_form_register .h_Login_lost .h_mot{
+    border-right: 1px solid black;
+}
+#login .h_form_register .h_Login_back a{
+    text-decoration: none;
+    color: black;
+}
+#login .h_form_register .h_Login_back a:hover{
+    text-decoration: none;
+    color: red;
 }

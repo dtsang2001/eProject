@@ -1,0 +1,194 @@
+@media only screen and (max-width: 320px) {
+    .h_titleproduct{
+        background-image: url(images/hungimges/text_products.png);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 150px;
+        padding:15px;
+        
+    }
+    .h_titleproduct ul{
+        text-align: center;
+    }
+    .h_titleproduct ul li{
+        list-style: none;
+        display: inline-block;
+    }
+    .h_titleproduct ul li a{
+        text-decoration: none;
+        padding: 5px;
+        font-family: Teko-Medium;
+        font-size: 20px;
+        color: black;
+        cursor: pointer;
+    }
+    .h_titleproduct ul li i{
+        font-size: 8px !important;
+    }
+    .h_review .h_cmt .h_cmt_right {
+        float: right;
+        width: 100% !important;
+    }
+}  
+
+@media only screen and (max-width:992px){
+    .h_responsive .h_titleshop_right{
+        display: none;
+    }
+    .menutrai {
+        /* height: 100%;
+        width: 50%;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        overflow-x: hidden;
+        transition: all 0.4s ease-in-out;
+        padding-top: 60px;
+        box-shadow: -1px -1px 10px grey; */
+        transform: translateX(-600px);
+    }
+    .traisang{
+        transform: translateX(0px);
+    }
+    .h_titleshop_left {
+        text-align: center !important;
+        float: none;
+    }
+}
+@media only screen and (max-width:560px){
+    .h_review .h_comment_post .h_comment_post_rating .h_comment_name{
+        width: 100%;
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    .h_review .h_comment_post .h_comment_post_rating .h_comment_email{
+        width: 100%;
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width:375px){
+    #productDetail .h_khungto_left{
+        width: 100%;
+        height: 300px;
+    }
+}
+@media only screen and (min-width:376px){
+    #productDetail .h_khungto_left{
+        width: 100%;
+        height: 400px;
+    }
+}
+@media only screen and (min-width:700px){
+    #productDetail .h_khungto_left{
+        width: 100%;
+        height: 600px;
+    }
+}
+@media only screen and (max-width:1002px){
+    #login .h_form_register .h_Login_back a{
+        text-decoration: none;
+        color: black;
+        display: block;
+        float: right;
+        /* width: 100%; */
+    }
+        .h_form_register .h_Login_back {
+            text-decoration: none;
+            color: black;
+            display: block;
+            float: right;
+            width: 100%;
+        }
+    
+    #login .h_form_register{
+        width: 50%;
+        height: 400px;
+        background-color: #f6f6f6;
+        margin: auto;
+        padding: 10px 15px;
+    }
+}
+@media only screen and (max-width:768px){
+    #login .h_form_register{
+        width: 60%;
+        height: 400px;
+        background-color: #f6f6f6;
+        margin: auto;
+        padding: 10px 15px;
+    }
+     .h_form_register .h_Login_back a{
+        text-decoration: none;
+        color: black;
+        display: block;
+        float: right;
+    }
+    .h_form_register .h_Login_back {
+        text-decoration: none;
+        color: black;
+        display: block;
+        float: right;
+        width: 100%;
+    }
+    
+}
+@media only screen and (max-width:425px){
+    #login .h_form_register{
+        width: 100%;
+        height: 400px;
+        background-color: #f6f6f6;
+        margin: auto;
+        padding: 10px 15px;
+    }
+    #login .h_form_register .h_Login_back a{
+        text-decoration: none;
+        color: black;
+        display: block;
+        
+    }
+    #login .h_form_register .h_Login_back {
+        float: right;
+        width: 100%;
+    }
+    
+}
+@media only screen and (max-width:353px){
+    #login .h_form_register{
+        width: 100%;
+        height: 400px;
+        background-color: #f6f6f6;
+        margin: auto;
+        padding: 10px 15px;
+    }
+    #login .h_form_register .h_Login_back a{
+        text-decoration: none;
+        color: black;
+        display: block;
+        float: right;
+    }
+    #login .h_rowtren   {
+        height: auto !important;
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width:582px){
+    #login .h_form_register{
+        width: 100%;
+        height: 400px;
+        background-color: #f6f6f6;
+        margin: auto;
+        padding: 10px 15px;
+    }
+    #login .h_form_register .h_Login_back a{
+        text-decoration: none;
+        color: black;
+        display: block;
+        float: right;
+    }
+    
+}
+

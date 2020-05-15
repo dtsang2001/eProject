@@ -33,7 +33,7 @@ $(function(){
 
     // ====================================================Code cho nút filter mở ra trang shop
     $('.nut_mo_ra_menu').click(function(){
-        // console.log('hello');
+        console.log('hello');
         $('#menu').addClass('traisang');
         return false;
     });
@@ -78,8 +78,80 @@ $(function(){
     })
     //========================================================= Rating
 
-    $('.h_content_DAR .h_comment_post .h_fivestar a').click(function(){
+    // $('.h_content_DAR .h_comment_post .h_fivestar a').click(function(){
+    //     console.log('hello');
+    //     $(this).addClass('active');
+    //     return false;
+        
+    // });
+    $('#stars a').on('mouseover',function(){
+        var onStar = parseInt($(this).data('value'),10);//Ngôi sao hiện đang di chuột
+        //Làm nổi bật tất cả các ngôi sao trước ngôi sao được di
+        $(this).parent().children('a.star').each(function(e){
+            if(e < onStar){
+                $(this).addClass('active');
+            }else{
+                $(this).removeClass('active');
+            }
+        })
+        return false;
+    })
+
+    //hành động khi kích vào ngôi sao
+    $('#stars a').click(function(){
+        var onStar = parseInt($(this).data('value'),10);
+        var stars = $(this).parent().children('a.star');
         console.log('hello');
+        for(i = 0;i <stars.length;i++){
+            $(stars[i]).removeClass('active');
+        }
+        for(i = 0;i <onStar;i++){
+            $(stars[i]).addClass('active');
+
+        }
+        return false;
+    })
+
+    //=======================================Chọn ảnh để xem detail
+    $('.part1 .h_khung_anh_nho .h_anhduoinho ').click(function(){
+        console.log('hello');
+        var danhmucabc = $(this).data('class');
+        console.log(danhmucabc);
+        $('.part1 .h_khung_anh_nho .h_anhduoinho ').children('.part1 .h_khung_anh_nho .h_anhduoinho .h_lopmo_anhnho ').css('opacity','');
+        $(this).children('.part1 .h_khung_anh_nho .h_anhduoinho .h_lopmo_anhnho ').css('opacity','0');
+
+        $('.part1 .h_khungto_left .itemxx').each(function(){
+            if($(this).hasClass(danhmucabc)){
+                $(this).show();
+            }else{
+                $(this).hide();
+            }
+        });
     });
+
+        //xử lí ảnh to zoom
+        $('.tile')
+    // tile mouse actions
+    .on('mouseover', function(){
+      $(this).children('.photo').css({'transform': 'scale('+ $(this).attr('data-scale') +')'});
+    })
+    .on('mouseout', function(){
+      $(this).children('.photo').css({'transform': 'scale(1)'});
+    })
+    .on('mousemove', function(e){
+      $(this).children('.photo').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
+    })
+    // tiles set up
+    .each(function(){
+      $(this)
+        // add a photo container
+        .append('<div class="photo"></div>')
+        // some text just to show zoom level on current item in this example
+        // .append('<div class="txt"><div class="x">'+ $(this).attr('data-scale') +'x</div>ZOOM ON<br>HOVER</div>')
+        // set up a background image for each tile based on data-image attribute
+        .children('.photo').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
+    })
+
+
     
 });
