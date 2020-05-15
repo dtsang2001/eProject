@@ -25,6 +25,419 @@
 
 </head>
 <body>
+
+    <nav class="nav-fixed" id="nav-fixed">
+        <div class="clearfix">
+            <div class="nav-block">
+                <div class="nav-menu clearfix">
+
+                    <div class="nav-responsive clearfix">
+
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">
+                                <img src="images/logo-text.png" alt="" width="150px">
+                            </a>
+                        </div>
+
+                        <ul class="nav navbar-nav menu-block nav-menu-main">
+                            <li class="active">
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="shop.html">Shop</a>
+                            </li>
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+                        </ul>
+                        
+                        <ul class="nav navbar-nav navbar-right menu-block ">
+
+                            <li class="nav-icon-main" style="padding-right: 0;">
+                                <a href="#" data-toggle="modal" data-target="#modal-search"><i class="fas fa-search"></i></a>
+                            </li>
+                            <li class="hover-down nav-icon-main" style="padding-right: 0;">
+                                <a data-toggle="modal" data-target="#modal-user"><i class="fas fa-user"></i></a>
+                            </li>
+                            <li class="nav-icon-main nav-icon-cart" >
+                                <a href="javascript:void(0)">
+                                    <i class="fas fa-shopping-basket cart">
+                                        <span>0</span>
+                                    </i>
+                                    
+                                    <span class="price-amount">
+                                        <span class="price-currency-symbol">$</span>
+                                        0.00
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-icon-main nav-icon-bars" style="padding-left: 0px;">
+                                <a href="javascript:void(0)"><i class="fas fa-bars"></i></a>
+                            </li>
+                        </ul>
+                </div>                                      
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SANG -->
+        <header>
+            <div class="slides">
+                <div class="car-slides">
+                    <img class="image-slide-page" src="images/bg_sd.jpeg" alt="">
+                </div>
+
+                <div class="my-nav">
+                    <div class="nav-slogan">
+                        <span class="site-welcome">Welcome to our online store!</span>
+                    </div>
+
+                    <div class="nav-site">
+                        <div class="flex-container">
+                            <div class="nav-logo">
+                                <img src="images/logo.png" alt="">
+                            </div>
+                                <div class="nav-block block-flex">
+                                <div class="nav-menu clearfix">
+                                    <div class="logo-mobile">
+                                        <img src="images/logo-text.png" alt="">
+                                    </div>
+                                    <div class="">
+                                        <ul class="nav navbar-nav menu-block hide-mobile">
+                                            <li class="active">
+                                                <a href="#">Home</a>
+                                            </li>
+                                            <li>
+                                                <a href="shop.html">Shop</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Blog</a>
+                                            </li>
+                                            <li>
+                                                <a href="contact.html">Contact</a>
+                                            </li>
+                                            <li>
+                                                <a href="about.html">About</a>
+                                            </li>
+                                        </ul>
+                                        
+                                        <ul class="nav nav-icon navbar-nav navbar-right menu-block ">
+                                            <li class="nav-icon-search" style="padding-right: 0;">
+                                                <a href="" data-toggle="modal" data-target="#modal-search"><i class="fas fa-search"></i></a>
+                                            </li>
+                                            <li class="nav-icon-user" style="padding-right: 0;">
+                                                <a href="" data-toggle="modal" data-target="#modal-user"><i class="fas fa-user"></i></a>
+                                            </li>
+                                            <li class="nav-icon-cart">
+                                                <a href="javascript:void(0)">
+                                                    <i class="fas fa-shopping-basket cart">
+                                                        <span>0</span>
+                                                    </i>
+                                                    
+                                                    <span class="price-amount">
+                                                        <span class="price-currency-symbol">$</span>
+                                                        0.00
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-icon-main nav-icon-bars" style="padding-left: 0px;">
+                                                <a href="javascript:void(0)"><i class="fas fa-bars"></i></a>
+                                            </li>
+                                        </ul>
+                                   </div>                                      
+
+                                </div>
+                                <div class="nav-search clearfix">
+                                    <form method="get">
+                                        <label class="screen-reader-text"><i class="ion-ios-search"></i></label>
+                                        <input type="text" class="search-field" placeholder="Search products…" value="" name="s">
+                                        <button type="submit" class="btn-site" value="Search">Search</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="modal-user" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Sign in</h4>
+                </div>
+                <div class="modal-body modal-user">
+                    
+                    <form class="form-site" action="" method="POST" role="form">
+                    
+                        <div class="form-group">
+                            <label for="">Username or email <span>*</span></label>
+                            <input type="text" name="username" placeholder="...">
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="">Password <span>*</span></label>
+                            <input type="password" name="password" placeholder="...">
+                        </div>
+
+                        <p><a href="">
+                            Lost your password?
+                        </a></p>
+                    
+                        <button type="submit" class="btn-site">Login</button>
+
+                        <button type="submit" class="btn-site-outline">Create account</button>
+                        
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Seach -->
+    <div class="modal fade" id="modal-search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Seach</h4>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="nav-search clearfix">
+                        <form method="get">
+                            <label class="screen-reader-text"><i class="ion-ios-search"></i></label>
+                            <input type="text" class="search-field" placeholder="Search products…" value="" name="s">
+                            <button type="submit" class="btn-site" value="Search">Search</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="side-nav-cart side-nav">
+
+        <div class="side-list-cart">
+
+            <div class="side-header clearfix">
+                <h4>shopping cart</h4>
+                <a href="javascript:void(0)" class="close-side-cart">
+                    <span>close</span>                        
+                </a>
+            </div>
+
+            <!-- <p class="cart-empty">No products in the cart.</p> -->
+
+            <div id="" class="list-cart-child clearfix">
+                <ul>
+
+                    <li>
+                        <div>
+                            <a href="">
+                                <b class="ion-ios-close-outline"></b>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="images/hungimges/product-01.jpg" alt="">
+                        </div>
+                        <div class="cart-info-product">
+                            <h4>Nike React Metcon AMP</h4>
+                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <a href="">
+                                <b class="ion-ios-close-outline"></b>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="images/hungimges/product-04.jpg" alt="">
+                        </div>
+                        <div class="cart-info-product">
+                            <h4>Nike React Metcon AMP</h4>
+                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <a href="">
+                                <b class="ion-ios-close-outline"></b>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="images/hungimges/product-04.jpg" alt="">
+                        </div>
+                        <div class="cart-info-product">
+                            <h4>Nike React Metcon AMP</h4>
+                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <a href="">
+                                <b class="ion-ios-close-outline"></b>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="images/hungimges/product-04.jpg" alt="">
+                        </div>
+                        <div class="cart-info-product">
+                            <h4>Nike React Metcon AMP</h4>
+                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <a href="">
+                                <b class="ion-ios-close-outline"></b>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="images/hungimges/product-04.jpg" alt="">
+                        </div>
+                        <div class="cart-info-product">
+                            <h4>Nike React Metcon AMP</h4>
+                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <a href="">
+                                <b class="ion-ios-close-outline"></b>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="images/hungimges/product-04.jpg" alt="">
+                        </div>
+                        <div class="cart-info-product">
+                            <h4>Nike React Metcon AMP</h4>
+                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <a href="">
+                                <b class="ion-ios-close-outline"></b>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="images/hungimges/product-04.jpg" alt="">
+                        </div>
+                        <div class="cart-info-product">
+                            <h4>Nike React Metcon AMP</h4>
+                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <a href="">
+                                <b class="ion-ios-close-outline"></b>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="images/hungimges/product-04.jpg" alt="">
+                        </div>
+                        <div class="cart-info-product">
+                            <h4>Nike React Metcon AMP</h4>
+                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <a href="">
+                                <b class="ion-ios-close-outline"></b>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="images/hungimges/product-04.jpg" alt="">
+                        </div>
+                        <div class="cart-info-product">
+                            <h4>Nike React Metcon AMP</h4>
+                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footed-cart clearfix">
+                <h4>subtotal <span>$15.25</span></h4>
+                <button class="btn-site">View cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="side-nav-menu-mobile side-nav">
+
+        <div class="side-list-cart">
+
+            <div class="side-header clearfix">
+                <h4>Menu</h4>
+                <a href="javascript:void(0)" class="close-side-mobile-menu">
+                    <span>close</span>                        
+                </a>
+            </div>
+
+            <div class="side-menu-mobile">
+                <ul class="nav navbar-nav menu-block">
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Shop</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="" data-toggle="modal" data-target="#modal-user">Login</a>
+                    </li>
+                    <li>
+                        <a href="">Cart</a>
+                    </li>
+                    <li>
+                        <div class="nav-search clearfix">
+                            <form method="get">
+                                <!-- <label class="screen-reader-text"><i class="ion-ios-search"></i></label> -->
+                                <input type="text" class="search-field" placeholder="Search..." value="" name="s">
+                                <button type="submit" class="btn-site" value="Search">
+                                    <i class="ion-ios-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     
     <section>
         <div class="container-fuild">
@@ -40,14 +453,147 @@
                 </div>
             </div>
 
-            <div class="container-fluid">
+            <div class="container-fluid cart-main">
                 
                 <div class="row">
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-8">
-                        
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+           
+                        <!-- <table class="table-cart clearfix">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td class="remove-product">
+                                        <a href="">
+                                            <b class="ion-ios-close-outline"></b>
+                                        </a>
+                                    </td>
+
+                                    <td style="vertical-align: middle;" class="image-product">
+                                        <a href="">
+                                            <img src="images/hungimges/product-01.jpg" alt="">
+                                        </a>
+                                    </td>
+
+                                    <td class="name-product">
+                                        <h4><a href="">
+                                            Nike React Metcon AMP
+                                        </a></h4>
+                                    </td>
+
+                                    <td class="price-product">
+                                        <span class="price">$12.79</span>
+                                    </td>
+
+                                    <td class="quantity-product">
+                                        <input type="number" value="1">
+                                    </td>
+
+                                    <td class="subtotal-product">
+                                        <span>$12.79</span>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table> -->
+
+                        <div class="view-content">
+                            <table class="views-table cols-6 table-cart">
+                                <thead>
+                                    <tr>                                        
+                                        <th class="views-field "></th>
+                                        <th class="views-field "></th>
+                                        <th class="views-field views-field-field-name">Product</th>
+                                        <th class="views-field views-field-field-price">Price</th>
+                                        <th class="views-field views-field-quantity">Quantity</th>
+                                        <th class="views-field views-field-commerce-total">Subtotal</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd views-row-first views-row-last">
+                                        <td class="views-field remove-product">
+                                            <a href="">
+                                                <b class="ion-ios-close-outline"></b>
+                                            </a>
+                                        </td>
+                                        <td class="views-field image-product">
+                                            <img src="images/hungimges/product-10.jpg" alt="">
+                                        </td>
+                                        <td class="views-field views-field-field-colour name-product">
+                                            <h4><a href="">
+                                                Nike React Metcon AMP
+                                            </a></h4>
+                                        </td>
+                                        <td class="views-field views-field-field-size price-product">
+                                            <span class="price">$12.79</span>
+                                        </td>
+                                        <td class="views-field views-field-quantity quantity-product">
+                                            <input type="number" value="1">
+                                        </td>
+                                        <td class="views-field views-field-commerce-total subtotal-product">
+                                            <span>$12.79</span>
+                                        </td>
+                                        
+                                    </tr>
+
+                                    <tr class="odd views-row-first views-row-last">
+                                        <td class="views-field remove-product">
+                                            <a href="">
+                                                <b class="ion-ios-close-outline"></b>
+                                            </a>
+                                        </td>
+                                        <td class="views-field image-product">
+                                            <img src="images/hungimges/product-10.jpg" alt="">
+                                        </td>
+                                        <td class="views-field views-field-field-colour name-product">
+                                            <h4><a href="">
+                                                Nike React Metcon AMP
+                                            </a></h4>
+                                        </td>
+                                        <td class="views-field views-field-field-size price-product">
+                                            <span class="price">$12.79</span>
+                                        </td>
+                                        <td class="views-field views-field-quantity quantity-product">
+                                            <input type="number" value="1">
+                                        </td>
+                                        <td class="views-field views-field-commerce-total subtotal-product">
+                                            <span>$12.79</span>
+                                        </td>
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
 
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+
+                        <div class="cart-code-sale">
+                            <h2>Coupon code</h2>
+
+                            
+                            <form action="" method="POST" role="form">
+                            
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Coupon code">
+                                </div>
+                            
+                                <button type="submit" class="btn-site">Apply</button>
+                            </form>
+                            
+                        </div>
+
                         <div class="cart-totals">
 
                             <h2>Cart totals</h2>
@@ -56,20 +602,30 @@
                         
                                 <tr class="cart-subtotal">
                                     <th>Subtotal</th>
-                                    <td data-title="Subtotal"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>191.23</span></td>
+                                    <td data-title="Subtotal"><span class="Price-currencySymbol">$</span>191.23</span></td>
+                                </tr>
+
+                                <tr class="cart-out-price">
+                                    <th>Shipping</th>
+                                    <td data-title="Subtotal">+ <span class="Price-currencySymbol">$</span>0.00</td>
+                                </tr>
+
+                                <tr class="cart-out-price">
+                                    <th>Code Sale</th>
+                                    <td data-title="Subtotal">- <span class="Price-currencySymbol">$</span>0.00</td>
                                 </tr>
 
                                 <tr class="order-total">
                                     <th>Total</th>
-                                    <td data-title="Total"><strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>191.23</span></strong> </td>
+                                    <td data-title="Total"><strong><span class="Price-currencySymbol">$</span>191.23</strong> </td>
                                 </tr>
                                 
                             </table>
                         
-                            <div class="wc-proceed-to-checkout">
+                            <div class="proceed-to-checkout">
                                 
-                                <a href="" class="">
-                                Proceed to checkout</a>
+                                <a href="" class="btn-site">
+                                checkout</a>
                             </div>
                         
                             
@@ -85,6 +641,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- Hưng js -->
     <script src="js/hung.js"></script>
     <!-- Sang js -->
