@@ -892,10 +892,11 @@ table {
 /* Trang register */
 #login .h_form_register{
     width: 40%;
-    height: 400px;
+    height: 100%;
     background-color: #f6f6f6;
     margin: auto;
     padding:10px 15px;
+    margin-bottom: 40px;
 }
 #login .h_form_register h2{
     margin: 0px;
@@ -948,4 +949,148 @@ table {
 #login .h_form_register .h_Login_back a:hover{
     text-decoration: none;
     color: red;
+}
+
+
+/* =====================================Trang checkout */
+#checkout .h_content_checkout .h_form_cnt_checkout .h_content_firstname,#checkout .h_content_checkout .h_form_diff_address .h_content_firstname{
+    width: 49.2%;
+    float: left;
+}
+#checkout .h_content_checkout .h_form_cnt_checkout .h_content_lastname,#checkout .h_content_checkout .h_form_diff_address .h_content_lastname{
+    width: 49.2%;
+    float: right;
+}
+#checkout .h_content_checkout .h_form_cnt_checkout label,#checkout .h_content_checkout .h_form_diff_address label{
+    width: 100%;
+}
+#checkout .h_content_checkout .h_content_order_note label{
+    width: 100%;
+} 
+#checkout .h_content_checkout .h_form_cnt_checkout input,#checkout .h_content_checkout .h_form_diff_address input{
+    width: 100%;
+}
+#checkout .h_content_checkout .h_form_cnt_checkout .input-text,#checkout .h_content_checkout .h_form_diff_address .input-text{
+    padding: 0.6180469716em;
+    background-color: #ffffff;
+    color: #626262;
+    border: 2px solid;
+    border-color: #ebebeb;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    font-weight: normal;
+    border-radius: 3px;
+    outline: 0;
+    margin-bottom: 5px;
+}
+#checkout .h_content_checkout .h_form_cnt_checkout .h_content_country select,#checkout .h_content_checkout .h_form_diff_address .h_content_country select{
+    width: 100%;
+    background-color: #ffffff;
+    color: #626262;
+    border: 2px solid;
+    border-color: #ebebeb;
+    padding: 7px;
+}
+#checkout .h_content_checkout .h_content_order_note textarea{
+    width: 100%;
+    background-color: #ffffff;
+    color: #626262;
+    border: 2px solid;
+    border-color: #ebebeb;
+    padding: 7px;
+    height: 100px;
+}
+#checkout .h_content_checkout .h_form_cnt_checkout .input-checkbox,#checkout .h_content_checkout .h_form_diff_address .input-checkbox{
+    width: auto;
+}
+#checkout .h_content_checkout .h_content_df_address{
+    position: relative;
+}
+#checkout .h_content_checkout .h_content_df_address .input-checkbox{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+#checkout .h_content_checkout .h_content_right_all {
+    background-color: #F6F6F6;
+    border: 6px solid #ebebeb;
+    padding: 20px;
+}
+#checkout .h_content_checkout .h_content_right_all h2{
+    font-weight: 700;
+    margin: 0px;
+}
+#checkout .h_content_checkout .h_content_right_all .h_content_right_content{
+    padding: 0 30px;
+    background-color: white;
+}
+#checkout .h_content_checkout .h_content_right_all .h_content_right_content table{
+    
+    width: 100%;
+}
+#checkout .h_content_checkout .h_content_right_all .h_content_right_content tr{
+    border-bottom:1px solid #F6F6F6 ;
+}
+#checkout .h_content_checkout .h_content_right_all .h_content_right_content tr td{
+    
+    height: 40px;
+    padding: 10px 0;
+    text-align: right;
+}
+#checkout .h_content_checkout .h_content_right_all .h_content_right_content tr td nav ul li{
+    /* float: right; */
+    width: 100%;
+    display: block;
+    text-align: right;
+}
+#checkout .h_content_checkout .h_content_right_all .h_content_right_content table .h_content_right_content_td_total{
+    color: red;
+    font-size: 30px;
+    font-weight: 700;
+}
+input[type=radio]{
+    color: red;
+}
+#checkout .h_content_checkout .h_content_right_all .h_content_right_under_content li{
+    border-bottom: 1px solid rgb(216, 214, 214);
+}
+#checkout .h_content_checkout .h_content_right_all .h_content_right_under_content .h_content_right_under_PP a{
+    text-decoration: none;
+    color: red;
+    font-weight: 700;
+}
+#checkout .h_content_checkout .h_content_right_all .h_content_right_under_content h4{
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10px 0px;
+}
+/* #checkout .h_content_checkout .h_content_right_all .h_content_right_under_content h4::before{
+    content:"";
+    border-radius: 50%;
+    font-family: "ekommart-icon";
+} */
+#checkout .h_content_checkout .h_content_right_all .h_content_right_under_content p{
+    padding: 10px;
+}
+.active_checkout{
+    color: red;
+}
+#checkout .h_content_checkout .h_content_right_all .h_content_right_under_content h4 img{
+    width: 75px;
+    float: right;
+}
+#checkout .h_content_checkout .h_content_right_all .h_content_right_under_content button{
+    width: 100%;
+    height: 45px;
+    border: none;
+    background-color: #ef3636;
+    color: white;
+    font-weight: 700;
+}
+#checkout .h_content_checkout .h_content_right_all h2{
+    margin-bottom: 15px;
+}
+#checkout .h_rowtren .h_titleshop{
+    height: auto;
 }

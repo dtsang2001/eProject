@@ -152,6 +152,27 @@ $(function(){
         .children('.photo').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
     })
 
+    // Nút checkbox hiển thị form diff address
+    $('#h_form_diff').hide();
+    $('#checkbox1').click(function(){
+        if($(this).is(':checked')){
+            $('#h_form_diff').show();
+        }else{
+            $('#h_form_diff').hide();
+        }
+    })
 
+    //viết cho hiệu ứng trang checkout
+    $('.h_content_right_under_DBT .h_h4_DBT').addClass('active_checkout');
+    $('.h_content_right_under_content #h_h4_COD_content').slideUp();
+    $('.h_content_right_under_content #h_h4_PP_content').slideUp();
+    $('.h_content_right_under_content #h_h4_DBT_content').slideDown();
+    $('.h_content_right_under_content h4').click(function(){
+        $('.h_content_right_under_content p').slideUp();
+        // console.log('đã click');
+        $('.h_content_right_under_content h4').removeClass('active_checkout');
+        $(this).addClass('active_checkout');
+        $(this).next('.h_content_right_under_content p').slideToggle();
+    })
     
 });
