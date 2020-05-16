@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check out</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="./plugins/bootstrap-3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hung.css">
+    <link rel="stylesheet" href="css/nam.css">
+    <link rel="stylesheet" href="css/thang.css">
+    <link rel="stylesheet" href="css/sang.css">
+    <link rel="stylesheet" href="css/thang-responsive.css">
+    <link rel="stylesheet" href="css/sang-responsive.css">
+    <link rel="stylesheet" href="css/hung-responsive.css">
+</head>
+<body>
+    <section id="checkout">
+        <div class="container-fuild">
+            <div class="row h_rowtren h_responsive">
+                <div class="h_titleshop ">
+                    <div class="h_titleshop_left">
+                        <a href="">Check Out</a>
+                    </div>
+                    <div class="h_titleshop_right">
+                        <a href=""><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        <span><i class="fa fa-angle-right" aria-hidden="true"></i></span> Check out
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row h_content_checkout">
+                    <div class="col-md-7">
+                        <h2>Billing details</h2>
+                        <div class="h_form_cnt_checkout">
+                            <p class="h_content_firstname">
+                                <label for="">First name <span>*</span></label>
+                                <input type="text" class="input-text">
+                            </p>
+                            <p class="h_content_lastname">
+                                <label for="">Last name <span>*</span></label>
+                                <input type="text" class="input-text">
+                            </p>
+                            <p class="h_content_company_name">
+                                <label for="">Company name (optional)</label>
+                                <input type="text" class="input-text">
+                            </p>
+                            <p class="h_content_country">
+                                <label for="">Country / Reglon <span>*</span></label>
+                                <select name="" id="">
+                                    <option value="">US</option>
+                                    <option value="">UK</option>
+                                    <option value="">Việt Nam</option>
+                                    <option value="">Trung Quốc</option>
+                                    <option value="">Thái Lan</option>
+                                </select>
+                            </p>
+                            <p class="h_content_stress_address">
+                                <label for="">Stress address <span>*</span></label>
+                                <input type="text" class="input-text" placeholder="House number and stress name">
+                                <input type="text" class="input-text" placeholder="apartment, sult, unit, etc, ...s">
+                            </p>
+                            <p class="h_content_town_city">
+                                <label for="">Town / City (*)</label>
+                                <input type="text" class="input-text">
+                            </p>
+                            <p class="h_content_county">
+                                <label for="">County (Optional)</label>
+                                <input type="text" class="input-text">
+                            </p>
+                            <p class="h_content_postcode">
+                                <label for="">Postcode <span>*</span></label>
+                                <input type="text" class="input-text">
+                            </p>    
+                            <p class="h_content_phone">
+                                <label for="">Phone <span>*</span></label>
+                                <input type="text" class="input-text">
+                            </p>
+                            <p class="h_content_email_address">
+                                <label for="">Email address <span>*</span></label>
+                                <input type="text" class="input-text">
+                            </p>
+                            <p class="h_content_checkbox">
+                                <input type="checkbox" class="input-checkbox">
+                                <span>Create an account?</span>
+                            </p>
+                        </div>
+                        <div class="h_content_df_address">
+                            <h2>Ship to a different address?</h2>
+                            <input type="checkbox" class="input-checkbox" id="checkbox1">
+                        </div>
+                        <div class="h_form_diff_address" id="h_form_diff">
+                            <p class="h_content_firstname">
+                                <label for="">First name <span>*</span></label>
+                                <input type="text" class="input-text">
+                            </p>
+                            <p class="h_content_lastname">
+                                <label for="">Last name <span>*</span></label>
+                                <input type="text" class="input-text">
+                            </p>
+                            <p class="h_content_company_name">
+                                <label for="">Company name (optional)</label>
+                                <input type="text" class="input-text">
+                            </p>
+                            <p class="h_content_country">
+                                <label for="">Country / Reglon <span>*</span></label>
+                                <select name="" id="">
+                                    <option value="">US</option>
+                                    <option value="">UK</option>
+                                    <option value="">Việt Nam</option>
+                                    <option value="">Trung Quốc</option>
+                                    <option value="">Thái Lan</option>
+                                </select>
+                            </p>
+                            <p class="h_content_stress_address">
+                                <label for="">Stress address <span>*</span></label>
+                                <input type="text" class="input-text" placeholder="House number and stress name">
+                                <input type="text" class="input-text" placeholder="apartment, sult, unit, etc, ...s">
+                            </p>
+                            <p class="h_content_town_city">
+                                <label for="">Town / City (*)</label>
+                                <input type="text" class="input-text">
+                            </p>
+                            <p class="h_content_county">
+                                <label for="">County (Optional)</label>
+                                <input type="text" class="input-text">
+                            </p>
+                            <p class="h_content_postcode">
+                                <label for="">Postcode <span>*</span></label>
+                                <input type="text" class="input-text">
+                            </p>    
+                        </div>
+                        <p class="h_content_order_note">
+                            <label for="">Order notes (optional)</label>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                        </p>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="h_content_right_all">
+                            <h2>Your oder</h2>
+                            <div class="h_content_right_content">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Product</th>
+                                            <td>Subtotal</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                Kyrie 6 By Your
+                                                <strong class="product-quantity">×&nbsp;1</strong>
+                                            </td>
+                                            <td>$190.5</td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Kyrie 6 By Your
+                                                <strong class="product-quantity">×&nbsp;1</strong>
+                                            </th>
+                                            <td>$190.5</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>
+                                                Subtotal
+                                            </th>
+                                            <td>$190.5</td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Shipping
+                                            </th>
+                                            <td>
+                                                <nav>
+                                                    <ul>
+                                                        <li>Float rate
+                                                            <input type="radio" name="mot" >
+                                                        </li>
+                                                        <li>Free shipping
+                                                            <input type="radio" name="mot" >
+                                                        </li>
+                                                        <li>Local pickup
+                                                            <input type="radio" name="mot" >
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Total</th>
+                                            <td class="h_content_right_content_td_total">$190.85</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="h_content_right_under_content">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <div class="h_content_right_under_DBT">
+                                                <h4 class="h_h4_DBT">Direct bank transfer</h4>
+                                                <p id="h_h4_DBT_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eligendi ducimus eveniet cum animi est, minus amet eos odit, distinctio, laborum similique saepe mollitia ipsa ullam esse facilis optio. Eveniet nulla sequi quidem illum neque!</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="h_content_right_under_COD">
+                                                <h4 class="h_h4_COD">Cash on delivery</h4>
+                                                <p id="h_h4_COD_content">Pay with cash upon delivery</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="h_content_right_under_PP">
+                                                <h4 class="h_h4_PP">PayPal <span><a href="">What is paypal?</a></span><img src="images/hungimges/AM_mc_vs_ms_ae_UK.png" alt=""></h4>
+                                                <p id="h_h4_PP_content">pay via Paypal, you can </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <button type="submit">Place order</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Hưng js -->
+    <script src="js/hung.js"></script>
+    <!-- Sang js -->
+    <script src="js/sang.js"></script>
+</body>
+</html>
