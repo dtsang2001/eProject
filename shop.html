@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="">
+<html lang="en" >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,10 +29,8 @@
     <link rel="stylesheet" href="css/sang-responsive.css">
     <link rel="stylesheet" href="css/hung-responsive.css">
   </head>
-  <body >
+  <body ng-app="">
     <div ng-include="'menu.html'"></div>
-    <input type="text" ng-model="myInput">
-    <h2>{{myInput}}</h2>
     <!-- Hung -->
     <section>
       
@@ -423,6 +421,7 @@
             </div>
         </div>
     </section>
+    <div ng-include="'footer.html'"></div>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     
@@ -431,6 +430,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- Hưng js -->
     <script src="js/hung.js"></script>
+    <script src="js/sang.js"></script>
     <script src="js/angular.min.js"></script>
   </body>
 </html>

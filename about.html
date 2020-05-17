@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,13 +16,16 @@
     <!-- Bootstrap CSS -->
     <link href="./plugins/bootstrap-3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/sang.css">
     <link rel="stylesheet" href="css/hung.css">
     <link rel="stylesheet" href="css/nam.css">
     <link rel="stylesheet" href="css/thang.css">
+    <link rel="stylesheet" href="css/sang.css">
     <link rel="stylesheet" href="css/thang-responsive.css">
+    <link rel="stylesheet" href="css/sang-responsive.css">
+    <link rel="stylesheet" href="css/hung-responsive.css">
 </head>
 <body>
+    <div ng-include="'menu.html'"></div>
     <div class="container">
         <div class="row">
             <div class="t_imgStory col-md-6">
@@ -145,5 +148,15 @@
             </div>
         </div>
     </div>
+    <div ng-include="'footer.html'"></div>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Hưng js -->
+    <script src="js/hung.js"></script>
+    <script src="js/sang.js"></script>
 </body>
 </html>

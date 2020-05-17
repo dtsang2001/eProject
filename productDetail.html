@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/hung-responsive.css">
 </head>
 <body>
+    <div ng-include="'menu.html'"></div>
     <section id="productDetail">
         <div class="container-fuild">
             <div class="row h_rowtren h_responsive">
@@ -400,13 +401,15 @@
             </div>
         </div>
     </section>
+    <div ng-include="'footer.html'"></div>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    
+    <script src="js/angular.min.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- Hưng js -->
     <script src="js/hung.js"></script>
+    <script src="js/sang.js"></script>
 </body>
 </html>
