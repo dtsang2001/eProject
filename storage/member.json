@@ -1,0 +1,30 @@
+[
+    {
+        "Name" : "Nguyen Duc Thang",
+        "Avatar" : "images/thangimages/thang2.jpg",
+        "Job" : "Developer",
+        "Phone" : "0934526783",
+        "Email" : "thangdn@gmail.com"
+    },
+    {
+        "Name" : "Dinh The Sang",
+        "Avatar" : "images/thangimages/sang.jpg",
+        "Job" : "Developer",
+        "Phone" : "0934526783",
+        "Email" : "sangdt@gmail.com"
+    },
+    {
+        "Name" : "Nguyen Thanh Hung",
+        "Avatar" : "images/thangimages/hung.jpg",
+        "Job" : "Developer",
+        "Phone" : "0934526783",
+        "Email" : "hungtn@gmail.com"
+    },
+    {
+        "Name" : "Pham Van Nam",
+        "Avatar" : "images/thangimages/nam.jpg",
+        "Job" : "Developer",
+        "Phone" : "0934526783",
+        "Email" : "namvp@gmail.com"
+    }
+]

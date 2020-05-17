@@ -16,25 +16,6 @@ $( () => {
 
         position = scroll;
 
-    });
-
-    // const close_cart;
-
-    $('.close-side-cart').click( () => {
-        $('.side-nav-cart').removeClass('size-side');
-    });
-
-    $('.nav-icon-cart').click( () => {
-        $('.side-nav-cart').addClass('size-side');
-    });
-    
-
-    $('.close-side-mobile-menu').click( () => {
-        $('.side-nav-menu-mobile').removeClass('size-side');
-    });
-
-    $('.nav-icon-bars').click( () => {
-        $('.side-nav-menu-mobile').addClass('size-side');
-    });                             
+    });                        
     
 });

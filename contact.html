@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="">
+<html lang="en" ng-app="myApp" ng-controller="myCtrl">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,13 +21,35 @@
     <link rel="stylesheet" href="css/nam.css">
     <link rel="stylesheet" href="css/thang.css">
     <link rel="stylesheet" href="css/thang-responsive.css">
+    <link rel="stylesheet" href="css/sang-responsive.css">
+    <link rel="stylesheet" href="css/hung-responsive.css">
 
 </head>
 <body>
-    <div ng-include="'menu.html'"></div>
+    <div ng-include="'layouts/menu.html'"></div>
+
+    <div ng-include="'layouts/header.html'"></div>
+
+    <div ng-include="'layouts/modal.html'"></div>
+    
+    <div>
+        <div class="row h_rowtren h_responsive">
+            <div class="h_titleshop ">
+                <div class="h_titleshop_left">
+                    <a href="">Contact</a>
+                </div>
+                <div class="h_titleshop_right">
+                    <a href=""><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    <span><i class="fa fa-angle-right" aria-hidden="true"></i> Contact</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
     <div class="container" >
         <div class="row">
-            <div class="t_content col-md-4">
+            <div class="t_content col-xs-12 col-sm-12 col-md-4 col-lg-4">
                 <p>GET IN TOUCH</p>
                 <br>
                 <h3>Visit one of our agency locations or
@@ -46,7 +68,7 @@
                 <br>
                 <i class="ion-clock" style="margin-right: 10px;"> </i> Monday to Saturday: 9.00am to 16.pm
             </div>
-            <div class="t_map col-md-8">
+            <div class="t_map col-xs-12 col-sm-12 col-md-8 col-lg-8">
                 <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 500px;">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.2028126423584!2d105.7839097225188!3d21.04657966784879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab32dd484c53%3A0x4201b89c8bdfd968!2zMjM4IEhvw6BuZyBRdeG7kWMgVmnhu4d0LCBD4buVIE5odeG6vywgQ-G6p3UgR2nhuqV5LCBIw6AgTuG7mWksIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1589343014159!5m2!1svi!2s" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> 
                 </div>
@@ -54,10 +76,11 @@
         </div>
     </div>
 
-    <div class="container ">
+    <div class="container">
         <div class="row">
             <div class="t_frame clearfix">
-                <div class="t_form col-md-8" >
+
+                <div class="t_form col-xs-12 col-sm-12 col-md-8 col-lg-8" >
                     <p>LEAVE A MESSAGE</p>
                     <h2>We love to hear from you</h2>
                     <br>
@@ -71,62 +94,27 @@
                     <br>
                     <button class="btn btn-danger">Submit</button>
                 </div>
-                <div class="t_contact col-md-4">
+
+                <div class="t_contact col-xs-12 col-sm-12 col-md-4 col-lg-4" ng-repeat="m in mem">
+
                     <div class="t_ctc">
                         <div class="imgs">
-                            <img src="images/thangimages/thang2.jpg" alt="">
+                            <img src="{{m.Avatar}}" alt="">
                         </div>  
                         <div class="cnt">
-                        <h4>Nguyen Duc Thang</h4>
-                            <p>CEO</p>
-                            <p>Phone: + 844 123 444 77 88</p>
-                            <p>Email: thang@gmail.com</p>
+                            <h4>{{m.Name}}</h4>
+                            <p>{{m.Job}}</p>
+                            <p>Phone: {{m.Phone}}</p>
+                            <p>Email: {{m.Email}}</p>
                         </div>
                     </div>
-                    <div class="t_ctc">
-                        <div class="imgs">
-                            <img src="images/thangimages/sang.jpg" alt="">
-                        </div>
-                        <div class="cnt">
-                            <h4>Dinh The Sang</h4>
-                            <p>Developer</p>
-                            <p>Phone: + 844 123 444 77 88</p>
-                            <p>Email: sang@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="t_ctc">
-                        <div class="imgs">
-                            <img src="images/thangimages/hung.jpg" alt="">
-                        </div>
-                        <div class="cnt">
-                            <h4>Nguyen Thanh Hung</h4>
-                            <p>Support Fontend</p>
-                            <p>Phone: + 844 123 444 77 88</p>
-                            <p>Email: hung@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="t_ctc">
-                        <div class="imgs">
-                            <img src="images/thangimages/nam.jpg" alt="">
-                        </div>
-                        <div class="cnt">
-                            <h4>Pham Van Nam</h4>
-                            <p>Marketing</p>
-                            <p>Phone: + 844 123 444 77 88</p>
-                            <p>Email: nam@gmail.com</p>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
     </div>
 
-
-
-
-
-
-    <div ng-include="'footer.html'"></div>
+    <div ng-include="'layouts/footer.html'"></div>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/angular.min.js"></script>
@@ -136,5 +124,6 @@
     <!-- Hưng js -->
     <script src="js/hung.js"></script>
     <script src="js/sang.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

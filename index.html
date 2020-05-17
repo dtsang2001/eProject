@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="" ng-app="myApp" ng-controller="myCtrl">
 
 <head>
     <meta charset="utf-8">
@@ -28,69 +28,8 @@
 </head>
 
 <body>
-        <!-- SANG -->
-        <nav class="nav-fixed" id="nav-fixed">
-            <div class="clearfix">
-                <div class="nav-block">
-                    <div class="nav-menu clearfix">
-
-                        <div class="nav-responsive clearfix">
-
-                            <div class="navbar-header">
-                                <a class="navbar-brand" href="#">
-                                    <img src="images/logo-text.png" alt="" width="150px">
-                                </a>
-                            </div>
-
-                            <ul class="nav navbar-nav menu-block nav-menu-main">
-                                <li class="active">
-                                    <a href="#">Home</a>
-                                </li>
-                                <li>
-                                    <a href="shop.html">Shop</a>
-                                </li>
-                                <li>
-                                    <a href="#">Blog</a>
-                                </li>
-                                <li>
-                                    <a href="contact.html">Contact</a>
-                                </li>
-                                <li>
-                                    <a href="about.html">About</a>
-                                </li>
-                            </ul>
-                            
-                            <ul class="nav navbar-nav navbar-right menu-block ">
-
-                                <li class="nav-icon-main" style="padding-right: 0;">
-                                    <a href="#" data-toggle="modal" data-target="#modal-search"><i class="fas fa-search"></i></a>
-                                </li>
-                                <li class="hover-down nav-icon-main" style="padding-right: 0;">
-                                    <a data-toggle="modal" data-target="#modal-user"><i class="fas fa-user"></i></a>
-                                </li>
-                                <li class="nav-icon-main nav-icon-cart" >
-                                    <a href="javascript:void(0)">
-                                        <i class="fas fa-shopping-basket cart">
-                                            <span>0</span>
-                                        </i>
-                                        
-                                        <span class="price-amount">
-                                            <span class="price-currency-symbol">$</span>
-                                            0.00
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="nav-icon-main nav-icon-bars" style="padding-left: 0px;">
-                                    <a href="javascript:void(0)"><i class="fas fa-bars"></i></a>
-                                </li>
-                            </ul>
-                    </div>                                      
-
-                    </div>
-                </div>
-            </div>
-        </nav>
-
+    
+    <div ng-include="'layouts/menu.html'"></div>
         <!-- SANG -->
         <header>        
             
@@ -165,7 +104,7 @@
                                                 <a href="" data-toggle="modal" data-target="#modal-user"><i class="fas fa-user"></i></a>
                                             </li>
                                             <li class="nav-icon-cart">
-                                                <a href="javascript:void(0)">
+                                                <a href="javascript:void(0)" ng-click="cart()">
                                                     <i class="fas fa-shopping-basket cart">
                                                         <span>0</span>
                                                     </i>
@@ -177,7 +116,7 @@
                                                 </a>
                                             </li>
                                             <li class="nav-icon-main nav-icon-bars" style="padding-left: 0px;">
-                                                <a href="javascript:void(0)"><i class="fas fa-bars"></i></a>
+                                                <a href="javascript:void(0)" ng-click="menu_mobile()"><i class="fas fa-bars"></i></a>
                                             </li>
                                         </ul>
                                    </div>                                      
@@ -256,275 +195,7 @@
             </div>
     </header>
 
-    <!-- Modal Login -->
-    <div class="modal fade" id="modal-user" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">close</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Sign in</h4>
-                </div>
-                <div class="modal-body modal-user">
-                    
-                    <form class="form-site" action="" method="POST" role="form">
-                    
-                        <div class="form-group">
-                            <label for="">Username or email <span>*</span></label>
-                            <input type="text" name="username" placeholder="...">
-                        </div>
-                    
-                        <div class="form-group">
-                            <label for="">Password <span>*</span></label>
-                            <input type="password" name="password" placeholder="...">
-                        </div>
-
-                        <p><a href="">
-                            Lost your password?
-                        </a></p>
-                    
-                        <button type="submit" class="btn-site">Login</button>
-
-                        <button type="submit" class="btn-site-outline">Create account</button>
-                        
-                    </form>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Seach -->
-    <div class="modal fade" id="modal-search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">close</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Seach</h4>
-                </div>
-                <div class="modal-body">
-                    
-                    <div class="nav-search clearfix">
-                        <form method="get">
-                            <label class="screen-reader-text"><i class="ion-ios-search"></i></label>
-                            <input type="text" class="search-field" placeholder="Search products…" value="" name="s">
-                            <button type="submit" class="btn-site" value="Search">Search</button>
-                        </form>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="side-nav-cart side-nav">
-
-        <div class="side-list-cart">
-
-            <div class="side-header clearfix">
-                <h4>shopping cart</h4>
-                <a href="javascript:void(0)" class="close-side-cart">
-                    <span>close</span>                        
-                </a>
-            </div>
-
-            <!-- <p class="cart-empty">No products in the cart.</p> -->
-
-            <div id="" class="list-cart-child clearfix">
-                <ul>
-
-                    <li>
-                        <div>
-                            <a href="">
-                                <b class="ion-ios-close-outline"></b>
-                            </a>
-                        </div>
-                        <div>
-                            <img src="images/hungimges/product-01.jpg" alt="">
-                        </div>
-                        <div class="cart-info-product">
-                            <h4>Nike React Metcon AMP</h4>
-                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <a href="">
-                                <b class="ion-ios-close-outline"></b>
-                            </a>
-                        </div>
-                        <div>
-                            <img src="images/hungimges/product-04.jpg" alt="">
-                        </div>
-                        <div class="cart-info-product">
-                            <h4>Nike React Metcon AMP</h4>
-                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <a href="">
-                                <b class="ion-ios-close-outline"></b>
-                            </a>
-                        </div>
-                        <div>
-                            <img src="images/hungimges/product-04.jpg" alt="">
-                        </div>
-                        <div class="cart-info-product">
-                            <h4>Nike React Metcon AMP</h4>
-                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <a href="">
-                                <b class="ion-ios-close-outline"></b>
-                            </a>
-                        </div>
-                        <div>
-                            <img src="images/hungimges/product-04.jpg" alt="">
-                        </div>
-                        <div class="cart-info-product">
-                            <h4>Nike React Metcon AMP</h4>
-                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <a href="">
-                                <b class="ion-ios-close-outline"></b>
-                            </a>
-                        </div>
-                        <div>
-                            <img src="images/hungimges/product-04.jpg" alt="">
-                        </div>
-                        <div class="cart-info-product">
-                            <h4>Nike React Metcon AMP</h4>
-                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <a href="">
-                                <b class="ion-ios-close-outline"></b>
-                            </a>
-                        </div>
-                        <div>
-                            <img src="images/hungimges/product-04.jpg" alt="">
-                        </div>
-                        <div class="cart-info-product">
-                            <h4>Nike React Metcon AMP</h4>
-                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <a href="">
-                                <b class="ion-ios-close-outline"></b>
-                            </a>
-                        </div>
-                        <div>
-                            <img src="images/hungimges/product-04.jpg" alt="">
-                        </div>
-                        <div class="cart-info-product">
-                            <h4>Nike React Metcon AMP</h4>
-                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <a href="">
-                                <b class="ion-ios-close-outline"></b>
-                            </a>
-                        </div>
-                        <div>
-                            <img src="images/hungimges/product-04.jpg" alt="">
-                        </div>
-                        <div class="cart-info-product">
-                            <h4>Nike React Metcon AMP</h4>
-                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            <a href="">
-                                <b class="ion-ios-close-outline"></b>
-                            </a>
-                        </div>
-                        <div>
-                            <img src="images/hungimges/product-04.jpg" alt="">
-                        </div>
-                        <div class="cart-info-product">
-                            <h4>Nike React Metcon AMP</h4>
-                            <p>1 <i class="ion-android-close"></i> <span>$45.9</span></p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footed-cart clearfix">
-                <h4>subtotal <span>$15.25</span></h4>
-                <button class="btn-site">View cart</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="side-nav-menu-mobile side-nav">
-
-        <div class="side-list-cart">
-
-            <div class="side-header clearfix">
-                <h4>Menu</h4>
-                <a href="javascript:void(0)" class="close-side-mobile-menu">
-                    <span>close</span>                        
-                </a>
-            </div>
-
-            <div class="side-menu-mobile">
-                <ul class="nav navbar-nav menu-block">
-                    <li class="active">
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Shop</a>
-                    </li>
-                    <li>
-                        <a href="#">Blog</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="" data-toggle="modal" data-target="#modal-user">Login</a>
-                    </li>
-                    <li>
-                        <a href="">Cart</a>
-                    </li>
-                    <li>
-                        <div class="nav-search clearfix">
-                            <form method="get">
-                                <!-- <label class="screen-reader-text"><i class="ion-ios-search"></i></label> -->
-                                <input type="text" class="search-field" placeholder="Search..." value="" name="s">
-                                <button type="submit" class="btn-site" value="Search">
-                                    <i class="ion-ios-search"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <div ng-include="'layouts/modal.html'"></div>
 
     <!-- HUNG -->
     <section id="h_section">
@@ -863,84 +534,21 @@
 
     <!-- THANG -->
 
-    <footer class="footer-bs">
-        
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 footer-brand">
-                <h5><strong>CONTACT US</strong></h5>
-                <br>
-                <p>If you have any question, please contact us at Eyeonic.com</p>
-                <div>
-                <h3><i class="ion-android-call"></i><span style="font-size:15px"><strong>+048</strong>  </span><strong>800 456 789</strong>  </h3>
-            </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 footer-nav">
-                <h5><strong>STORE LOCATION</strong></h5>
-                <br>
-                
-                    <p>238 Hoàng Quốc Việt, Cầu Giấy, Hà Nội</p>
-                    <br>
-                    <p>Monday – Friday: 8am – 4pm</p>
-                    <p>Saturday: 9am – 5pm</p>
-                
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 footer-social">
-                <h5><strong>CATEGORIES</strong></h5>
-                <br>
-                <ul>
-	
-                    <li><a href="#">Sun Glasses</a></li>
-                    <li><a href="#">Contact Lenses</a></li>
-                    <li><a href="#">Glasses</a></li>
-                    <li><a href="#">VR Glasses</a></li>
-                </ul>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 footer-ns">
-                <h5><strong>NEWSLETTER</strong> </h5>
-                <br>
-                <p>Subscribe to the weekly newsletter for all the latest updates</p>
-                <p>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Your Email...">
-                    <span class="input-group-btn">
-                        <button class="btn btn-danger" type="button">Subscribe</button>
-                    </span>
-                </div><!-- /input-group -->
-                </p>
-            </div>
-            <hr>
-        </div>
-        <hr>
-        <div class="row footer-two">
-            <div class="col-md-4 footer-copyright">             
-                <p>Copyright © 2020 Eyeonic.com. All Rights Reserved.</p>                              
-            </div>
-            
-            <div class="col-md-4 footer-icon">
-                <a href=""><i class="ion-social-facebook"></i></a>
-                <a href=""><i class="ion-social-linkedin"></i></a>
-                <a href=""><i class="ion-social-twitter"></i></a>
-                <a href=""><i class="ion-social-instagram"></i></a>
-            </div>
-            
-            <div class="col-md-4 footer-payment">             
-                <img src="images/thangimages/payment.png" alt="">
-            </div>
-        </div>
-    </footer>
-
-
+    <div ng-include="'layouts/footer.html'"></div>
+    
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Bootstrap JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     <script src="js/angular.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="plugins/bootstrap-3/js/bootstrap.min.js"></script>
+
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- Hưng js -->
     <script src="js/hung.js"></script>
     <!-- Sang js -->
     <script src="js/sang.js"></script>
+    <!-- App js -->
+    <script src="js/app.js"></script>
 
 </body>
 </html>
