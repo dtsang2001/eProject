@@ -38,16 +38,24 @@ body{
     transform: translate(-50%,-50%);
     z-index: 4;
     transition: all 0.3s ease;
+    width: 128px
 }
 .h_3icon nav ul li a:hover{
     color: red;
     transition: all 0.3s ease;
+    border: 1px solid red;
+    display: inline-block;
+    padding: 10px;
+    height: 40px;    
+}
+.h_3icon nav ul li:hover {
+    /* border: 1px solid red; */
+    transition: all 0.3s ease;   
 }
 .item:hover .h_anhtren{
     position: absolute;
     top:45px;
-    left: 0;
-    
+    left: 0; 
     z-index: 2;
 }
 
@@ -57,15 +65,17 @@ body{
 
 .h_3icon nav ul li{
     float: left;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
-    padding: 5px;
+    /* padding: 5px; */
     margin-right: 1px;
 }
 .h_3icon nav ul li a{
-    display: inline-block;
-    height: 16px;
     color: black;
+    border: 1px solid black;
+    display: inline-block;
+    padding: 10px;
+    height: 40px;   
 }
 .h_cuoi{
     border-right: 1px solid black;
@@ -292,6 +302,7 @@ a{
 }
 .h_titleshop{
     padding:25px 110px;
+    height: 93px;
 }
 .row{
     margin-left: 0px;
@@ -584,7 +595,7 @@ table {
 }
 #productDetail .h_titleshop{
     text-align: center;
-    
+    height: 70px;
 }
 #productDetail .h_titleshop a{
     color: white;

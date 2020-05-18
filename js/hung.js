@@ -1,5 +1,7 @@
 $(function(){
     //viết cho nút
+    $('.h_titleproduct ul .h_moc a').addClass("selected"); 
+    $('.part2 .h_title_DAR ul li a').addClass("selected");
     $('.h_titleproduct ul li a').click(function(event) {
         console.log('hello');
         
@@ -24,6 +26,7 @@ $(function(){
             }else{
                 $(this).hide();
             }
+            
         })
         return false;
     });
