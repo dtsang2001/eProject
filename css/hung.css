@@ -645,6 +645,60 @@ table {
     text-align: center;
     border-radius: 5px;
 }
+#productDetail .h_khungto_right_color{
+    display: block ;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+#productDetail .h_khungto_right_color nav ul li{
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    float: left;
+    margin-right: 5px;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.3);
+    padding: 2px;
+    display: flex;
+}
+#productDetail .h_quantity{
+   clear: both;
+   padding-bottom: 10px;
+   width: 100%;
+   height: 60px;
+}
+#productDetail .h_quantity .h_quantity_add_cart{
+    float: right;
+    width: 70%;
+    background: none;
+    background-color: #ef3636;
+    border-color: #ef3636;
+    display: block;
+    text-align: center;
+    height: 45px;
+    border: none;
+    border-radius: 3px;
+    padding: 11px;
+    color: #fff;
+    font-weight: 700;
+    opacity: 0.5!important;
+    cursor: not-allowed;
+}
+#productDetail .h_quantity input{
+    width: 27%;
+    /* padding: .75em 40px .75em .75em; */
+    border-radius: 0;
+    text-align: left;
+    float: left;
+    height: 44px;
+}   
+#productDetail .h_khungto_right_color nav ul li:hover{
+    box-shadow: 0 0 0 3px rgba(0,0,0,.1);
+}
+
 #productDetail .h_description{
     padding: 10px 0px;
 }

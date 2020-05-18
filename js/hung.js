@@ -1,7 +1,11 @@
 $(function(){
     //viết cho nút
     $('.h_titleproduct ul .h_moc a').addClass("selected"); 
-    $('.part2 .h_title_DAR ul li a').addClass("selected");
+    $('.part2 .h_title_DAR ul .h_act a').addClass("selected");
+    $('.part2 .h_content_DAR .h_description').show();
+    $('.part2 .h_content_DAR .h_addi').hide();
+    $('.part2 .h_content_DAR .h_review').hide();
+    $('.part1 .h_khung_anh_nho .act .h_lopmo_anhnho').css("opacity","0");
     $('.h_titleproduct ul li a').click(function(event) {
         console.log('hello');
         
