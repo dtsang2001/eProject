@@ -440,17 +440,15 @@
     float: right;
 }
 
-.side-list-cart .footed-cart button{
+.side-list-cart .footed-cart a{
+    display: inline-block;
     margin: 7px 14px;
     padding: 8px 16px;
     width: 315px;
     margin-left: 50%;
     margin-right: 50%;
     transform: translate(-50%, -50%);
-    /* float: left; */
-}
-
-.side-list-cart .footed-cart button a{
+    text-align: center;
     font-family: Gilroy-Bold;
     color: #f1f1f1;
     text-decoration: none;
@@ -573,6 +571,17 @@
     margin-bottom: 10px;
 }
 
+.modal-body .form-site .btn-create-acc{
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+    font-family: Gilroy-Bold;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-body .form-site .btn-create-acc:hover,
 .modal-body .form-site button:hover{
     background-color: red;
     color: white;

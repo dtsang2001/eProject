@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Bootstrap CSS -->
     <link href="./plugins/bootstrap-3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Toastr -->
+    <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
+    <link rel="stylesheet" href="plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/hung.css">
     <link rel="stylesheet" href="css/nam.css">
@@ -31,170 +34,39 @@
     
     <div ng-include="'layouts/menu.html'"></div>
 
-    <div ng-include="'layouts/header-index.html'"></div>
+    <div ng-include="'layouts/header.html'"></div>
 
     <div ng-include="'layouts/modal.html'"></div>
 
-    <!-- HUNG -->
-    <section id="h_section">
-        <div>
-            <div class="h_titleproduct" style="background-image: url(images/hungimges/text_products.png);background-position: top center;padding: 25px 0 0 0;">
-                <div class="row clearfix">
-                    <ul>
-                        <li class="h_moc"><a href="" data-class="itemx">All</a></li>
-                        <li><i class="fas fa-circle" style="color: black ;font-size: 15px;"></i></li>
-                        <li ><a href="" data-class="sun_glass">Featured</a></li>
-                        <li><i class="fas fa-circle" style="color: black ;font-size: 15px;"></i></li>
-                        <li><a href="" data-class="contact_glass">New Arrivals</a></li>
-                        <li><i class="fas fa-circle" style="color: black ;font-size: 15px;"></i></li>
-                        <li><a href="" data-class="vr_glass">Best Sellers</a></li>
-                    </ul>
-                </div> 
-            </div>
-            <div class="h_allproduct">
-                <div class="row clearfix">
-                    
-                    <div ng-repeat="pro in product" class="col-lg-3 col-md-4 col-sm-6 col-xs-12 itemx {{pro.Slug_Cat}}">
-                        <div class="item clearfix ">
-                            <div class="anhduoi responsive">
-                                <div class="h_anhtren">
-                                    <img src="{{pro.Images[1]}}" alt="">
-                                </div>
-                                <div class="h_3icon">
-                                    <nav>
-                                        <ul>
-                                            <li class="nut1" data-hieuung="tooltip" title="Add to wishlist"><a href=""><i class='far fa-heart' style='font-size:18px'></i></a></li>
-                                            <li class="nut2" data-hieuung="tooltip" title="Quick view"><a href=""><i class="fas fa-eye" style='font-size:18px'></i></a></li>
-                                            <li class="nut3" data-hieuung="tooltip" title="Add to cart"><a href=""><i class='fas fa-shopping-cart' style='font-size:18px'></i></a></li>
-                                        <ul>
-                                    </nav>
-                                </div>
-                                <div class="h_lopmo"></div>
-                                <div class="h_anhduoi">
-                                    <img src="{{pro.Images[2]}}" class="responsive" alt="">
-                                </div>
-                            </div>
-                            <div class="h_namecate"><a href="">{{pro.Category}}</a></div>
-                            <div class="h_namepro"><a href="">{{pro.Name}}</a></div>
-                            <div class="h_price"><a href="">$ {{ pro.Price | currency:"":2}}</a></div>
-                            <div class="h_add clearfix"><a href="" ng-click="add_cart(pro)">Add Cart</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>   
-    </section>
-
-    <div class="t_blockquote">
-        <p class="mb-0">NEED-IT-NOW SALE <strong>60% OFF</strong> CLEARANCE IN STORES & ONLINE</p>
-    </div>
-
-    <!-- THANG -->
-    <section>
-        <div class="t_titlecat clearfix" style="height: 100px;">
-            <div class="row">
-                <h3>CATEGORIES</h3>
-            </div> 
-        </div>
-        <div>
-                
-            <div class="row t_header-child">
-                
-                <div class="t_block-column-wrap col-xs-12 col-sm-6 col-md-8 col-lg-8">
-                    <div class="res1">
-                    <div class="t_block-widget-wrap">
-                        <div class="t_img-hover-zoom">
-                            <img src="images/thangimages/cat1.jpg" alt="This zooms-in really well and smooth">
-                        </div>
-                        
-                            <div class="t_text-widget">
-                           
-                                <div class="t_main-text-widget">
-                                    <h4><a>Sun Glasses</a></h4>
-                                    <p>11 Products</p>
-                                </div>
-                            </div>
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="t_block-column-wrap col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                    <div class="res2">
-                    <div class="t_block-widget-wrap">
-                        <div class="t_img-hover-zoom">
-                            <img src="images/thangimages/cat2.jpg" alt="This zooms-in really well and smooth">
-                        </div>   
-                        
-                        <div class="t_text-widget">
-                            
-                            <div class="t_main-text-widget">
-                                <h4><a>Contact Lenses</a></h4>
-                                <p>35 Products</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-
-                <div class="t_block-column-wrap col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <div class="res3">
-                    <div class="t_block-widget-wrap">
-                        <div class="t_img-hover-zoom">
-                            <img src="images/thangimages/cat3.jpg" alt="This zooms-in really well and smooth">
-                        </div>   
-                        
-                        <div class="t_text-widget">
-                            
-                            <div class="t_main-text-widget">
-                                <h4><a>Glasses</a></h4>
-                                <p>11 Products</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-
-                <div class="t_block-column-wrap col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <div class="res4">
-                    <div class="t_block-widget-wrap">
-                        <div class="t_img-hover-zoom">
-                            <img src="images/thangimages/cat4.jpg" alt="This zooms-in really well and smooth">
-                        </div>
-
-                        <div class="t_text-widget">
-                            
-                            <div class="t_main-text-widget">
-                                <h4><a>VR Glasses</a></h4>
-                                <p>9 Product</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                
-            </div>
-            
-        </div>
-        
-    </section>
-
-    <!-- NAM -->
-    <section>
-        
-    </section>
+    <ng-view></ng-view>
 
     <!-- THANG -->
 
     <div ng-include="'layouts/footer.html'"></div>
     
     <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
     <script src="js/angular.min.js"></script>
+    <script src="plugins/angular-route/angular-route.min.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="plugins/bootstrap-3/js/bootstrap.min.js"></script>
+    <!-- jQuery-ui -->
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Toastr -->
+    <script src="plugins/toastr/toastr.min.js"></script>
+    <script src="plugins/sweetalert/sweetalert2.all.min.js"></script>
 
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript">
+
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000
+        });
+        
+    </script>
+
     <!-- Hưng js -->
     <script src="js/hung.js"></script>
     <!-- Sang js -->

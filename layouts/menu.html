@@ -13,20 +13,20 @@
                         </div>
 
                         <ul class="nav navbar-nav menu-block nav-menu-main">
-                            <li>
-                                <a href="index.html">Home</a>
+                            <li ng-class="{ active: isActive('/')}">
+                                <a href="#!">Home</a>
                             </li>
-                            <li>
-                                <a href="shop.html">Shop</a>
+                            <li ng-class="{ active: isActive('/shop')}">
+                                <a href="#!shop">Shop</a>
                             </li>
-                            <li>
-                                <a href="blog.html">Blog</a>
+                            <li ng-class="{ active: isActive('/blog')}">
+                                <a href="#!blog">Blog</a>
                             </li>
-                            <li>
-                                <a href="contact.html">Contact</a>
+                            <li ng-class="{ active: isActive('/contact')}">
+                                <a href="#!contact">Contact</a>
                             </li>
-                            <li>
-                                <a href="about.html">About</a>
+                            <li ng-class="{ active: isActive('/about')}">
+                                <a href="#!about">About</a>
                             </li>
                         </ul>
                         

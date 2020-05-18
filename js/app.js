@@ -1,7 +1,37 @@
 
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ['ngRoute']);
 
-app.controller('myCtrl', ($scope, $http) => {
+app.config( ($routeProvider) => {
+    $routeProvider
+    .when('/', {
+        templateUrl: 'pages/home.html',
+        activetab: 'home'
+    })
+    .when('/shop', {
+        templateUrl: 'pages/shop.html',
+        activetab: 'shop'
+    })
+    .when('/blog', {
+        templateUrl: 'pages/blog.html'
+    })
+    .when('/contact', {
+        templateUrl: 'pages/contact.html'
+    })
+    .when('/about', {
+        templateUrl: 'pages/about.html'
+    })
+    .when('/cart', {
+        templateUrl: 'pages/cart.html'
+    })
+    .when('/checkout', {
+        templateUrl: 'pages/checkout.html'
+    })
+    .when('/login', {
+        templateUrl: 'pages/login.html'
+    })
+})
+
+app.controller('myCtrl', ($scope, $http, $location) => {
 
     $http.get('storage/member.json').then( (res) => {
         $scope.mem = res.data
@@ -64,6 +94,8 @@ app.controller('myCtrl', ($scope, $http) => {
         sessionStorage.setItem('cart_qty', $scope.carts_qty);
         sessionStorage.setItem('cart_total', $scope.carts_total);
         $scope.cart = pro;
+        $('.side-nav-cart').addClass('size-side');
+        toastr.success("<b> Add product to cart success !!! </b>");
     }
 
     $scope.remove_cart = (Id) => {
@@ -76,6 +108,8 @@ app.controller('myCtrl', ($scope, $http) => {
             sessionStorage.setItem('cart_qty', $scope.carts_qty);
             sessionStorage.setItem('cart_total', $scope.carts_total);
             sessionStorage.setItem('cart', angular.toJson($scope.carts));
+
+            toastr.success("<b>Remove product success!!!</b>");
         }
     }
 
@@ -93,5 +127,26 @@ app.controller('myCtrl', ($scope, $http) => {
 
     $scope.close_menu_mobile = () => {
         $('.side-nav-menu-mobile').removeClass('size-side');
+    }
+
+    $scope.sort_cart = (obj) => {
+        var cat = obj.target.getAttribute("data-class")
+
+        $('.h_titleproduct ul li a').removeClass("selected");
+        $(this).addClass("selected");  
+        
+        $('.h_allproduct .itemx').each(function(){
+            if($(this).hasClass(cat)){
+                $(this).show();
+            }else{
+                $(this).hide();
+            }
+            
+        })
+        return false;
+    }
+
+    $scope.isActive = function(route) {
+        return route === $location.path();
     }
 });

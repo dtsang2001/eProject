@@ -26,7 +26,7 @@
                 
                     <button type="submit" class="btn-site">Login</button>
 
-                    <button type="submit" class="btn-site-outline">Create account</button>
+                    <a href="#!login" data-dismiss="modal" aria-label="Close" class="btn-create-acc btn-site-outline">Create account</a>
                     
                 </form>
                 
@@ -94,7 +94,7 @@
 
         <div class="footed-cart clearfix">
             <h4>subtotal <span>$ {{carts_total | currency:"":2}}</span></h4>
-            <button class="btn-site"><a href="view-cart.html">View cart</a></button>
+            <a class="btn-site" ng-click="close_cart()" href="#!cart">View cart</a>
         </div>
     </div>
 </div>
@@ -113,25 +113,25 @@
         <div class="side-menu-mobile">
             <ul class="nav navbar-nav menu-block">
                 <li class="active">
-                    <a href="index.html">Home</a>
+                    <a href="#!">Home</a>
                 </li>
                 <li>
-                    <a href="shop.html">Shop</a>
+                    <a href="#!shop">Shop</a>
                 </li>
                 <li>
-                    <a href="blog.html">Blog</a>
+                    <a href="#!blog">Blog</a>
                 </li>
                 <li>
-                    <a href="contact.html">Contact</a>
+                    <a href="#!contact">Contact</a>
                 </li>
                 <li>
-                    <a href="about.html">About</a>
+                    <a href="#!about">About</a>
                 </li>
                 <li>
                     <a href="" data-toggle="modal" data-target="#modal-user">Login</a>
                 </li>
                 <li>
-                    <a href="">Cart</a>
+                    <a href="#!cart">Cart</a>
                 </li>
                 <li>
                     <div class="nav-search clearfix">

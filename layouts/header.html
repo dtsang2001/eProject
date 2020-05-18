@@ -1,9 +1,5 @@
 <header>
     <div class="slides">
-        <!-- <div class="car-slides">
-            <img class="image-slide-page" src="images/bg.jpg" alt="">
-        </div> -->
-
         <div class="my-nav my-nav-mobile">
             <div class="nav-slogan">
                 <span class="site-welcome">Welcome to our online store!</span>
@@ -21,20 +17,20 @@
                             </div>
                             <div class="">
                                 <ul class="nav navbar-nav menu-block hide-mobile">
-                                    <li class="active">
-                                        <a href="index.html">Home</a>
+                                    <li ng-class="{ active: isActive('/')}">
+                                        <a href="#!">Home</a>
                                     </li>
-                                    <li>
-                                        <a href="shop.html">Shop</a>
+                                    <li ng-class="{ active: isActive('/shop')}">
+                                        <a href="#!shop">Shop</a>
                                     </li>
-                                    <li>
-                                        <a href="blog.html">Blog</a>
+                                    <li ng-class="{ active: isActive('/blog')}">
+                                        <a href="#!blog">Blog</a>
                                     </li>
-                                    <li>
-                                        <a href="contact.html">Contact</a>
+                                    <li ng-class="{ active: isActive('/contact')}">
+                                        <a href="#!contact">Contact</a>
                                     </li>
-                                    <li>
-                                        <a href="about.html">About</a>
+                                    <li ng-class="{ active: isActive('/about')}">
+                                        <a href="#!about">About</a>
                                     </li>
                                 </ul>
                                 
