@@ -66,54 +66,28 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="odd views-row-first views-row-last">
+                                    <tr ng-repeat="c in carts" class="odd views-row-first views-row-last">
                                         <td class="views-field remove-product">
-                                            <a href="">
+                                            <a ng-click="remove_cart(c.Id)" href="">
                                                 <b class="ion-ios-close-outline"></b>
                                             </a>
                                         </td>
                                         <td class="views-field image-product">
-                                            <img src="images/hungimges/product-10.jpg" alt="">
+                                            <img src="{{c.Images[1]}}" alt="">
                                         </td>
                                         <td class="views-field views-field-field-colour name-product">
                                             <h4><a href="">
-                                                Nike React Metcon AMP
+                                                {{c.Name}}
                                             </a></h4>
                                         </td>
                                         <td class="views-field views-field-field-size price-product">
-                                            <span class="price">$12.79</span>
+                                            <span class="price">${{c.Price | currency:"":2}}</span>
                                         </td>
                                         <td class="views-field views-field-quantity quantity-product">
-                                            <input type="number" value="1">
+                                            <input type="number" value="{{c.quantity}}">
                                         </td>
                                         <td class="views-field views-field-commerce-total subtotal-product">
-                                            <span>$12.79</span>
-                                        </td>
-                                        
-                                    </tr>
-
-                                    <tr class="odd views-row-first views-row-last">
-                                        <td class="views-field remove-product">
-                                            <a href="">
-                                                <b class="ion-ios-close-outline"></b>
-                                            </a>
-                                        </td>
-                                        <td class="views-field image-product">
-                                            <img src="images/hungimges/product-10.jpg" alt="">
-                                        </td>
-                                        <td class="views-field views-field-field-colour name-product">
-                                            <h4><a href="">
-                                                Nike React Metcon AMP
-                                            </a></h4>
-                                        </td>
-                                        <td class="views-field views-field-field-size price-product">
-                                            <span class="price">$12.79</span>
-                                        </td>
-                                        <td class="views-field views-field-quantity quantity-product">
-                                            <input type="number" value="1">
-                                        </td>
-                                        <td class="views-field views-field-commerce-total subtotal-product">
-                                            <span>$12.79</span>
+                                            <span>$ {{c.subtotal_price | currency:"":2}}</span>
                                         </td>
                                         
                                     </tr>

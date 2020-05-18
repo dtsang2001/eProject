@@ -76,7 +76,7 @@
 
                 <li ng-repeat="c in carts">
                     <div>
-                        <a href="">
+                        <a ng-click="remove_cart(c.Id)" href="">
                             <b class="ion-ios-close-outline"></b>
                         </a>
                     </div>
@@ -93,7 +93,7 @@
         </div>
 
         <div class="footed-cart clearfix">
-            <h4>subtotal <span>$15.25</span></h4>
+            <h4>subtotal <span>$ {{carts_total | currency:"":2}}</span></h4>
             <button class="btn-site"><a href="view-cart.html">View cart</a></button>
         </div>
     </div>

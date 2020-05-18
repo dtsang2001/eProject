@@ -41,12 +41,12 @@
                             <li class="nav-icon-cart">
                                 <a href="javascript:void(0)" ng-click="nav_cart()">
                                     <i class="fas fa-shopping-basket cart">
-                                        <span>0</span>
+                                        <span>{{carts_qty}}</span>
                                     </i>
                                     
                                     <span class="price-amount">
                                         <span class="price-currency-symbol">$</span>
-                                        0.00
+                                        {{carts_total | currency:"":2}}
                                     </span>
                                 </a>
                             </li>
