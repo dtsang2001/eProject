@@ -303,8 +303,7 @@
 }
 .t_form{
 	margin-top: 60px;
-	padding-left: 80px;
-
+	padding-left: 15px;
 }
 .t_form p{
 	font-family: Gilroy;
@@ -330,15 +329,16 @@
 }
 
 .t_contact .t_ctc{
+	/* flex-grow: 10; */
 	display: flex;
 }
 
 .t_ctc img{
+	
 	width: 60px;
 	height: 60px;
 	object-fit: cover;
 	border-radius: 50%;
-	/* float: left; */
 }
 
 .t_ctc .cnt{
@@ -387,21 +387,18 @@
 
 .wcu_container{
 	background-color: #F7F7F7;
-	padding-left: 120px;
 	margin-top: 70px;
 }
 .wcu_container h1{
-	padding-left: 70px;
+	padding-left: 15px;
 	font-family: Gilroy-Bold;
 	color: #000;
 }
 .t_WCU{
-	width: 26%;
 	height: 100%;
 	background-color: #fff;
-	margin: 30px;
-	padding: 30px 0px 30px 30px;
-
+	padding: 30px;
+	margin-bottom: 20px;
 }
 .t_WCU i{
 	color: #FE6E44;
@@ -415,6 +412,15 @@
 
 .t_team{
 	text-align: center;
+}
+.t_team p{
+	max-width: 400px;
+	margin: auto;
+	cursor: pointer;
+}
+
+.t_team .info_member{
+	margin-bottom: 40px;
 }
 .t_teamimg img{
 	width: 160px;
@@ -434,12 +440,10 @@
 
 } */
 .t_teamicon{
-	padding-left: 23px;
+	/* padding-left: 23px; */
 }
 .t_social{
 	list-style: none;
-	width: 40px;
-	height: 40px;
 	float: left;
 	margin: 0px;
 
@@ -448,25 +452,17 @@
 .t_social nav ul li{
 	padding-right: 0px;
 }
-/* .t_social a{
-	border: solid lightgray;
-	border-radius: 50%;
-	width: 30px;
-	height: 30px;
-	color: #000;
-	
-} */
 
-
-.t_teamicon nav ul li{
-    float: left;
-
-	margin-right: 15px;
-
-    text-align: center;
-
+.t_teamicon ul{
+	display: inline-block;
+	margin: 10px 0;
 }
-.t_teamicon nav ul li a{
+.t_teamicon ul li{
+    float: left;
+	text-align: center;
+	padding: 0px;
+}
+.t_teamicon ul li a{
     text-decoration: none;
 	width: 32px;
 	height: 32px;
@@ -477,7 +473,7 @@
 	margin-bottom: 5px;
 	border-radius: 50%;
 }
-.t_teamicon nav ul li a:hover{
+.t_teamicon ul li a:hover{
     border: 2px solid red;
     color: red !important;
 }

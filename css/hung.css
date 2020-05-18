@@ -262,7 +262,7 @@ a{
 /* ==========================trang shop============================ */
 .h_rowtren{
     background-color: #252525;
-    height: 100px;
+    height: auto;
     width: 100%;
 }
 .h_titleshop_left{

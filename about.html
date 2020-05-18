@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="css/hung-responsive.css">
 </head>
 <body>
-
     <div ng-include="'layouts/menu.html'"></div>
 
     <div ng-include="'layouts/header.html'"></div>
@@ -49,7 +48,7 @@
     <div class="container">
         <div class="row">
             <div class="t_imgStory col-md-6">
-                <img width="100%" src="../images/thangimages/About-1.jpg" alt="">
+                <img width="100%" src="images/thangimages/About-1.jpg" alt="">
             </div>
             <div class="t_story col-md-6">
                 <h1>Our Story</h1>
@@ -71,26 +70,40 @@
             </div>
         </div>
     </div>
-    <div class="wcu_container">
+    <div class="container wcu_container ">
         <div class="row">
             <h1>Why Choose Us</h1>
-            <div class="t_WCU col-md-4">
-                <i class="ion-jet"></i>
-                <h3>Free Delivery</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+            <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4">
+                <div class="t_WCU">
+                    <i class="ion-jet"></i>
+                    <h3>Secure Payment</h3>
+                    <p>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
             </div>
-            <div class="t_WCU col-md-4">
-                <i class="ion-card"></i>
-                <h3>Secure Payment</h3>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4">
+                <div class="t_WCU">
+                    <i class="ion-card"></i>
+                    <h3>Secure Payment</h3>
+                    <p>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
             </div>
-            <div class="t_WCU col-md-4">
-                <i class="ion-ios-chatbubble-outline"></i>
-                <h3>24/7 Support</h3>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat</p>
+            <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4">
+                <div class="t_WCU">
+                    <i class="ion-ios-chatbubble-outline"></i>
+                    <h3>24/7 Support</h3>
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    </p>
+                </div>
+                
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="row">
             <h1 style="font-family: Gilroy-Bold;color: #000000;padding-bottom: 50px;">Our Team</h1>
@@ -100,17 +113,15 @@
                 </div>
                 <h5>{{m.Name}}</h5>
                 <p>{{m.Job}}</p>
-                <div class="t_teamicon">
-                    <nav>
-                        <ul>
-                            <li class="t_social"><a href=""><i class="ion-social-facebook"></i></a></li>
-                            <li class="t_social"><a href=""><i class="ion-social-twitter"></i></a></li>
-                            <li class="t_social"><a href=""><i class="ion-social-youtube"></i></a></li>
-                            <li class="t_social"><a href=""><i class="ion-social-googleplus"></i></a></li>
-                        </ul> 
-                    </nav>
+                <div class="t_teamicon clearfix">
+                    <ul class="clearfix">
+                        <li class="t_social" ><a href=""><i class="ion-social-facebook"></i></a></li>
+                        <li class="t_social" ><a href=""><i class="ion-social-twitter"></i></a></li>
+                        <li class="t_social" ><a href=""><i class="ion-social-youtube"></i></a></li>
+                        <li class="t_social" ><a href=""><i class="ion-social-googleplus"></i></a></li>
+                    </ul> 
                 </div>
-                <p style="padding-top: 60px;cursor: pointer;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+                <p class="info_member">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p> 
             </div>
         </div>
     </div>
