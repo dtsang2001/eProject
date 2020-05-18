@@ -97,6 +97,11 @@
     border-radius: none;
 }
 
+.my-nav-mobile{
+    position: unset;
+    margin: 0;
+}
+
 .my-nav .nav-icon-search{
     display: none;       
 }
@@ -437,13 +442,18 @@
 
 .side-list-cart .footed-cart button{
     margin: 7px 14px;
-    font-family: Gilroy-Bold;
     padding: 8px 16px;
     width: 315px;
     margin-left: 50%;
     margin-right: 50%;
     transform: translate(-50%, -50%);
     /* float: left; */
+}
+
+.side-list-cart .footed-cart button a{
+    font-family: Gilroy-Bold;
+    color: #f1f1f1;
+    text-decoration: none;
 }
 
 .list-cart-child ul{

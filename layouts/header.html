@@ -1,10 +1,10 @@
 <header>
     <div class="slides">
-        <div class="car-slides">
-            <img class="image-slide-page" src="images/bg_sd.jpeg" alt="">
-        </div>
+        <!-- <div class="car-slides">
+            <img class="image-slide-page" src="images/bg.jpg" alt="">
+        </div> -->
 
-        <div class="my-nav">
+        <div class="my-nav my-nav-mobile">
             <div class="nav-slogan">
                 <span class="site-welcome">Welcome to our online store!</span>
             </div>
@@ -22,13 +22,13 @@
                             <div class="">
                                 <ul class="nav navbar-nav menu-block hide-mobile">
                                     <li class="active">
-                                        <a href="#">Home</a>
+                                        <a href="index.html">Home</a>
                                     </li>
                                     <li>
                                         <a href="shop.html">Shop</a>
                                     </li>
                                     <li>
-                                        <a href="#">Blog</a>
+                                        <a href="blog.html">Blog</a>
                                     </li>
                                     <li>
                                         <a href="contact.html">Contact</a>
@@ -46,7 +46,7 @@
                                         <a href="" data-toggle="modal" data-target="#modal-user"><i class="fas fa-user"></i></a>
                                     </li>
                                     <li class="nav-icon-cart">
-                                        <a href="javascript:void(0)">
+                                        <a href="javascript:void(0)" ng-click="nav_cart()">
                                             <i class="fas fa-shopping-basket cart">
                                                 <span>0</span>
                                             </i>
@@ -58,7 +58,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-icon-main nav-icon-bars" style="padding-left: 0px;">
-                                        <a href="javascript:void(0)"><i class="fas fa-bars"></i></a>
+                                        <a href="javascript:void(0)" ng-click="menu_mobile()"><i class="fas fa-bars"></i></a>
                                     </li>
                                 </ul>
                            </div>                                      

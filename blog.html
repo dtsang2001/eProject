@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="">
+<html lang="en" ng-app="myApp" ng-controller="myCtrl">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,6 +26,24 @@
 </head>
 <body>
     <div ng-include="'layouts/menu.html'"></div>
+
+    <div ng-include="'layouts/header.html'"></div>
+
+    <div ng-include="'layouts/modal.html'"></div>
+
+    <div>
+        <div class="row h_rowtren h_responsive">
+            <div class="h_titleshop ">
+                <div class="h_titleshop_left">
+                    <a href="">Blog</a>
+                </div>
+                <div class="h_titleshop_right">
+                    <a href=""><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    <span><i class="fa fa-angle-right" aria-hidden="true"></i> Blog</span>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <div class="container">
         <div class="row">
@@ -222,7 +240,7 @@
             </div>           
         </div>
     </div>
-    <div ng-include="'footer.html'"></div>
+    <div ng-include="'layouts/footer.html'"></div>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/angular.min.js"></script>
@@ -232,5 +250,6 @@
     <!-- Hưng js -->
     <script src="js/hung.js"></script>
     <script src="js/sang.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

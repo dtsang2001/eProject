@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" ng-app="myApp" ng-controller="myCtrl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,10 +14,7 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
     <!-- Ionicons -->
-    <link
-      rel="stylesheet"
-      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
-    />
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
     <!-- Bootstrap CSS -->
     <link href="./plugins/bootstrap-3/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
@@ -29,8 +26,13 @@
     <link rel="stylesheet" href="css/sang-responsive.css">
     <link rel="stylesheet" href="css/hung-responsive.css">
   </head>
-  <body ng-app="">
-    <div ng-include="'menu.html'"></div>
+  <body>
+    <div ng-include="'layouts/menu.html'"></div>
+
+    <div ng-include="'layouts/header.html'"></div>
+
+    <div ng-include="'layouts/modal.html'"></div>
+    
     <!-- Hung -->
     <section>
       
@@ -46,6 +48,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="container">
                 <div class="row h_rowduoi">
                     <!-- danh sách danh mục ở dạng đầy đủ -->
@@ -241,12 +244,15 @@
                       </div>
                       <div class="h_right_content_content">
                         <div class="row">
-                          <div class="col-md-4 col-sm-6 col-xs-12 itemx">
+
+                          <div ng-show="cart"> add cart - success!! {{cart.Name}}</div>
+
+                          <div ng-repeat="pro in product" class="col-md-4 col-sm-6 col-xs-12 itemx">
                             <div class="item ">
                             
                               <div class="anhduoi">
                                   <div class="h_anhtren">
-                                      <img src="images/hungimges/product-03.jpg" alt="">
+                                      <img src="{{ pro.Images[1] }}" alt="">
                                   </div>
                                   <div class="h_3icon">
                                       <nav>
@@ -259,150 +265,17 @@
                                   </div>
                                   <div class="h_lopmo"></div>
                                   <div class="h_anhduoi">
-                                      <img src="images/hungimges/product-05.jpg" class="responsive" alt="">
+                                      <img src="{{ pro.Images[2] }}" class="responsive" alt="">
                                   </div>
                               </div>
-                              <div class="h_namecate"><a href="">Shose</a></div>
-                              <div class="h_namepro"><a href="">Nike</a></div>
-                              <div class="h_price"><a href="">145.93</a></div>
-                              <div class="h_add"><a href="">Add Cart</a></div>
+                              <div class="h_namecate"><a href="">{{ pro.Category }}</a></div>
+                              <div class="h_namepro"><a href="">{{ pro.Name }}</a></div>
+                              <div class="h_price"><a href="">$ {{ pro.Price | currency:"":2}}</a></div>
+                              <div class="h_add"><a href="" ng-click="add_cart(pro)" >Add Cart</a></div>
                           </div>
+
                           </div>
-                          <div class="col-md-4 col-sm-6 col-xs-12 itemx">
-                            <div class="item ">
-                            
-                              <div class="anhduoi">
-                                  <div class="h_anhtren">
-                                      <img src="images/hungimges/product-03.jpg" alt="">
-                                  </div>
-                                  <div class="h_3icon">
-                                      <nav>
-                                          <ul>
-                                              <li class="nut1" data-hieuung="tooltip" title="Add to wishlist"><a href=""><i class='far fa-heart' style='font-size:18px'></i></a></li>
-                                              <li class="nut2" data-hieuung="tooltip" title="Quick view"><a href=""><i class="fas fa-eye" style='font-size:18px'></i></a></li>
-                                              <li class="nut3" data-hieuung="tooltip" title="Add to cart"><a href=""><i class='fas fa-shopping-cart' style='font-size:18px'></i></a></li>
-                                          <ul>
-                                      </nav>
-                                  </div>
-                                  <div class="h_lopmo"></div>
-                                  <div class="h_anhduoi">
-                                      <img src="images/hungimges/product-05.jpg" class="responsive" alt="">
-                                  </div>
-                              </div>
-                              <div class="h_namecate"><a href="">Shose</a></div>
-                              <div class="h_namepro"><a href="">Nike</a></div>
-                              <div class="h_price"><a href="">145.93</a></div>
-                              <div class="h_add"><a href="">Add Cart</a></div>
-                          </div>
-                          </div>
-                          <div class="col-md-4 col-sm-6 col-xs-12 itemx">
-                            <div class="item ">
-                            
-                              <div class="anhduoi">
-                                  <div class="h_anhtren">
-                                      <img src="images/hungimges/product-03.jpg" alt="">
-                                  </div>
-                                  <div class="h_3icon">
-                                      <nav>
-                                          <ul>
-                                              <li class="nut1" data-hieuung="tooltip" title="Add to wishlist"><a href=""><i class='far fa-heart' style='font-size:18px'></i></a></li>
-                                              <li class="nut2" data-hieuung="tooltip" title="Quick view"><a href=""><i class="fas fa-eye" style='font-size:18px'></i></a></li>
-                                              <li class="nut3" data-hieuung="tooltip" title="Add to cart"><a href=""><i class='fas fa-shopping-cart' style='font-size:18px'></i></a></li>
-                                          <ul>
-                                      </nav>
-                                  </div>
-                                  <div class="h_lopmo"></div>
-                                  <div class="h_anhduoi">
-                                      <img src="images/hungimges/product-05.jpg" class="responsive" alt="">
-                                  </div>
-                              </div>
-                              <div class="h_namecate"><a href="">Shose</a></div>
-                              <div class="h_namepro"><a href="">Nike</a></div>
-                              <div class="h_price"><a href="">145.93</a></div>
-                              <div class="h_add"><a href="">Add Cart</a></div>
-                          </div>
-                          </div>
-                          <div class="col-md-4 col-sm-6 col-xs-12 itemx">
-                            <div class="item ">
-                            
-                              <div class="anhduoi">
-                                  <div class="h_anhtren">
-                                      <img src="images/hungimges/product-03.jpg" alt="">
-                                  </div>
-                                  <div class="h_3icon">
-                                      <nav>
-                                          <ul>
-                                              <li class="nut1" data-hieuung="tooltip" title="Add to wishlist"><a href=""><i class='far fa-heart' style='font-size:18px'></i></a></li>
-                                              <li class="nut2" data-hieuung="tooltip" title="Quick view"><a href=""><i class="fas fa-eye" style='font-size:18px'></i></a></li>
-                                              <li class="nut3" data-hieuung="tooltip" title="Add to cart"><a href=""><i class='fas fa-shopping-cart' style='font-size:18px'></i></a></li>
-                                          <ul>
-                                      </nav>
-                                  </div>
-                                  <div class="h_lopmo"></div>
-                                  <div class="h_anhduoi">
-                                      <img src="images/hungimges/product-05.jpg" class="responsive" alt="">
-                                  </div>
-                              </div>
-                              <div class="h_namecate"><a href="">Shose</a></div>
-                              <div class="h_namepro"><a href="">Nike</a></div>
-                              <div class="h_price"><a href="">145.93</a></div>
-                              <div class="h_add"><a href="">Add Cart</a></div>
-                          </div>
-                          </div>
-                          <div class="col-md-4 col-sm-6 col-xs-12 itemx">
-                            <div class="item ">
-                            
-                              <div class="anhduoi">
-                                  <div class="h_anhtren">
-                                      <img src="images/hungimges/product-03.jpg" alt="">
-                                  </div>
-                                  <div class="h_3icon">
-                                      <nav>
-                                          <ul>
-                                              <li class="nut1" data-hieuung="tooltip" title="Add to wishlist"><a href=""><i class='far fa-heart' style='font-size:18px'></i></a></li>
-                                              <li class="nut2" data-hieuung="tooltip" title="Quick view"><a href=""><i class="fas fa-eye" style='font-size:18px'></i></a></li>
-                                              <li class="nut3" data-hieuung="tooltip" title="Add to cart"><a href=""><i class='fas fa-shopping-cart' style='font-size:18px'></i></a></li>
-                                          <ul>
-                                      </nav>
-                                  </div>
-                                  <div class="h_lopmo"></div>
-                                  <div class="h_anhduoi">
-                                      <img src="images/hungimges/product-05.jpg" class="responsive" alt="">
-                                  </div>
-                              </div>
-                              <div class="h_namecate"><a href="">Shose</a></div>
-                              <div class="h_namepro"><a href="">Nike</a></div>
-                              <div class="h_price"><a href="">145.93</a></div>
-                              <div class="h_add"><a href="">Add Cart</a></div>
-                          </div>
-                          </div>
-                          <div class="col-md-4 col-sm-6 col-xs-12 itemx">
-                            <div class="item ">
-                            
-                              <div class="anhduoi">
-                                  <div class="h_anhtren">
-                                      <img src="images/hungimges/product-03.jpg" alt="">
-                                  </div>
-                                  <div class="h_3icon">
-                                      <nav>
-                                          <ul>
-                                              <li class="nut1" data-hieuung="tooltip" title="Add to wishlist"><a href=""><i class='far fa-heart' style='font-size:18px'></i></a></li>
-                                              <li class="nut2" data-hieuung="tooltip" title="Quick view"><a href=""><i class="fas fa-eye" style='font-size:18px'></i></a></li>
-                                              <li class="nut3" data-hieuung="tooltip" title="Add to cart"><a href=""><i class='fas fa-shopping-cart' style='font-size:18px'></i></a></li>
-                                          <ul>
-                                      </nav>
-                                  </div>
-                                  <div class="h_lopmo"></div>
-                                  <div class="h_anhduoi">
-                                      <img src="images/hungimges/product-05.jpg" class="responsive" alt="">
-                                  </div>
-                              </div>
-                              <div class="h_namecate"><a href="">Shose</a></div>
-                              <div class="h_namepro"><a href="">Nike</a></div>
-                              <div class="h_price"><a href="">145.93</a></div>
-                              <div class="h_add"><a href="">Add Cart</a></div>
-                          </div>
-                          </div>
+                          
                         </div>
                       </div>
                       <div class="h_right_content_pagination">
@@ -421,16 +294,17 @@
             </div>
         </div>
     </section>
-    <div ng-include="'footer.html'"></div>
+
+    <div ng-include="'layouts/footer.html'"></div>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    
+    <script src="js/angular.min.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- Hưng js -->
     <script src="js/hung.js"></script>
     <script src="js/sang.js"></script>
-    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

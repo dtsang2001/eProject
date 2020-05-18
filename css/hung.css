@@ -11,7 +11,7 @@ body{
 }
 .item .anhduoi{
     position: relative;
-    height: 330px;
+    height: 250px;
     transition: 0.4s;
     overflow: hidden;
 }
@@ -45,8 +45,9 @@ body{
 }
 .item:hover .h_anhtren{
     position: absolute;
-    top:0;
+    top:45px;
     left: 0;
+    
     z-index: 2;
 }
 
@@ -77,18 +78,20 @@ body{
     transition: all 0.4s ease;
 }
 .h_anhtren img{
-    height: 330px;
+    width: 100%;
+    /* height: 330px; */
     object-fit: cover;
 }
 .h_anhduoi{
     position: absolute;
-    top:0px;
+    top:45px;
     left: 0;
     z-index: 1;
     transition: 0.4s;
 }
 .h_anhduoi img{
-    height: 330px;
+    width: 100%;
+    /* height: 250px; */
     object-fit: cover;
 }
 nav ul li{
@@ -100,7 +103,7 @@ a{
 }
 .h_lopmo{
     width: 100%;
-    height: 330px;
+    height: 250px;
     position: absolute;
     top: 0;
     left: 0;

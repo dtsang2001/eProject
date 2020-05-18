@@ -1,6 +1,6 @@
 @media only screen and (max-width: 500px){
     .footer-payment img{
-        width: 250px;
+        width: 100%;
         margin-top: 10px;
     }
     .footer-brand {
