@@ -95,9 +95,9 @@
                     <button class="btn btn-danger">Submit</button>
                 </div>
 
-                <div class="t_contact col-xs-12 col-sm-12 col-md-4 col-lg-4" ng-repeat="m in mem">
+                <div class="t_contact col-xs-12 col-sm-12 col-md-4 col-lg-4">
 
-                    <div class="t_ctc">
+                    <div class="t_ctc" ng-repeat="m in mem">
                         <div class="imgs">
                             <img src="{{m.Avatar}}" alt="">
                         </div>  
@@ -108,7 +108,7 @@
                             <p>Email: {{m.Email}}</p>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
