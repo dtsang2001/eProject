@@ -29,6 +29,9 @@ app.config( ($routeProvider) => {
     .when('/login', {
         templateUrl: 'pages/login.html'
     })
+    .when('/pro', {
+        templateUrl: 'pages/product-detail.html'
+    })
 })
 
 app.controller('myCtrl', ($scope, $http, $location) => {
