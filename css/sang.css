@@ -164,6 +164,10 @@
     padding-right: 50px;
 }
 
+.navbar-right li a{
+    cursor: pointer;
+}
+
 .nav-logo {
     flex-grow: 1;
     border-right: 1px solid #e0e0e0;
@@ -890,4 +894,57 @@
     border: none;
     font-size: 20px;
     padding-right: 5px;
+}
+
+/* Nam */
+
+#n-logoimg{
+    /* border: 1px solid black; */
+    border-top: solid 1px #EBEBEB;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 2%;
+    margin-top: 2px;
+    overflow: hidden;
+    text-align: center;
+    
+    
+}
+.n-logolink{
+    float: left;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+    display: inline-block;
+
+}
+.n-linkimg{
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+@media only screen and (max-width: 601px) {
+    .n-logolink{
+      padding-left:15% ;
+    }
+}
+
+#n-tittel-blog{
+    padding-left: 17%;
+    padding-right: 17%;
+    font-weight: bold;
+}
+#n-img-blog{
+    text-align: center;
+    margin-bottom: 25px;
+    padding-left: 17%;
+    padding-right: 17%;  
+}
+#n-ul-blog{
+    margin-left: 35px;
+    margin-bottom: 30px;
 }

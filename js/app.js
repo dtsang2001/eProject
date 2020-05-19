@@ -29,8 +29,11 @@ app.config( ($routeProvider) => {
     .when('/login', {
         templateUrl: 'pages/login.html'
     })
-    .when('/pro', {
+    .when('/product', {
         templateUrl: 'pages/product-detail.html'
+    })
+    .when('/blog-detail', {
+        templateUrl: 'pages/blog-detail.html'
     })
 })
 
@@ -43,6 +46,21 @@ app.controller('myCtrl', ($scope, $http, $location) => {
     $http.get('storage/products.json').then( (res) => {
         $scope.product = res.data
     });
+
+    $scope.info_product;
+
+    var ViewProductDetail = sessionStorage.getItem('info_pro');
+
+    if (ViewProductDetail) {
+        $scope.info_product = angular.fromJson(ViewProductDetail);
+    }
+
+    $scope.view_product = (pro) => {
+
+        $scope.info_product = pro;
+
+        sessionStorage.setItem('info_pro', angular.toJson($scope.info_product));
+    }
 
     $scope.compare = [];
 
@@ -151,6 +169,11 @@ app.controller('myCtrl', ($scope, $http, $location) => {
         }
     }
 
+    $scope.read_more = (rm) => {
+        $('#productDetail .h_description').addClass('more');
+        $(rm.target).hide();
+    }
+
     $scope.nav_cart = () => {
         $('.side-nav-cart').addClass('size-side');
     }
@@ -238,3 +261,5 @@ app.controller('myCtrl', ($scope, $http, $location) => {
     }
     
 });
+
+// $('body').scrollTop(0);
