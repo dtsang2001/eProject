@@ -235,7 +235,6 @@ app.controller('myCtrl', ($scope, $http, $location) => {
                 $(this).hide();
             }
         });
-        return false;
     }
     
     $scope.message = "";
