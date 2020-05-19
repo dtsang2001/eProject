@@ -8,23 +8,23 @@
             </div>
             <div class="modal-body modal-user">
                 
-                <form class="form-site" action="" method="POST" role="form">
+                <form class="form-site" action="" method="POST" role="form" name="formLogin">
                 
                     <div class="form-group">
                         <label for="">Username or email <span>*</span></label>
-                        <input type="text" name="username" placeholder="...">
+                        <input type="text" name="email" placeholder="..." required ng-model="formLogin.login_email">
                     </div>
                 
                     <div class="form-group">
                         <label for="">Password <span>*</span></label>
-                        <input type="password" name="password" placeholder="...">
+                        <input type="password" name="password" required ng-model="formLogin.login_pass" placeholder="...">
                     </div>
 
                     <p><a href="">
                         Lost your password?
                     </a></p>
                 
-                    <button type="submit" class="btn-site">Login</button>
+                    <button type="button" ng-click="login(formLogin)" class="btn-site">Login</button>
 
                     <a href="#!login" data-dismiss="modal" aria-label="Close" class="btn-create-acc btn-site-outline">Create account</a>
                     

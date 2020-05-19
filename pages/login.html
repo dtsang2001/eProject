@@ -13,20 +13,45 @@
         </div>
         <div class="container ">
             <div class="row">
+
                 <div class="col-md-6 h_login">
-                    <form action="" method="post">
+                    <!-- Thông báo đăng nhập thành công và thông tin người dùng -->
+                    <div class="alert alert-success" ng-show="message1 ">
+                        <!-- <button type="button" class="close" data-dismiss="alert" ng-click="logout()">&times;</button> -->
+                        <p>{{message1}}</p>
+                        <!-- <p>Xin Chào {{loginInfo}}</p> -->
+                    </div>
+
+                    <!-- <div class="alert alert-danger" ng-show="!loginInfo && message">
+                        <p>{{message}} FF</p>
+                    </div> -->
+
+                    <div class="alert alert-danger" ng-show="message2 " >
+                        {{message2}}
+                    </div>
+
+                    <div class="help-block" ng-if="formLogin.email.$dirty">
+                        <div class="error" ng-if="formLogin.email.$error.requied">
+                            <span class="glyphicon glyphicon-remove"></span> Địa chỉ email không đúng định dạng
+                        </div>
+                    </div>
+
+                    <!-- form đăng nhập hiển thị kh chưa đăng nhập -->
+                    <form  action="" method="post" name="formLogin">
                         <h2>Login</h2>
                         <label>Username or email address <span>*</span></label>
-                        <input type="text">
+                        <input type="email" name="email" required ng-model="formLogin.login_email">
                         <label for="">PassWord <span>*</span></label>
-                        <input type="text">
-                        <button type="submit">Login</button>
+                        <input type="password" name="password" required ng-model="formLogin.login_pass">
+                        <button type="button" ng-click="login(formLogin)" ng-disabled="formLogin.email.$error.requied || formLogin.email.$error.email || formLogin.password.$error.requied">Login</button>
+                        <!-- <button type="submit"  ng-disabled="formLogin.email.$error.requied || formLogin.email.$error.email || formLogin.password.$error.requied">Login</button> -->
                     </form>
                     <input type="checkbox"> Remember me
                     <a href="" class="h_lyp">Last your password ?</a>
                 </div>
+
                 <div class="col-md-6 h_register">
-                    <form action="" method="post">
+                    <form action="" method="post" name="formRegister">
                         <h2>Register</h2>
                         <label>Email <span>*</span></label>
                         <input type="text">
