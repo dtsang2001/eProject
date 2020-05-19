@@ -57,7 +57,7 @@
     }
 
     .carousel-inner .item{
-        height: 750px;
+        height: 600px;
     }
 
     .my-nav .price-amount{
@@ -129,6 +129,10 @@
 
     .my-nav .nav-menu-main{
         display: none;
+    }
+
+    .carousel-inner .item{
+        height: 450px;
     }
 
     .my-nav .nav-icon{

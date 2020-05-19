@@ -44,6 +44,42 @@ app.controller('myCtrl', ($scope, $http, $location) => {
         $scope.product = res.data
     });
 
+    $scope.compare = [];
+
+    var CompareInStorage = sessionStorage.getItem('cpr');
+
+    if (CompareInStorage) {
+        $scope.compare = angular.fromJson(CompareInStorage);
+    }
+
+    function checkCompareExists(Id) {
+        for (var k in $scope.compare) {
+            if ($scope.compare[k].Id == Id) {
+                return k;
+            }
+        }
+        return -1;   
+    }
+
+    $scope.add_compare = (pro) => {
+        var itemExists = checkCompareExists(pro.Id);
+
+        if (itemExists == -1) {
+            $scope.compare.push(pro);
+        }
+
+        sessionStorage.setItem('cpr', angular.toJson($scope.compare));
+    }
+
+    $scope.remove_compare = (Id) => {
+        var itemExists = checkCompareExists(Id);
+
+        if (itemExists != -1) {
+            $scope.compare.splice(itemExists, 1);
+            sessionStorage.setItem('cpr', angular.toJson($scope.compare));
+        }
+    }
+
     $scope.carts = [];
     $scope.carts_qty = 0;
     $scope.carts_total = 0;
@@ -56,7 +92,6 @@ app.controller('myCtrl', ($scope, $http, $location) => {
 
     if (CartInStorage) {
         $scope.carts = angular.fromJson(CartInStorage);
-        // $scope.carts_qty = sessionStorage.getItem('carts_qty');
     }
 
     if (QuantityCart) {
@@ -134,9 +169,10 @@ app.controller('myCtrl', ($scope, $http, $location) => {
 
     $scope.sort_cart = (obj) => {
         var cat = obj.target.getAttribute("data-class")
-
+        
         $('.h_titleproduct ul li a').removeClass("selected");
-        $(this).addClass("selected");  
+        // $('.h_titleproduct ul li a').addClass("selected");
+        $(this).addClass("selected");
         
         $('.h_allproduct .itemx').each(function(){
             if($(this).hasClass(cat)){
@@ -151,5 +187,13 @@ app.controller('myCtrl', ($scope, $http, $location) => {
 
     $scope.isActive = function(route) {
         return route === $location.path();
+    }
+
+    $scope.filter_shop = () => {
+        $('#menu').addClass('traisang');
+    }
+
+    $scope.close_filter_shop = () => {
+        $('#menu').removeClass('traisang');
     }
 });

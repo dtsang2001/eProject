@@ -400,7 +400,7 @@ a{
     background-color: red;
 }
 .h_right_content_pagination .selected_pagination a{
-    color: black;
+    color: #fff;
 }
 .h-hide{
     display: inline-block;

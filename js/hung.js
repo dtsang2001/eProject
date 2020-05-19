@@ -1,6 +1,6 @@
 $(function(){
     //viết cho nút
-    $('.h_titleproduct ul .h_moc a').addClass("selected"); 
+     
     $('.part2 .h_title_DAR ul li a').addClass("selected");
     $('.part2 .h_title_DAR ul .h_act a').addClass("selected");
     $('.part2 .h_content_DAR .h_description').show();
@@ -41,10 +41,10 @@ $(function(){
 
     // ====================================================Code cho nút filter mở ra trang shop
     $('.nut_mo_ra_menu').click(function(){
-        console.log('hello');
         $('#menu').addClass('traisang');
         return false;
     });
+
     $('.h_rowduoi').click(function(){
         // console.log('hello');
         $('#menu').removeClass('traisang');

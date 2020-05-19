@@ -100,7 +100,7 @@
 
                 <!-- Danh sách danh mục ở dạng cái nút filter -->
                 <div class="menutrai h-show" id="menu">
-                    <h4>Close <i class="fas fa-times"></i></h4>
+                    <h4><a ng-click="close_filter_shop()" href="">Close <i class="fas fa-times"></i></a></h4>
                     <h3>Product category</h3>
                     <div class="h_listcate">
                       <nav>
@@ -168,17 +168,6 @@
                         </ul>
                       </nav>
                     </div>
-                    <h3>Filter By Size</h3>
-                    <div class="h_listsize clearfix">
-                      <nav>
-                        <ul>
-                          <li><a href="">L</a></li>
-                          <li><a href="">M</a></li>
-                          <li><a href="">S</a></li>
-                          <li><a href="">XL</a></li>
-                        </ul>
-                      </nav>
-                    </div>  
                 </div>
 
 
@@ -190,7 +179,7 @@
                     </div>
 
                     <div class="h_right_content_hearder_left h-show">
-                        <a href="" class="nut_mo_ra_menu">
+                        <a ng-click="filter_shop()" href="" class="nut_mo_ra_menu">
                             <i class="fa fa-filter" aria-hidden="true"></i>
                             <span> Filter</span>
                         </a>
@@ -208,8 +197,6 @@
                   </div>
                   <div class="h_right_content_content">
                     <div class="row">
-
-                      <div ng-show="cart"> add cart - success!! {{cart.Name}}</div>
 
                       <div ng-repeat="pro in product" class="col-md-4 col-sm-6 col-xs-12 itemx">
                         <div class="item ">

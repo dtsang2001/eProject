@@ -58,6 +58,53 @@
     </div>
 </div>
 
+<!-- Modal Compare -->
+<div class="modal fade" id="modal-compare" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Compare</h4>
+            </div>
+            <div class="modal-body">
+                <div ng-if="compare.length == 0">
+                    <p>No products were compared.</p>
+                </div>
+                <div ng-if="compare.length > 0" class="view-content table-compare">
+                    <table class="views-table cols-6" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th class="views-field views-field-remove"></th>
+                                <th class="views-field views-field-image">Image</th>
+                                <th class="views-field views-field-title">Name</th>
+                                <th class="views-field views-field-field-colour">Category</th>
+                                <th class="views-field views-field-field-size">Price</th>
+                                <th class="views-field views-field-desc">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr ng-repeat="com in compare" class="odd views-row-first views-row-last">
+                                <td class="views-field views-field-remove">
+                                    <a href="" ng-click="remove_compare(com.Id)"><b class="ion-ios-close-outline"></b></a>
+                                </td>
+                                <td class="views-field views-field-image">
+                                    <img src="{{com.Images[1]}}" width="84" height="114" alt="">
+                                </td>
+                                <td class="views-field views-field-title">{{com.Name}}</td>
+                                <td class="views-field views-field-field-colour">{{com.Category}}</td>
+                                <td class="views-field views-field-field-size">$ {{com.Price | currency:"":2}}</td>
+                                <td class="views-field views-field-desc">{{com.Description}}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="side-nav-cart side-nav">
 
     <div class="side-list-cart">
@@ -69,33 +116,39 @@
             </a>
         </div>
 
-        <p class="cart-empty">No products in the cart.</p>
-
-        <div id="" class="list-cart-child clearfix">
-            <ul>
-
-                <li ng-repeat="c in carts">
-                    <div>
-                        <a ng-click="remove_cart(c.Id)" href="">
-                            <b class="ion-ios-close-outline"></b>
-                        </a>
-                    </div>
-                    <div>
-                        <img src="{{c.Images[1]}}" alt="">
-                    </div>
-                    <div class="cart-info-product">
-                        <h4>{{c.Name}}</h4>
-                        <p>{{c.quantity}} <i class="ion-android-close"></i> <span>$ {{c.Price | currency:"":2}}</span></p>
-                    </div>
-                </li>
-
-            </ul>
+        <div ng-if="carts_qty == 0">
+            <p class="cart-empty">No products in the cart.</p>
         </div>
-
-        <div class="footed-cart clearfix">
-            <h4>subtotal <span>$ {{carts_total | currency:"":2}}</span></h4>
-            <a class="btn-site" ng-click="close_cart()" href="#!cart">View cart</a>
+        <div ng-if="carts_qty > 0">
+            <div id="" class="list-cart-child clearfix">
+                <ul>
+    
+                    <li ng-repeat="c in carts">
+                        <div>
+                            <a ng-click="remove_cart(c.Id)" href="">
+                                <b class="ion-ios-close-outline"></b>
+                            </a>
+                        </div>
+                        <div>
+                            <img src="{{c.Images[1]}}" alt="">
+                        </div>
+                        <div class="cart-info-product">
+                            <h4>{{c.Name}}</h4>
+                            <p>{{c.quantity}} <i class="ion-android-close"></i> <span>$ {{c.Price | currency:"":2}}</span></p>
+                        </div>
+                    </li>
+    
+                </ul>
+            </div>
+    
+            <div class="footed-cart clearfix">
+                <h4>subtotal <span>$ {{carts_total | currency:"":2}}</span></h4>
+                <a class="btn-site" ng-click="close_cart()" href="#!cart">View cart</a>
+            </div>
         </div>
+        
+
+        
     </div>
 </div>
 
