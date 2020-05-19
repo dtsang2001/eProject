@@ -12,30 +12,34 @@
             </div>
         </div>
         <div class="container ">
-            <div class="h_form_register">
-                <form action="" method="POST">
-                    <h2>Register</h2>
-                    <p>Email Address <span>*</span></p>
-                    <input type="text">
-                    <p>Name <span>*</span></p>
-                    <input type="text">
-                    <p>Password <span>*</span></p>
-                    <input type="password">
-                    <p>Re-Password <span>*</span></p>
-                    <input type="password">
-                    <p>A password will be sent to your email address.</p>
-                    <button type="submit">Submit</button>
-                    <div class="h_Login_lost">
-                        <nav>
-                            <ul>
-                                <li ><a href="" >Lost your password</a></li>
-                                <li class="h_mot"><a href="">Login</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="h_Login_back"><a href="">Back to home</a></div>
-                </form>
-                
+            <div class="row">
+                <div class="col-md-6 h_login">
+                    <form action="" method="post">
+                        <h2>Login</h2>
+                        <label>Username or email address <span>*</span></label>
+                        <input type="text">
+                        <label for="">PassWord <span>*</span></label>
+                        <input type="text">
+                        <button type="submit">Login</button>
+                    </form>
+                    <input type="checkbox"> Remember me
+                    <a href="" class="h_lyp">Last your password ?</a>
+                </div>
+                <div class="col-md-6 h_register">
+                    <form action="" method="post">
+                        <h2>Register</h2>
+                        <label>Email <span>*</span></label>
+                        <input type="text">
+                        <label for="">Name <span>*</span></label>
+                        <input type="text">
+                        <label>Password <span>*</span></label>
+                        <input type="password">
+                        <label for="">Re-password <span>*</span></label>
+                        <input type="password">
+                        <p>A password will be sent to your email address</p>
+                        <button type="submit">register</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

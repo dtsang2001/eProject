@@ -32,25 +32,25 @@
                         <nav>
                             <ul>
                                 <li>
-                                    <div class="h_anhduoinho act" data-class="lop01">
-                                        <div class="h_lopmo_anhnho"></div>
+                                    <div ng-click="imageSmall(myText1)" ng-init="myText1='lop01'" class="lop01 h_anhduoinho " data-class="lop01">
+                                        <div class="h_lopmo_anhnho h_act"></div>
                                         <img  src="images/hungimges/product-01.jpg" alt="">
                                     </div>                                 
                                 </li>
                                 <li>
-                                    <div class="h_anhduoinho" data-class="lop02">
+                                    <div ng-click="imageSmall(myText2)" ng-init="myText2='lop02'" class="lop02 h_anhduoinho" data-class="lop02">
                                         <div class="h_lopmo_anhnho"></div>
                                         <img  src="images/hungimges/product-02.jpg" alt="">
                                     </div> 
                                 </li>
                                 <li>
-                                    <div class="h_anhduoinho" data-class="lop03">
+                                    <div ng-click="imageSmall(myText3)" ng-init="myText3='lop03'" class="lop03 h_anhduoinho" data-class="lop03">
                                         <div class="h_lopmo_anhnho"></div>
                                         <img  src="images/hungimges/product-03.jpg" alt="">
                                     </div> 
                                 </li>
                                 <li>
-                                    <div class="h_anhduoinho" data-class="lop04">
+                                    <div ng-click="imageSmall(myText4)" ng-init="myText4='lop04'" class="lop04 h_anhduoinho" data-class="lop04">
                                         <div class="h_lopmo_anhnho"></div>
                                         <img  src="images/hungimges/product-04.jpg" alt="">
                                     </div> 
@@ -121,9 +121,9 @@
                 <div class="h_title_DAR">
                     <nav>
                         <ul>
-                            <li class="h_act"><a href="" data-class="h_description" class="selected ">Description</a></li>
-                            <li><span><i class="fas fa-circle" style="color: black ;font-size: 5px;"></i></span><a data-class="h_addi" href="">Additional Information</a><span><i class="fas fa-circle" style="color: black ;font-size: 5px;"></i></span></li>
-                            <li><a data-class="h_review" href="">Reviews (5)</a></li>
+                            <li ><a ng-click="DAR($event)" href="" data-class="h_description" class="selected " ng-modal="so1">Description</a></li>
+                            <li ><span><i class="fas fa-circle" style="color: black ;font-size: 5px;"></i></span><a ng-click="DAR($event)" data-class="h_addi" href="" ng-odal="so2">Additional Information</a><span><i class="fas fa-circle" style="color: black ;font-size: 5px;"></i></span></li>
+                            <li ><a ng-click="DAR($event)" data-class="h_review" href="" ng-modal="so3">Reviews (5)</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -131,7 +131,7 @@
                     <div class="itemkhoi h_description">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem quam molestiae optio asperiores repudiandae reprehenderit voluptas, delectus quo. Rerum impedit assumenda alias, quia, magnam reprehenderit beatae tenetur id harum minima adipisci. Quam dolorem corrupti maiores autem delectus quaerat officia, dicta maxime? Voluptatibus officia nemo dignissimos dicta laudantium iusto similique itaque quia nobis distinctio nisi assumenda accusantium, consectetur laborum aut esse, ullam ex non velit dolorem ut. Similique, voluptas. Quam, ut esse nemo corporis tenetur illo iusto nihil, nisi suscipit, voluptatum dolore eveniet est beatae doloremque vitae maiores ratione? Qui temporibus debitis distinctio at fugit, necessitatibus nihil velit iste voluptatum perspiciatis.
                     </div>
-                    <div class="itemkhoi h_addi">
+                    <div class="itemkhoi h_addi h_none">
                         <table class="table table-hover">
                             <tbody>
                                 <tr>
@@ -177,7 +177,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="itemkhoi h_review">
+                    <div class="itemkhoi h_review h_none">
                         <div class="row">
                             <div class="col-md-6 h_comment_view">
                                 <div class="h_cmt">
@@ -314,3 +314,4 @@
         </div>
     </div>
 </section>
+<script src="../js/hung.js"></script>

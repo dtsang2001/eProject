@@ -174,13 +174,13 @@ app.controller('myCtrl', ($scope, $http, $location) => {
         // $('.h_titleproduct ul li a').addClass("selected");
         $(this).addClass("selected");
         
+        
         $('.h_allproduct .itemx').each(function(){
             if($(this).hasClass(cat)){
                 $(this).show();
             }else{
                 $(this).hide();
-            }
-            
+            }    
         })
         return false;
     }
@@ -196,4 +196,56 @@ app.controller('myCtrl', ($scope, $http, $location) => {
     $scope.close_filter_shop = () => {
         $('#menu').removeClass('traisang');
     }
+
+
+
+    $('.part2 .h_content_DAR .h_description').show();
+    $('.part2 .h_content_DAR .h_addi').hide();
+    $('.part2 .h_content_DAR .h_review').hide();
+    // $scope.show('so1');
+    // $scope.so2.hide();
+    // $scope.so3.hide();
+
+    $scope.DAR = (obj1) => {
+        var tab = obj1.target.getAttribute("data-class");
+        console.log(tab);
+        $('.part2 .h_title_DAR ul li a').removeClass("selected");
+        // $(this).addClass('selected');
+        $(obj1.target).addClass('selected');
+        
+        $('#productDetail .h_content_DAR .itemkhoi').each(function(){
+            if($(this).hasClass(tab)){
+                $(this).show();
+            }else{
+                $(this).hide();
+            }
+        
+        });
+        return false;
+    }
+    $scope.imageSmall = (dd) => {
+        
+        // alert(dd);
+        var tab2 = dd;
+
+        var link = '.' + tab2 + ' .h_lopmo_anhnho';
+        $('.h_lopmo_anhnho').removeClass('h_act');
+        $(link).addClass('h_act');
+
+        // $(tab2.target).addClass('h_act');
+        // console.log(tab2);
+        // $('.part1 .h_khung_anh_nho .h_anhduoinho ').children('.part1 .h_khung_anh_nho .h_anhduoinho .h_lopmo_anhnho ').css('opacity','');
+        // $(this).children('.part1 .h_khung_anh_nho .h_anhduoinho .h_lopmo_anhnho ').css('opacity','0');
+
+        $('.part1 .h_khungto_left .itemxx').each(function(){
+            if($(this).hasClass(tab2)){
+                $(this).show();
+                
+            }else{
+                $(this).hide();
+            }
+        });
+        return false;
+    }
+    
 });
