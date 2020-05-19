@@ -1165,3 +1165,6 @@ input[type=radio]{
 .part1 .h_anhduoinho .h_act{
     opacity: 0 !important;
 }
+.error{
+    color: red;
+}

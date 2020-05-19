@@ -231,7 +231,6 @@ app.controller('myCtrl', ($scope, $http, $location) => {
         $('.part1 .h_khungto_left .itemxx').each(function(){
             if($(this).hasClass(tab2)){
                 $(this).show();
-                
             }else{
                 $(this).hide();
             }
@@ -239,4 +238,33 @@ app.controller('myCtrl', ($scope, $http, $location) => {
         return false;
     }
     
+    $scope.message = "";
+
+    $scope.loginInfo = sessionStorage.getItem('login_inffo');
+    $scope.login = (dataset) => {
+        var email = dataset.login_email;
+        var pass = dataset.login_pass;
+        if(email == 'admin@gmail.com' && pass =='admin'){
+            sessionStorage.setItem('login_inffo', email);
+            toastr.success("<b>login success!!!</b>");
+            // $scope.loginInfo = email;
+        }else if(email==null && pass ==null){
+            toastr.error("<b>Did not enter your account, password !!!</b>");
+        }else if(email==null){
+            toastr.error("<b>No account has been entered yet !!!</b>");
+        }else if(pass==null){
+            toastr.error("<b>Password not entered !!!</b>");
+        }else if(email=='admin@gmail.com' && pass !='admin'){
+            toastr.error("<b>wrong pass !!!</b>");
+        }else if(email!='admin@gmail.com' && pass !='admin'){
+            toastr.error("<b>wrong email !!!</b>");
+        }else{
+            toastr.error("<b>Login fail!!!</b>");
+        }       
+    };
+    $scope.logout = () =>{
+        sessionStorage.removeItem('login_inffo');
+        $scope.message = "Thoát thành công";
+        $scope.loginInfo = null;
+    }
 });
