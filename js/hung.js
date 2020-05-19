@@ -1,8 +1,8 @@
 $(function(){
     //viết cho nút
      
-    $('.part2 .h_title_DAR ul li a').addClass("selected");
-    $('.part2 .h_title_DAR ul .h_act a').addClass("selected");
+    // $('.part2 .h_title_DAR ul li a').addClass("selected");
+    // $('.part2 .h_title_DAR ul .h_act a').addClass("selected");
     $('.part2 .h_content_DAR .h_description').show();
     $('.part2 .h_content_DAR .h_addi').hide();
     $('.part2 .h_content_DAR .h_review').hide();

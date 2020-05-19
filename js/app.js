@@ -197,15 +197,6 @@ app.controller('myCtrl', ($scope, $http, $location) => {
         $('#menu').removeClass('traisang');
     }
 
-
-
-    $('.part2 .h_content_DAR .h_description').show();
-    $('.part2 .h_content_DAR .h_addi').hide();
-    $('.part2 .h_content_DAR .h_review').hide();
-    // $scope.show('so1');
-    // $scope.so2.hide();
-    // $scope.so3.hide();
-
     $scope.DAR = (obj1) => {
         var tab = obj1.target.getAttribute("data-class");
         console.log(tab);
