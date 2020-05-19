@@ -783,6 +783,13 @@ table {
     /* font-weight: 700; */
     font-family: Teko-Medium;
 }
+#productDetail .part2 nav ul li a:hover{
+    text-decoration: none;
+    font-size: 30px;
+    color: red;
+    /* font-weight: 700; */
+    font-family: Teko-Medium;
+}
 #productDetail .part2 nav ul li span{
     display: inline-block;
 }
@@ -792,6 +799,10 @@ table {
 #productDetail .part2 .h_content_DAR{
     
     margin:40px 0px;
+}
+#productDetail .part2 .h_content_DAR .h_none{
+    
+    display: none;
 }
 #productDetail .part2 .selected{
     color: red;
@@ -958,68 +969,57 @@ table {
 
 
 /* Trang register */
-#login .h_form_register{
-    width: 40%;
-    height: 100%;
-    background-color: #f6f6f6;
-    margin: auto;
-    padding:10px 15px;
-    margin-bottom: 40px;
+#login .h_login{
+    padding: 50px;
+    border-right: 1px solid #ebebeb;
 }
-#login .h_form_register h2{
-    margin: 0px;
-    padding: 15px 0px;
-}
-#login .h_form_register p span{
-    color: red;
-}
-#login .h_form_register p{
-    margin-top: 10px;
-    padding: 10px 0px;
-}
-#login .h_form_register input{
-    width: 100%;
-    padding: 0.6180469716em;
-    background-color: #ffffff;
-    color: #626262;
-    border: 2px solid;
-    border-color: #ebebeb;
-    -webkit-appearance: none;
-    box-sizing: border-box;
-    font-weight: normal;
-    border-radius: 3px;
-    outline: 0;
-    padding: 10px 0px;
-}
-#login .h_form_register button{
-    width: 100%;
-    padding: 10px 0px;
-    margin: 10px 0px;
-}
-#login .h_form_register .h_Login_lost nav ul li{
+#login .h_login .h_lyp{
     float: right;
-}
-#login .h_form_register .h_Login_lost nav ul li a{
     text-decoration: none;
-    color: black;
 }
-#login .h_form_register .h_Login_lost nav ul li a:hover{
-    text-decoration: none;
+#login .h_login form{
+    background-color: #f6f6f6;
+    padding: 50px;
+    margin-bottom: 30px;
+}
+#login .h_register form{
+    
+    padding: 35px;
+}
+#login .h_login label{
+    width: 100%;
+}
+#login .h_login input[type=text],#login .h_register input[type=text]{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 25px;
+}
+#login .h_register input[type=password]{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 25px;
+}
+#login .h_login label span,#login .h_register label span{
     color: red;
 }
-#login .h_form_register .h_Login_lost .h_mot{
-    border-right: 1px solid black;
-}
-#login .h_form_register .h_Login_back a{
+#login .h_login button,#login .h_register button{
+    border: none;
+    border-radius: 3px;
+    background: none;
+    background-color: #ef3636;
+    border-color: #ef3636;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.6180469716em 1.41575em;
     text-decoration: none;
-    color: black;
-}
-#login .h_form_register .h_Login_back a:hover{
-    text-decoration: none;
-    color: red;
-}
+    font-weight: 700;
+    text-shadow: none;
+    display: inline-block;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 50px;
 
-
+}
 /* =====================================Trang checkout */
 #checkout .h_content_checkout .h_form_cnt_checkout .h_content_firstname,#checkout .h_content_checkout .h_form_diff_address .h_content_firstname{
     width: 49.2%;
@@ -1161,4 +1161,7 @@ input[type=radio]{
 }
 #checkout .h_rowtren .h_titleshop{
     height: auto;
+}
+.part1 .h_anhduoinho .h_act{
+    opacity: 0 !important;
 }

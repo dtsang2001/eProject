@@ -312,3 +312,27 @@
         width: 140px;
     }
 }
+
+@media only screen and (max-width:500px){
+    #login .h_login form {
+        background-color: #f6f6f6;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+    #login .h_login{
+        padding: 0px;
+        margin-bottom: 20px;
+    }
+    .h_titleshop {
+        padding: 25px 110px;
+        height: auto;
+    }
+    #login .h_register form {
+        background-color: #f6f6f6;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+    #login .h_register{
+        padding: 0px;
+    }
+}
