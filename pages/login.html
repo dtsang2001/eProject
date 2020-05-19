@@ -43,7 +43,7 @@
                         <input type="email" name="email" required ng-model="formLogin.login_email">
                         <label for="">PassWord <span>*</span></label>
                         <input type="password" name="password" required ng-model="formLogin.login_pass">
-                        <button type="button" ng-click="login(formLogin)" ng-disabled="formLogin.email.$error.requied || formLogin.email.$error.email || formLogin.password.$error.requied">Login</button>
+                        <a href="#!"><button type="button" ng-click="login(formLogin)" ng-disabled="formLogin.email.$error.requied || formLogin.email.$error.email || formLogin.password.$error.requied">Login</button></a>    
                         <!-- <button type="submit"  ng-disabled="formLogin.email.$error.requied || formLogin.email.$error.email || formLogin.password.$error.requied">Login</button> -->
                     </form>
                     <input type="checkbox"> Remember me

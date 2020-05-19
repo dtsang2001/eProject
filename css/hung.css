@@ -979,7 +979,7 @@ table {
 }
 #login .h_login form{
     background-color: #f6f6f6;
-    padding: 50px;
+    padding: 30px;
     margin-bottom: 30px;
 }
 #login .h_register form{
@@ -990,6 +990,16 @@ table {
     width: 100%;
 }
 #login .h_login input[type=text],#login .h_register input[type=text]{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 25px;
+}
+#login .h_login input[type=email]{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 25px;
+}
+#login .h_login input[type=password]{
     width: 100%;
     height: 50px;
     margin-bottom: 25px;
