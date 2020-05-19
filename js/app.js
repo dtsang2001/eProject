@@ -231,12 +231,10 @@ app.controller('myCtrl', ($scope, $http, $location) => {
         $('.part1 .h_khungto_left .itemxx').each(function(){
             if($(this).hasClass(tab2)){
                 $(this).show();
-                
             }else{
                 $(this).hide();
             }
         });
-        return false;
     }
     
 });

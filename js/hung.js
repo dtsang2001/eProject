@@ -65,33 +65,6 @@ $(function(){
     $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
         " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 
-
-    //======================================================== DAR
-    $('.part2 .h_title_DAR ul li a').click(function () {  
-        // console.log('hello');
-        
-
-        var danhmuc2 = $(this).data('class');
-        console.log(danhmuc2);
-        $('.part2 .h_title_DAR ul li a').removeClass("selected");
-        $(this).addClass('selected');
-        $('#productDetail .h_content_DAR .itemkhoi').each(function(){
-            if($(this).hasClass(danhmuc2)){
-                $(this).show();
-            }else{
-                $(this).hide();
-            }
-        });
-        return false;
-    })
-    //========================================================= Rating
-
-    // $('.h_content_DAR .h_comment_post .h_fivestar a').click(function(){
-    //     console.log('hello');
-    //     $(this).addClass('active');
-    //     return false;
-        
-    // });
     $('#stars a').on('mouseover',function(){
         var onStar = parseInt($(this).data('value'),10);//Ngôi sao hiện đang di chuột
         //Làm nổi bật tất cả các ngôi sao trước ngôi sao được di
