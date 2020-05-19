@@ -34,14 +34,7 @@
                       </ul>
                     </nav>
                   </div>
-                  <h4>Filter By Price</h4>
-                  <div id="slider-range"></div>
-                  <p>
-                    <button type="submit" class="button">Filter</button>
-                    <label for="amount">Price:</label>
-                    <input type="text" id="amount" readonly style="width:80px;border:0; color:red; font-weight:bold;background-color: #F6F6F6">
-                  </p>
-                  <h4></h4>
+                  
                   <h4>Filter By Color</h4>
                   <div class="h_listcolor clearfix">
                     <nav>
@@ -85,17 +78,6 @@
                       </ul>
                     </nav>
                   </div>
-                  <h4>Filter By Size</h4>
-                  <div class="h_listsize">
-                    <nav>
-                      <ul>
-                        <li><a href="">L</a></li>
-                        <li><a href="">M</a></li>
-                        <li><a href="">S</a></li>
-                        <li><a href="">XL</a></li>
-                      </ul>
-                    </nav>
-                  </div>  
                 </div>
 
                 <!-- Danh sách danh mục ở dạng cái nút filter -->
@@ -118,13 +100,7 @@
                         </ul>
                       </nav>
                     </div>
-                    <!-- <h3>Filter By Price</h3>
-                    <div id="slider-range" ></span></div>
-                    <p>
-                      <button type="submit" class="button">Filter</button>
-                      <label for="amount">Price:</label>
-                      <input type="text" id="amount" readonly style="width:80px;border:0; color:red; font-weight:bold;background-color: #F6F6F6">
-                    </p> -->
+
                     <h3>Filter By Color</h3>
                     <div class="h_listcolor clearfix">
                       <nav>
@@ -206,22 +182,22 @@
                                   <img src="{{ pro.Images[1] }}" alt="">
                               </div>
                               <div class="h_3icon">
-                                  <nav>
-                                      <ul>
-                                          <li class="nut1" data-hieuung="tooltip" title="Add to wishlist"><a href=""><i class="fas fa-exchange-alt" style='font-size:18px'></i></a></li>
-                                          <li class="nut2" data-hieuung="tooltip" title="Quick view"><a href=""><i class="fas fa-eye" style='font-size:18px'></i></a></li>
-                                          <li class="nut3" data-hieuung="tooltip" title="Add to cart"><a href=""><i class='fas fa-shopping-cart' style='font-size:18px'></i></a></li>
-                                      <ul>
-                                  </nav>
+                                <nav>
+                                  <ul>
+                                      <li class="nut1" data-hieuung="tooltip" title="Add to compare"><a ng-click="add_compare(pro)" data-toggle="modal" data-target="#modal-compare"><i class='fas fa-exchange-alt' style='font-size:18px'></i></a></li>
+                                      <li class="nut2" data-hieuung="tooltip" title="Quick view"><a ng-click="view_product(pro)" href="#!product"><i class="fas fa-eye" style='font-size:18px'></i></a></li>
+                                      <li class="nut3" data-hieuung="tooltip" title="Add to cart"><a ng-click="add_cart(pro)" href=""><i class='fas fa-shopping-cart' style='font-size:18px'></i></a></li>
+                                  <ul>
+                                </nav>
                               </div>
                               <div class="h_lopmo"></div>
                               <div class="h_anhduoi">
                                   <img src="{{ pro.Images[2] }}" class="responsive" alt="">
                               </div>
                           </div>
-                          <div class="h_namecate"><a href="">{{ pro.Category }}</a></div>
-                          <div class="h_namepro"><a href="">{{ pro.Name }}</a></div>
-                          <div class="h_price"><a href="">$ {{ pro.Price | currency:"":2}}</a></div>
+                          <div class="h_namecate">{{ pro.Category }}</div>
+                          <div class="h_namepro"><a ng-click="view_product(pro)" href="#!product">{{ pro.Name }}</a></div>
+                          <div class="h_price"><b>$ {{ pro.Price | currency:"":2}}</b></div>
                           <div class="h_add"><a href="" ng-click="add_cart(pro)" >Add Cart</a></div>
                       </div>
 

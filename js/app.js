@@ -29,8 +29,11 @@ app.config( ($routeProvider) => {
     .when('/login', {
         templateUrl: 'pages/login.html'
     })
-    .when('/pro', {
+    .when('/product', {
         templateUrl: 'pages/product-detail.html'
+    })
+    .when('/blog-detail', {
+        templateUrl: 'pages/blog-detail.html'
     })
 })
 
@@ -43,6 +46,21 @@ app.controller('myCtrl', ($scope, $http, $location) => {
     $http.get('storage/products.json').then( (res) => {
         $scope.product = res.data
     });
+
+    $scope.info_product;
+
+    var ViewProductDetail = sessionStorage.getItem('info_pro');
+
+    if (ViewProductDetail) {
+        $scope.info_product = angular.fromJson(ViewProductDetail);
+    }
+
+    $scope.view_product = (pro) => {
+
+        $scope.info_product = pro;
+
+        sessionStorage.setItem('info_pro', angular.toJson($scope.info_product));
+    }
 
     $scope.compare = [];
 
@@ -151,6 +169,11 @@ app.controller('myCtrl', ($scope, $http, $location) => {
         }
     }
 
+    $scope.read_more = (rm) => {
+        $('#productDetail .h_description').addClass('more');
+        $(rm.target).hide();
+    }
+
     $scope.nav_cart = () => {
         $('.side-nav-cart').addClass('size-side');
     }
@@ -236,7 +259,7 @@ app.controller('myCtrl', ($scope, $http, $location) => {
             }
         });
     }
-    
+
     $scope.message = "";
 
     $scope.loginInfo = sessionStorage.getItem('login_inffo');
@@ -260,10 +283,24 @@ app.controller('myCtrl', ($scope, $http, $location) => {
         }else{
             toastr.error("<b>Login fail!!!</b>");
         }       
-    };
-    $scope.logout = () =>{
+    }
+
+    $scope.logout = () => {
         sessionStorage.removeItem('login_inffo');
         $scope.message = "Thoát thành công";
         $scope.loginInfo = null;
+    }
+
+    $scope.rating_star = (stars) => {
+        var onStar = parseInt($('#stars a').data('value'),10);
+
+        for(i = 0;i <stars;i++){
+            $('#stars a').removeClass('active');
+        }
+
+        for(i = 0;i <onStar;i++){
+            $('#stars a').addClass('active');
+
+        }        
     }
 });

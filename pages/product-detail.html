@@ -14,17 +14,18 @@
             <div class="row part1">
                 <div class="col-md-7">
                     <div class="h_khungto_left clearfix">
-                        <div class="itemxx lop01 tile" data-scale="2.4"  data-image="images/hungimges/product-01.jpg">
-                            <img src="images/hungimges/product-01.jpg" alt="">
+
+                        <div class="itemxx lop01 tile" data-scale="2.4" data-image="images/product/1.png">
+                            <img src="images/product/1.png" alt="">
                         </div>
-                        <div class="itemxx lop02 tile" data-scale="2.4" data-image="images/hungimges/product-02.jpg">
-                            <img src="images/hungimges/product-02.jpg" alt="">
+                        <div class="itemxx lop02 tile" data-scale="2.4" data-image="images/product/2.png">
+                            <img src="images/product/2.png" alt="">
                         </div>
-                        <div class="itemxx lop03 tile" data-scale="2.4" data-image="images/hungimges/product-03.jpg">
-                            <img src="images/hungimges/product-03.jpg" alt="">
+                        <div class="itemxx lop03 tile" data-scale="2.4" data-image="images/product/3.png">
+                            <img src="images/product/3.png" alt="">
                         </div>
-                        <div class="itemxx lop04 tile" data-scale="2.4" data-image="images/hungimges/product-04.jpg">
-                            <img src="images/hungimges/product-04.jpg" alt="">
+                        <div class="itemxx lop04 tile" data-scale="2.4" data-image="images/product/4.png">
+                            <img src="images/product/4.png" alt="">
                         </div>
                         
                     </div>
@@ -34,25 +35,25 @@
                                 <li>
                                     <div ng-click="imageSmall(myText1)" ng-init="myText1='lop01'" class="lop01 h_anhduoinho " data-class="lop01">
                                         <div class="h_lopmo_anhnho h_act"></div>
-                                        <img  src="images/hungimges/product-01.jpg" alt="">
+                                        <img  src="images/product/1.png" alt="">
                                     </div>                                 
                                 </li>
                                 <li>
                                     <div ng-click="imageSmall(myText2)" ng-init="myText2='lop02'" class="lop02 h_anhduoinho" data-class="lop02">
                                         <div class="h_lopmo_anhnho"></div>
-                                        <img  src="images/hungimges/product-02.jpg" alt="">
+                                        <img  src="images/product/2.png" alt="">
                                     </div> 
                                 </li>
                                 <li>
                                     <div ng-click="imageSmall(myText3)" ng-init="myText3='lop03'" class="lop03 h_anhduoinho" data-class="lop03">
                                         <div class="h_lopmo_anhnho"></div>
-                                        <img  src="images/hungimges/product-03.jpg" alt="">
+                                        <img  src="images/product/3.png" alt="">
                                     </div> 
                                 </li>
                                 <li>
                                     <div ng-click="imageSmall(myText4)" ng-init="myText4='lop04'" class="lop04 h_anhduoinho" data-class="lop04">
                                         <div class="h_lopmo_anhnho"></div>
-                                        <img  src="images/hungimges/product-04.jpg" alt="">
+                                        <img  src="images/product/4.png" alt="">
                                     </div> 
                                 </li>
                             </ul>
@@ -61,7 +62,7 @@
                 </div>
                 <div class="col-md-5">
                     <div class="h_khungto_right">
-                        <h3>Nike React Metcon AMP</h3>
+                        <h3>{{info_product.Name}}</h3>
                         <div class="h_fivestar">
                             <i class="fas fa-star" style="color: #f93;"></i>
                             <i class="fas fa-star" style="color: #f93;"></i>
@@ -70,8 +71,10 @@
                             <i class="fas fa-star"></i>
                             <span>( 5 customer reviews)</span>
                         </div>
-                        <div class="h_price">$180.22</div>
-                        <div class="h_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam esse error, maxime ratione, nostrum a praesentium molestiae quam, beatae aspernatur soluta voluptatem similique quis. Consequatur, fugit expedita! Deserunt, quaerat maiores.</div>   
+                        <div class="h_price">$ {{info_product.Price | currency:"":2}}</div>
+                        <div class="h_description-child">
+                            {{info_product.Description}}
+                        </div>   
                         <!-- <div class="h_out_stock ">
                             <p><i class="far fa-frown"></i> Out of stock</p>
                         </div>
@@ -93,22 +96,23 @@
                                 </ul>
                             </nav>
                         </div>
-                        <div class="h_quantity">
+
+                        <form method="GET" class="h_quantity">
                             <input  class="form-control" type="number" placeholder="1" min="1" max="99" >
-                            <div class="h_quantity_add_cart">
-                                <i class="fas fa-shopping-basket cart"> </i> Add to cart
-                            </div>
-                        </div>
+                            <button class="h_quantity_add_cart">
+                                <a href="">
+                                    <i class="fas fa-shopping-basket cart"> </i> Add to cart
+                                </a>
+                            </button>                            
+                        </form>
+                        
                         <div class="h_add_compare">
-                            <div class="h_add_wishlist">
-                                <i class="far fa-heart"></i> Add to wishlist
-                            </div>
                             <div class="h_compare">
-                                <i class="fas fa-exchange-alt"></i> Compare
+                                <a data-toggle="modal" data-target="#modal-compare" style="cursor: pointer;" ng-click="add_compare(info_product)"><i class="fas fa-exchange-alt"></i> Compare</a>
                             </div>
                         </div>
                         <div class="h_product_meta">
-                            <span>CATEGORY: <a href="">Shoes</a></span>
+                            <span>CATEGORY: <a href="">{{info_product.Category}}</a></span>
                             
                             <span>TAGS: <a href="">HOME1</a></span>
                             
@@ -129,7 +133,8 @@
                 </div>
                 <div class="h_content_DAR">
                     <div class="itemkhoi h_description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem quam molestiae optio asperiores repudiandae reprehenderit voluptas, delectus quo. Rerum impedit assumenda alias, quia, magnam reprehenderit beatae tenetur id harum minima adipisci. Quam dolorem corrupti maiores autem delectus quaerat officia, dicta maxime? Voluptatibus officia nemo dignissimos dicta laudantium iusto similique itaque quia nobis distinctio nisi assumenda accusantium, consectetur laborum aut esse, ullam ex non velit dolorem ut. Similique, voluptas. Quam, ut esse nemo corporis tenetur illo iusto nihil, nisi suscipit, voluptatum dolore eveniet est beatae doloremque vitae maiores ratione? Qui temporibus debitis distinctio at fugit, necessitatibus nihil velit iste voluptatum perspiciatis.
+                        {{info_product.Description}}
+                        <button ng-click="read_more($event)" class="btn-site-outline read-more">Read More</button>
                     </div>
                     <div class="itemkhoi h_addi ">
                         <table class="table table-hover">
@@ -246,11 +251,19 @@
                                 <div class="h_comment_post_rating">
                                     <p>Your rating</p>
                                     <div class="h_fivestar" id="stars">
+<<<<<<< HEAD
                                         <a href=""  class="star active" title='Poor' data-value='1'><i class="fas fa-star " ></i></a>
                                         <a href="" class="star" title='Fair' data-value='2'><i class="fas fa-star" ></i></a>
                                         <a href="" class="star" title='Good' data-value='3'><i class="fas fa-star" ></i></a>
                                         <a href="" class="star" title='Excellent' data-value='4'><i class="fas fa-star" ></i></a>
                                         <a href="" class="star" title='WOW!!!' data-value='5'><i class="fas fa-star"></i></a>
+=======
+                                        <a ng-click="rating_star(star1)" ng-init="star1 = '1'" class="star active" title='Poor' data-value='1'><i class="fas fa-star " ></i></a>
+                                        <a ng-click="rating_star(star2)" ng-init="star2 = '2'" class="star" title='Fair' data-value='2'><i class="fas fa-star" ></i></a>
+                                        <a ng-click="rating_star(star3)" ng-init="star3 = '3'" class="star" title='Good' data-value='3'><i class="fas fa-star" ></i></a>
+                                        <a ng-click="rating_star(star4)" ng-init="star4 = '4'" class="star" title='Excellent' data-value='4'><i class="fas fa-star" ></i></a>
+                                        <a ng-click="rating_star(star5)" ng-init="star5 = '5'" class="star" title='WOW!!!' data-value='5'><i class="fas fa-star"></i></a>
+>>>>>>> b4c4d1da28926851fd55403f20dfdf988e443421
                                     </div>
                                     <p>Your review *</p>
                                     <textarea name="" id="" cols="30" rows="10"></textarea>
@@ -302,9 +315,9 @@
                                     <img src="{{p.Images[2]}}" class="responsive" alt="">
                                 </div>
                             </div>
-                            <div class="h_namecate"><a href="">{{p.Category}}</a></div>
+                            <div class="h_namecate">{{p.Category}}</div>
                             <div class="h_namepro"><a href="">{{p.Name}}</a></div>
-                            <div class="h_price"><a href="">{{p.Price}}</a></div>
+                            <div class="h_price"><b>$ {{ p.Price | currency:"":2}}</b></div>
                             <div class="h_add"><a href="">Add Cart</a></div>
                         </div>
                     </div>
