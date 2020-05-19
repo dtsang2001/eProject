@@ -65,24 +65,24 @@ $(function(){
     $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
         " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 
-    $('#stars a').on('mouseover',function(){
-        var onStar = parseInt($(this).data('value'),10);//Ngôi sao hiện đang di chuột
-        //Làm nổi bật tất cả các ngôi sao trước ngôi sao được di
-        $(this).parent().children('a.star').each(function(e){
-            if(e < onStar){
-                $(this).addClass('active');
-            }else{
-                $(this).removeClass('active');
-            }
-        })
-        return false;
-    })
+    // $('#stars a').on('mouseover',function(){
+    //     var onStar = parseInt($(this).data('value'),10);
+    //     $(this).parent().children('a.star').each(function(e){
+    //         if(e < onStar){
+    //             $(this).addClass('active');
+    //         }else{
+    //             $(this).removeClass('active');
+    //         }
+    //     })
+    //     return false;
+    // })
 
     //hành động khi kích vào ngôi sao
     $('#stars a').click(function(){
         var onStar = parseInt($(this).data('value'),10);
+
         var stars = $(this).parent().children('a.star');
-        console.log('hello');
+        
         for(i = 0;i <stars.length;i++){
             $(stars[i]).removeClass('active');
         }

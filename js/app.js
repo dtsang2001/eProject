@@ -290,4 +290,17 @@ app.controller('myCtrl', ($scope, $http, $location) => {
         $scope.message = "Thoát thành công";
         $scope.loginInfo = null;
     }
+
+    $scope.rating_star = (stars) => {
+        var onStar = parseInt($('#stars a').data('value'),10);
+
+        for(i = 0;i <stars;i++){
+            $('#stars a').removeClass('active');
+        }
+
+        for(i = 0;i <onStar;i++){
+            $('#stars a').addClass('active');
+
+        }        
+    }
 });

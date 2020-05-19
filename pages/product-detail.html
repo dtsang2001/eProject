@@ -251,11 +251,11 @@
                                 <div class="h_comment_post_rating">
                                     <p>Your rating</p>
                                     <div class="h_fivestar" id="stars">
-                                        <a href="" class="star active" title='Poor' data-value='1'><i class="fas fa-star " ></i></a>
-                                        <a href="" class="star" title='Fair' data-value='2'><i class="fas fa-star" ></i></a>
-                                        <a href="" class="star" title='Good' data-value='3'><i class="fas fa-star" ></i></a>
-                                        <a href="" class="star" title='Excellent' data-value='4'><i class="fas fa-star" ></i></a>
-                                        <a href="" class="star" title='WOW!!!' data-value='5'><i class="fas fa-star"></i></a>
+                                        <a ng-click="rating_star(star1)" ng-init="star1 = '1'" class="star active" title='Poor' data-value='1'><i class="fas fa-star " ></i></a>
+                                        <a ng-click="rating_star(star2)" ng-init="star2 = '2'" class="star" title='Fair' data-value='2'><i class="fas fa-star" ></i></a>
+                                        <a ng-click="rating_star(star3)" ng-init="star3 = '3'" class="star" title='Good' data-value='3'><i class="fas fa-star" ></i></a>
+                                        <a ng-click="rating_star(star4)" ng-init="star4 = '4'" class="star" title='Excellent' data-value='4'><i class="fas fa-star" ></i></a>
+                                        <a ng-click="rating_star(star5)" ng-init="star5 = '5'" class="star" title='WOW!!!' data-value='5'><i class="fas fa-star"></i></a>
                                     </div>
                                     <p>Your review *</p>
                                     <textarea name="" id="" cols="30" rows="10"></textarea>
