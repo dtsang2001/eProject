@@ -308,11 +308,6 @@ app.controller('myCtrl', ($scope, $http, $location) => {
         $('.h_lopmo_anhnho').removeClass('h_act');
         $(link).addClass('h_act');
 
-        // $(tab2.target).addClass('h_act');
-        // console.log(tab2);
-        // $('.part1 .h_khung_anh_nho .h_anhduoinho ').children('.part1 .h_khung_anh_nho .h_anhduoinho .h_lopmo_anhnho ').css('opacity','');
-        // $(this).children('.part1 .h_khung_anh_nho .h_anhduoinho .h_lopmo_anhnho ').css('opacity','0');
-
         $('.part1 .h_khungto_left .itemxx').each(function(){
             if($(this).hasClass(tab2)){
                 $(this).show();
@@ -462,11 +457,13 @@ app.controller('myCtrl', ($scope, $http, $location) => {
         }
     }
 
-    $scope.logout = () => {
-        sessionStorage.removeItem('login_inffo');
-        $scope.message = "Thoát thành công";
-        $scope.loginInfo = null;
-    }
+    // $scope.handlingBill = (data) => {
+    //     var fName = data.first_name;
+    //     var lName = data.last_name;
+    //     var country = data.country;
+
+    //     alert(country + '-' + lName + '-' + fName);
+    // }
 
     $scope.rating_star = (stars) => {
         var onStar = parseInt($('#stars a').data('value'),10);
@@ -511,4 +508,6 @@ app.controller('myCtrl', ($scope, $http, $location) => {
             }    
         });
     }
+
+
 });

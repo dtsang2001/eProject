@@ -1,77 +1,96 @@
 <section id="checkout">
     <div class="container-fuild">
+
         <div class="row h_rowtren h_responsive">
             <div class="h_titleshop ">
                 <div class="h_titleshop_left">
                     <a href="">Check Out</a>
                 </div>
                 <div class="h_titleshop_right">
-                    <a href=""><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-                    <span><i class="fa fa-angle-right" aria-hidden="true"></i></span> Check out
+                    <a href=""><i class="fa fa-home"></i> Home</a>
+                    <i class="fa fa-angle-right"></i><a href="">Cart</a>
+                    <span><i class="fa fa-angle-right"></i> Checkout</span>
                 </div>
             </div>
         </div>
+
         <div class="container">
             <div class="row h_content_checkout">
+                <form action="" method="POST" name="bill" id="bill"></form>
                 <div class="col-md-7">
+
                     <h2>Billing details</h2>
                     <div class="h_form_cnt_checkout">
+
                         <p class="h_content_firstname">
                             <label for="">First name <span>*</span></label>
-                            <input type="text" class="input-text">
+                            <input ng-model="bill.first_name" type="text" class="input-text">
                         </p>
+
                         <p class="h_content_lastname">
                             <label for="">Last name <span>*</span></label>
-                            <input type="text" class="input-text">
+                            <input ng-model="bill.last_name" type="text" class="input-text">
                         </p>
+
                         <p class="h_content_company_name">
                             <label for="">Company name (optional)</label>
                             <input type="text" class="input-text">
                         </p>
+
                         <p class="h_content_country">
                             <label for="">Country / Reglon <span>*</span></label>
-                            <select name="" id="">
-                                <option value="">US</option>
-                                <option value="">UK</option>
-                                <option value="">Việt Nam</option>
-                                <option value="">Trung Quốc</option>
-                                <option value="">Thái Lan</option>
+                            <select ng-model="bill.country" name="" id="">
+                                <option value="">---Choice Country--</option>
+                                <option value="us">US</option>
+                                <option value="uk">UK</option>
+                                <option value="vietnam">Vietnamese</option>
+                                <option value="china">China</option>
                             </select>
                         </p>
+
                         <p class="h_content_stress_address">
                             <label for="">Stress address <span>*</span></label>
                             <input type="text" class="input-text" placeholder="House number and stress name">
                             <input type="text" class="input-text" placeholder="apartment, sult, unit, etc, ...s">
                         </p>
+
                         <p class="h_content_town_city">
                             <label for="">Town / City (*)</label>
                             <input type="text" class="input-text">
                         </p>
+
                         <p class="h_content_county">
                             <label for="">County (Optional)</label>
                             <input type="text" class="input-text">
                         </p>
+
                         <p class="h_content_postcode">
                             <label for="">Postcode <span>*</span></label>
                             <input type="text" class="input-text">
                         </p>    
+
                         <p class="h_content_phone">
                             <label for="">Phone <span>*</span></label>
                             <input type="text" class="input-text">
                         </p>
+
                         <p class="h_content_email_address">
                             <label for="">Email address <span>*</span></label>
                             <input type="text" class="input-text">
                         </p>
+
                         <p class="h_content_checkbox">
                             <input type="checkbox" class="input-checkbox">
                             <span>Create an account?</span>
                         </p>
+
                     </div>
+
                     <div class="h_content_df_address">
                         <h2>Ship to a different address?</h2>
                         <input type="checkbox" class="input-checkbox" id="checkbox1" ng-click="openDiff()">
                     </div>
+
                     <div class="h_form_diff_address h_test" id="h_form_diff" ng-modal="diff">
                         <p class="h_content_firstname">
                             <label for="">First name <span>*</span></label>
@@ -117,6 +136,7 @@
                         <label for="">Order notes (optional)</label>
                         <textarea name="" id="" cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
                     </p>
+                    
                 </div>
                 <div class="col-md-5">
                     <div class="h_content_right_all">
@@ -197,7 +217,7 @@
                                     </li>
                                 </ul>
                             </nav>
-                            <button type="submit">Place order</button>
+                            <button ng-click="handlingBill(bill)" type="submit">Place order</button>
                             
                         </div>
                     </div>

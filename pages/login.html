@@ -16,7 +16,6 @@
 
                 <div class="col-md-6 h_login">
 
-                    <!-- form đăng nhập hiển thị kh chưa đăng nhập -->
                     <form  action="" method="post" id="form_login" name="formLogin">
                         <h2>Login</h2>
                         <label>Username or email address <span>*</span></label>
@@ -24,7 +23,7 @@
                         <label for="">Password <span>*</span></label>
                         <input class="pass" type="password" name="password" required ng-model="formLogin.login_pass">
                         <button type="button" ng-click="login(formLogin)" ng-disabled="formLogin.email.$error.requied || formLogin.email.$error.email || formLogin.password.$error.requied">Login</button>  
-                        <!-- <button type="submit"  ng-disabled="formLogin.email.$error.requied || formLogin.email.$error.email || formLogin.password.$error.requied">Login</button> -->
+                        
                     </form>
                     <input type="checkbox"> Remember me
                     <a href="" class="h_lyp">Last your password ?</a>
