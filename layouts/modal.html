@@ -8,16 +8,16 @@
             </div>
             <div class="modal-body modal-user">
                 
-                <form class="form-site" action="" method="POST" role="form" name="formLogin">
+                <form id="form_login" class="form-site" action="" method="POST" role="form" name="formLogin">
                 
                     <div class="form-group">
                         <label for="">Username or email <span>*</span></label>
-                        <input type="text" name="email" placeholder="..." required ng-model="formLogin.login_email">
+                        <input class="email" type="text" name="email" placeholder="..." required ng-model="formLogin.login_email">
                     </div>
                 
                     <div class="form-group">
                         <label for="">Password <span>*</span></label>
-                        <input type="password" name="password" required ng-model="formLogin.login_pass" placeholder="...">
+                        <input class="pass" type="password" name="password" required ng-model="formLogin.login_pass" placeholder="...">
                     </div>
 
                     <p><a href="">
@@ -134,7 +134,7 @@
                         </div>
                         <div class="cart-info-product">
                             <h4>{{c.Name}}</h4>
-                            <p>{{c.quantity}} <i class="ion-android-close"></i> <span>$ {{c.Price | currency:"":2}}</span></p>
+                            <p>{{c.quantity}} <i class="ion-android-close"></i> <span>$ {{c.subtotal_price | currency:"":2}}</span></p>
                         </div>
                     </li>
     

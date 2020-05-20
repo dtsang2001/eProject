@@ -276,31 +276,30 @@
                 </div>
 
                 <div class="row h_related_product">
-                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 itemx kinhram" ng-repeat="p in product">
-                        <div class="item ">
-                        
-                            <div class="anhduoi">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 itemx kinhram" ng-repeat="pro in product_child">
+                        <div class="item clearfix ">
+                            <div class="anhduoi responsive">
                                 <div class="h_anhtren">
-                                    <img src="{{p.Images[1]}}" alt="">
+                                    <img src="{{pro.Images[1]}}" alt="">
                                 </div>
                                 <div class="h_3icon">
                                     <nav>
                                         <ul>
-                                            <li class="nut1" title="Add to wishlist"><a href=""><i class='far fa-heart' style='font-size:18px'></i></a></li>
-                                            <li class="nut2" title="Quick view"><a href=""><i class="fas fa-eye" style='font-size:18px'></i></a></li>
-                                            <li class="nut3" title="Add to cart"><a href=""><i class='fas fa-shopping-cart' style='font-size:18px'></i></a></li>
+                                            <li class="nut1" title="Add to compare"><a ng-click="add_compare(pro)" data-toggle="modal" data-target="#modal-compare"><i class='fas fa-exchange-alt' style='font-size:18px'></i></a></li>
+                                            <li class="nut2" title="Quick view"><a ng-click="view_product(pro)" href="#!product"><i class="fas fa-eye" style='font-size:18px'></i></a></li>
+                                            <li class="nut3" title="Add to cart"><a ng-click="add_cart(pro)" href=""><i class='fas fa-shopping-cart' style='font-size:18px'></i></a></li>
                                         <ul>
                                     </nav>
                                 </div>
                                 <div class="h_lopmo"></div>
                                 <div class="h_anhduoi">
-                                    <img src="{{p.Images[2]}}" class="responsive" alt="">
+                                    <img src="{{pro.Images[2]}}" class="responsive" alt="">
                                 </div>
                             </div>
-                            <div class="h_namecate">{{p.Category}}</div>
-                            <div class="h_namepro"><a href="">{{p.Name}}</a></div>
-                            <div class="h_price"><b>$ {{ p.Price | currency:"":2}}</b></div>
-                            <div class="h_add"><a href="" ng-click="add_cart(p)">Add Cart</a></div>
+                            <div class="h_namecate">{{pro.Category}}</div>
+                            <div class="h_namepro"><a ng-click="view_product(pro)" href="#!product">{{pro.Name}}</a></div>
+                            <div class="h_price"><b>$ {{ pro.Price | currency:"":2}}</b></div>
+                            <div class="h_add clearfix"><a href="" ng-click="add_cart(pro)">Add Cart</a></div>
                         </div>
                     </div>
                 </div>

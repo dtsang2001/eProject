@@ -1016,9 +1016,18 @@ table {
     
     padding: 35px;
 }
+#login .h_register form input{
+    padding: 0 10px;
+    outline: none;
+}
 #login .h_login label{
     width: 100%;
 }
+#login .h_login input{
+    padding: 0 10px;
+    outline: none;
+}
+
 #login .h_login input[type=text],#login .h_register input[type=text]{
     width: 100%;
     height: 50px;

@@ -47,6 +47,13 @@ app.controller('myCtrl', ($scope, $http, $location) => {
         $scope.product = res.data
     });
 
+    $http.get('storage/products_child.json').then( (res) => {
+        $scope.product_child = res.data
+    });
+
+    $scope.text = 'me@gmail.com';
+    $scope.emailFormat = /^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/;
+
     $scope.info_product;
 
     var ViewProductDetail = sessionStorage.getItem('info_pro');
@@ -291,44 +298,143 @@ app.controller('myCtrl', ($scope, $http, $location) => {
         });
     }
 
-    $scope.message = "";
-
-    $scope.loginInfo = sessionStorage.getItem('login_inffo');
     $scope.login = (dataset) => {
         var email = dataset.login_email;
-        var pass = dataset.login_pass;
-        if(email == 'admin@gmail.com' && pass =='admin'){
-            sessionStorage.setItem('login_inffo', email);
-            toastr.success("<b>login success!!!</b>");  
-            // $scope.loginInfo = email;
-        }else if(email==null && pass ==null){
-            toastr.error("<b>Did not enter your account, password !!!</b>");
-        }else if(email==null){
-            toastr.error("<b>No account has been entered yet !!!</b>");
-        }else if(pass==null){
-            toastr.error("<b>Password not entered !!!</b>");
-        }else if(email=='admin@gmail.com' && pass !='admin'){
-            toastr.error("<b>wrong pass !!!</b>");
-        }else if(email!='admin@gmail.com' && pass !='admin'){
-            toastr.error("<b>wrong email !!!</b>");
+        var password = dataset.login_pass;
+        var checkMail = /^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/;
+
+        var mail_success = false;
+
+        if (email==null) {
+            toastr.error("<b>You have not entered your email !!!</b>");
+            $('#form_login .email').removeClass('success_enter');
+            $('#form_login .email').addClass('error_enter');
         }else{
-            toastr.error("<b>Login fail!!!</b>");
-        }       
+            if (!checkMail.test(email)) {
+                toastr.error("<b>Your email is in the wrong format !!!</b>");
+                $('#form_login .email').removeClass('success_enter');
+                $('#form_login .email').addClass('error_enter');
+            }else{
+                mail_success = true;
+                $('#form_login .email').removeClass('error_enter');
+                $('#form_login .email').addClass('success_enter');
+            }
+        }
+
+        var pass_success = false;
+
+        if (password==null) {
+            toastr.error("<b>You have not entered your password !!!</b>");
+            $('#form_login .pass').removeClass('success_enter');
+            $('#form_login .pass').addClass('error_enter');
+        }else{
+            if (password.length < 5) {
+                toastr.error("<b>Password must be greater than 5 !!!</b>");
+                $('#form_login .pass').removeClass('success_enter');
+                $('#form_login .pass').addClass('error_enter');
+            } else {
+                pass_success = true;
+                $('#form_login .pass').removeClass('error_enter');
+                $('#form_login .pass').addClass('success_enter');
+            }
+        }
+
+        if (pass_success && mail_success) {
+            if (email =='admin@gmail.com' && password =='admin') {
+                $('#modal-user').modal('hide');
+                $location.path('/');
+                toastr.success("<b>Register succuss !!!</b>");
+                $('#form_login .pass').removeClass('error_enter');
+                $('#form_login .pass').addClass('success_enter');
+                $('#form_login .email').removeClass('error_enter');
+                $('#form_login .email').addClass('success_enter');
+            } else {
+                toastr.error("<b>Wrong account or password !!!</b>");
+                $('#form_login .pass').removeClass('success_enter');
+                $('#form_login .pass').addClass('error_enter');
+                $('#form_login .email').removeClass('success_enter');
+                $('#form_login .email').addClass('error_enter');
+            }
+            
+        }
+     
     }
+
     $scope.Register = (datasetReg) => {
         var email = datasetReg.Register_email;
         var name = datasetReg.Register_name;
         var password = datasetReg.Register_pass;
         var repassword = datasetReg.ReRegister_pass;
         var check = /^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/;
-        if(email==null && name==null && password==null && repassword==null){
-            toastr.error("<b>You did not enter anything !!!</b>");
-        }else if(email==null || name==null || password==null || repassword==null){
-            toastr.error("<b>Enter full information !!!</b>");
-        }else if(repassword!=password && email!=null & password !=null){
-            toastr.error("<b>Enter the wrong password again !!!</b>");
+
+        var mail_success = false;
+
+        if (email==null) {
+            toastr.error("<b>You have not entered your email !!!</b>");
+            $('#form_register .email').removeClass('success_enter');
+            $('#form_register .email').addClass('error_enter');
         }else{
-            toastr.success("<b>Sign Up Success!!!</b>");
+            if (!check.test(email)) {
+                toastr.error("<b>Your email is in the wrong format !!!</b>");
+                $('#form_register .email').removeClass('success_enter');
+                $('#form_register .email').addClass('error_enter');
+            }else{
+                var mail_success = true;
+                $('#form_register .email').removeClass('error_enter');
+                $('#form_register .email').addClass('success_enter');
+            }
+        }
+
+        var name_success = false;
+
+        if (name==null) {
+            toastr.error("<b>You have not entered your name !!!</b>");
+            $('#form_register .name').removeClass('success_enter');
+            $('#form_register .name').addClass('error_enter');
+        }else{
+            name_success = true;
+            $('#form_register .name').removeClass('error_enter');
+            $('#form_register .name').addClass('success_enter');
+        }
+
+        var pass_success = false;
+
+        if (password==null) {
+            toastr.error("<b>You have not entered your password !!!</b>");
+            $('#form_register .pass').removeClass('success_enter');
+            $('#form_register .pass').addClass('error_enter');
+        }else{
+            if (password.length < 5) {
+                toastr.error("<b>Password must be greater than 5 !!!</b>");
+                $('#form_register .pass').removeClass('success_enter');
+                $('#form_register .pass').addClass('error_enter');
+            } else {
+                pass_success = true;
+                $('#form_register .pass').removeClass('error_enter');
+                $('#form_register .pass').addClass('success_enter');
+            }
+        }
+
+        var re_pass_success = false;
+
+        if (repassword==null) {
+            toastr.error("<b>You did not enter re Re-password !!!</b>");
+            $('#form_register .re_pass').removeClass('success_enter');
+            $('#form_register .re_pass').addClass('error_enter');
+        }else{
+            if (repassword!=password) {
+                toastr.error("<b>The entered re-password does not match the password !!!</b>");
+                $('#form_register .re_pass').removeClass('success_enter');
+                $('#form_register .re_pass').addClass('error_enter');
+            }else{
+                re_pass_success = true;
+                $('#form_register .re_pass').removeClass('error_enter');
+                $('#form_register .re_pass').addClass('success_enter');
+            }
+        }
+
+        if (re_pass_success && pass_success && name_success && mail_success) {
+            toastr.success("<b>Register succuss !!!</b>");
         }
     }
 
