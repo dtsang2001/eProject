@@ -15,7 +15,12 @@
         <div class="container-fluid cart-main">
             
             <div class="row">
+
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+
+                    <div class="btn-cart">
+                        <button ng-click="continue_shop()" class="btn-site">Continue Shopping</button>
+                    </div>
 
                     <div class="view-content">
                         <table class="views-table cols-6 table-cart">
@@ -50,7 +55,7 @@
                                     </td>
                                     <td class="views-field views-field-quantity quantity-product">
                                         
-                                        <input ng-blur="update_cart(qty_cart)" ng-modal="qty_cart" type="number" value="{{c.quantity}}">
+                                        <input ng-blur="update_cart(qty_cart, c)" ng-model="qty_cart" type="number" value="{{c.quantity}}">
                                     </td>
                                     <td class="views-field views-field-commerce-total subtotal-product">
                                         <span>$ {{c.subtotal_price | currency:"":2}}</span>
@@ -60,6 +65,11 @@
                             </tbody>
                         </table>
                     </div>
+
+                    <div class="btn-cart btn-del">
+                        <button ng-click="delete_cart()" class="btn-site-outline">Delete Cart</button>
+                    </div>
+                    
 
                 </div>
 

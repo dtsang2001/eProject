@@ -136,9 +136,23 @@ app.controller('myCtrl', ($scope, $http, $location) => {
         return -1;
     }
 
-    $scope.update_cart = (obj) => {
-        var xxx = obj;
-        alert(xxx);
+    $scope.update_cart = (obj, pro) => {
+
+        var itemExists = checkCartExists(pro.Id);
+
+        if (itemExists != -1) {
+            $scope.carts[itemExists].quantity = obj;
+            $scope.carts[itemExists].subtotal_price = (pro.Price * obj);
+            $scope.carts_qty = obj;
+            $scope.carts_total = (pro.Price * obj);
+        }
+
+        sessionStorage.setItem('cart', angular.toJson($scope.carts));
+        sessionStorage.setItem('cart_qty', $scope.carts_qty);
+        sessionStorage.setItem('cart_total', $scope.carts_total);
+
+        toastr.success("<b> Update quantity success !!! </b>");
+
     }
 
     $scope.add_cart_qty = (res, pro) => {
@@ -205,6 +219,17 @@ app.controller('myCtrl', ($scope, $http, $location) => {
 
             toastr.success("<b>Remove product success!!!</b>");
         }
+    }
+
+    $scope.delete_cart = () => {
+        $scope.carts = [];
+        $scope.carts_qty = 0;
+        $scope.carts_total = 0;
+        sessionStorage.setItem('cart_qty', $scope.carts_qty);
+        sessionStorage.setItem('cart_total', $scope.carts_total);
+        sessionStorage.setItem('cart', angular.toJson($scope.carts));
+
+        toastr.success("<b>Delete cart success!!!</b>");
     }
 
     $scope.read_more = (rm) => {
@@ -459,6 +484,10 @@ app.controller('myCtrl', ($scope, $http, $location) => {
     $scope.create_acc_page = () => {
         $('#modal-user').modal('hide');
         $location.path('/login');
+    }
+
+    $scope.continue_shop = () => {
+        $location.path('/shop');
     }
 
     // angular trang checkout

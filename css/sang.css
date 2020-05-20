@@ -900,6 +900,27 @@
     border: 1px solid rgb(17, 218, 17);
 }
 
+.btn-cart button{
+    padding: 10px 20px !important;
+    margin-bottom: 10px;
+}
+
+.btn-cart button:hover{
+    background-color: #ef3636;
+    color: #fff;
+}
+
+.btn-del{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-del button{
+    width: 160px;
+    text-align: center;
+}
+
 /* Nam */
 
 #n-logoimg{
