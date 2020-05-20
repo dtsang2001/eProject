@@ -130,27 +130,22 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+
+                                    <tr ng-repeat="c in carts">
                                         <th>
-                                            Kyrie 6 By Your
-                                            <strong class="product-quantity">×&nbsp;1</strong>
+                                            {{c.Name}}
+                                            <strong class="product-quantity">×&nbsp;{{c.quantity}}</strong>
                                         </td>
-                                        <td>$190.5</td>
+                                        <td>${{c.subtotal_price | currency:"":2}}</td>
                                     </tr>
-                                    <tr>
-                                        <th>
-                                            Kyrie 6 By Your
-                                            <strong class="product-quantity">×&nbsp;1</strong>
-                                        </th>
-                                        <td>$190.5</td>
-                                    </tr>
+
                                 </tbody>
                                 <tfoot>
                                     <tr>
                                         <th>
                                             Subtotal
                                         </th>
-                                        <td>$190.5</td>
+                                        <td>${{carts_total | currency:"":2}}</td>
                                     </tr>
                                     <tr>
                                         <th>
@@ -160,7 +155,7 @@
                                             <nav>
                                                 <ul>
                                                     <li>Float rate
-                                                        <input type="radio" name="mot" >
+                                                        <input type="radio" name="mot" checked>
                                                     </li>
                                                     <li>Free shipping
                                                         <input type="radio" name="mot" >
@@ -174,7 +169,7 @@
                                     </tr>
                                     <tr>
                                         <th>Total</th>
-                                        <td class="h_content_right_content_td_total">$190.85</td>
+                                        <td class="h_content_right_content_td_total">${{carts_total | currency:"":2}}</td>
                                     </tr>
                                 </tfoot>
                             </table>
