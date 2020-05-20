@@ -271,7 +271,6 @@ app.controller('myCtrl', ($scope, $http, $location) => {
             }else{
                 $(this).hide();
             }
-        
         });
         return false;
     }
@@ -460,5 +459,27 @@ app.controller('myCtrl', ($scope, $http, $location) => {
     $scope.create_acc_page = () => {
         $('#modal-user').modal('hide');
         $location.path('/login');
+    }
+
+    // angular trang checkout
+    $scope.openDiff = () => {
+        console.log('helllo');
+        if($('#checkbox1').is(':checked')){
+            $('#checkout .h_content_checkout .h_form_diff_address').removeClass("h_test");
+        }else{
+            $('#checkout .h_content_checkout .h_form_diff_address').addClass("h_test");
+        }
+    }
+
+    $scope.clickDBT = (xxx) => {
+        var choice = xxx.target.getAttribute("data-class");
+        console.log(choice);
+        $('#checkout .h_content_right_all .h_content_right_under_content .chung').each(function(){
+            if($(this).hasClass(choice)){
+                $(this).show();
+            }else{
+                $(this).hide();
+            }    
+        });
     }
 });
