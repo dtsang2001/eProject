@@ -315,6 +315,22 @@ app.controller('myCtrl', ($scope, $http, $location) => {
             toastr.error("<b>Login fail!!!</b>");
         }       
     }
+    $scope.Register = (datasetReg) => {
+        var email = datasetReg.Register_email;
+        var name = datasetReg.Register_name;
+        var password = datasetReg.Register_pass;
+        var repassword = datasetReg.ReRegister_pass;
+        var check = /^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/;
+        if(email==null && name==null && password==null && repassword==null){
+            toastr.error("<b>You did not enter anything !!!</b>");
+        }else if(email==null || name==null || password==null || repassword==null){
+            toastr.error("<b>Enter full information !!!</b>");
+        }else if(repassword!=password && email!=null & password !=null){
+            toastr.error("<b>Enter the wrong password again !!!</b>");
+        }else{
+            toastr.success("<b>Sign Up Success!!!</b>");
+        }
+    }
 
     $scope.logout = () => {
         sessionStorage.removeItem('login_inffo');

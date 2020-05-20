@@ -43,7 +43,7 @@
                         <input type="email" name="email" required ng-model="formLogin.login_email">
                         <label for="">PassWord <span>*</span></label>
                         <input type="password" name="password" required ng-model="formLogin.login_pass">
-                        <a href="#!"><button type="button" ng-click="login(formLogin)" ng-disabled="formLogin.email.$error.requied || formLogin.email.$error.email || formLogin.password.$error.requied">Login</button></a>    
+                        <button type="button" ng-click="login(formLogin)" ng-disabled="formLogin.email.$error.requied || formLogin.email.$error.email || formLogin.password.$error.requied">Login</button>  
                         <!-- <button type="submit"  ng-disabled="formLogin.email.$error.requied || formLogin.email.$error.email || formLogin.password.$error.requied">Login</button> -->
                     </form>
                     <input type="checkbox"> Remember me
@@ -54,15 +54,15 @@
                     <form action="" method="post" name="formRegister">
                         <h2>Register</h2>
                         <label>Email <span>*</span></label>
-                        <input type="text">
+                        <input type="text" name="email" required ng-model="formRegister.Register_email">
                         <label for="">Name <span>*</span></label>
-                        <input type="text">
+                        <input type="text" name="name" required ng-model="formRegister.Register_name">
                         <label>Password <span>*</span></label>
-                        <input type="password">
+                        <input type="password" name="password" required ng-model="formRegister.Register_pass">
                         <label for="">Re-password <span>*</span></label>
-                        <input type="password">
+                        <input type="password" name="repassword" required ng-model="formRegister.ReRegister_pass">
                         <p>A password will be sent to your email address</p>
-                        <button type="submit">register</button>
+                        <button type="button" ng-click="Register(formRegister)" ng-disabled="formRegister.email.$error.requied || formRegister.email.$error.email || formRegister.password.$error.requied">register</button>
                     </form>
                 </div>
             </div>

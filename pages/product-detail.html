@@ -300,7 +300,7 @@
                             <div class="h_namecate">{{p.Category}}</div>
                             <div class="h_namepro"><a href="">{{p.Name}}</a></div>
                             <div class="h_price"><b>$ {{ p.Price | currency:"":2}}</b></div>
-                            <div class="h_add"><a href="">Add Cart</a></div>
+                            <div class="h_add"><a href="" ng-click="add_cart(p)">Add Cart</a></div>
                         </div>
                     </div>
                 </div>
