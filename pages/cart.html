@@ -49,7 +49,8 @@
                                         <span class="price">${{c.Price | currency:"":2}}</span>
                                     </td>
                                     <td class="views-field views-field-quantity quantity-product">
-                                        <input type="number" value="{{c.quantity}}">
+                                        
+                                        <input ng-blur="update_cart(qty_cart)" ng-modal="qty_cart" type="number" value="{{c.quantity}}">
                                     </td>
                                     <td class="views-field views-field-commerce-total subtotal-product">
                                         <span>$ {{c.subtotal_price | currency:"":2}}</span>
@@ -87,7 +88,7 @@
                     
                             <tr class="cart-subtotal">
                                 <th>Subtotal</th>
-                                <td data-title="Subtotal"><span class="Price-currencySymbol">$</span>191.23</span></td>
+                                <td data-title="Subtotal"><span class="Price-currencySymbol">$</span>{{carts_total | currency:"":2}}</span></td>
                             </tr>
 
                             <tr class="cart-out-price">
@@ -102,7 +103,7 @@
 
                             <tr class="order-total">
                                 <th>Total</th>
-                                <td data-title="Total"><strong><span class="Price-currencySymbol">$</span>191.23</strong> </td>
+                                <td data-title="Total"><strong><span class="Price-currencySymbol">$</span>{{carts_total | currency:"":2}}</strong> </td>
                             </tr>
                             
                         </table>

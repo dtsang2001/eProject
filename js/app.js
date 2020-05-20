@@ -129,6 +129,37 @@ app.controller('myCtrl', ($scope, $http, $location) => {
         return -1;
     }
 
+    $scope.update_cart = (obj) => {
+        var xxx = obj;
+        alert(xxx);
+    }
+
+    $scope.add_cart_qty = (res, pro) => {
+        var qty = (res.quantity == null)? 1 : res.quantity;
+        
+        var itemExists = checkCartExists(pro.Id);
+
+        if (itemExists != -1) {
+            $scope.carts[itemExists].quantity += qty;
+            $scope.carts[itemExists].subtotal_price += (pro.Price * qty);
+            $scope.carts_qty += qty;
+            $scope.carts_total += (pro.Price * qty);
+        } else {
+            pro.quantity = qty;
+            pro.subtotal_price = (pro.Price * qty);
+            $scope.carts.push(pro);
+            $scope.carts_qty += qty;
+            $scope.carts_total += (pro.Price * qty);
+        }
+
+        sessionStorage.setItem('cart', angular.toJson($scope.carts));
+        sessionStorage.setItem('cart_qty', $scope.carts_qty);
+        sessionStorage.setItem('cart_total', $scope.carts_total);
+        $scope.cart = pro;
+        $('.side-nav-cart').addClass('size-side');
+        toastr.success("<b> Add product to cart success !!! </b>");
+    }
+
     $scope.add_cart = (pro) => {
 
         var itemExists = checkCartExists(pro.Id);
@@ -268,7 +299,7 @@ app.controller('myCtrl', ($scope, $http, $location) => {
         var pass = dataset.login_pass;
         if(email == 'admin@gmail.com' && pass =='admin'){
             sessionStorage.setItem('login_inffo', email);
-            toastr.success("<b>login success!!!</b>");
+            toastr.success("<b>login success!!!</b>");  
             // $scope.loginInfo = email;
         }else if(email==null && pass ==null){
             toastr.error("<b>Did not enter your account, password !!!</b>");
@@ -302,5 +333,10 @@ app.controller('myCtrl', ($scope, $http, $location) => {
             $('#stars a').addClass('active');
 
         }        
+    }
+
+    $scope.create_acc_page = () => {
+        $('#modal-user').modal('hide');
+        $location.path('/login');
     }
 });
