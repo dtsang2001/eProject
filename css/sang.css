@@ -944,3 +944,10 @@
     margin-left: 35px;
     margin-bottom: 30px;
 }
+#modal-compare .modal-body {
+    position: relative;
+    padding: 15px;
+    overflow: hidden;
+    width: 100%;
+    overflow: scroll;
+}

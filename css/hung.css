@@ -1208,3 +1208,9 @@ input[type=radio]{
 .error{
     color: red;
 }
+#checkout .h_content_checkout .h_test{
+    display: none;
+}
+#checkout .h_content_right_all .h_content_right_under_content .h_hidden_checkout{
+    display: none;
+}

@@ -70,9 +70,9 @@
                     </div>
                     <div class="h_content_df_address">
                         <h2>Ship to a different address?</h2>
-                        <input type="checkbox" class="input-checkbox" id="checkbox1">
+                        <input type="checkbox" class="input-checkbox" id="checkbox1" ng-click="openDiff()">
                     </div>
-                    <div class="h_form_diff_address" id="h_form_diff">
+                    <div class="h_form_diff_address h_test" id="h_form_diff" ng-modal="diff">
                         <p class="h_content_firstname">
                             <label for="">First name <span>*</span></label>
                             <input type="text" class="input-text">
@@ -183,21 +183,21 @@
                             <nav>
                                 <ul>
                                     <li>
-                                        <div class="h_content_right_under_DBT">
-                                            <h4 class="h_h4_DBT">Direct bank transfer</h4>
-                                            <p id="h_h4_DBT_content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eligendi ducimus eveniet cum animi est, minus amet eos odit, distinctio, laborum similique saepe mollitia ipsa ullam esse facilis optio. Eveniet nulla sequi quidem illum neque!</p>
+                                        <div class="h_content_right_under_DBT" >
+                                            <h4 class="h_h4_DBT" ng-click="clickDBT($event)" data-class="thu1">Direct bank transfer</h4>
+                                            <p id="h_h4_DBT_content" class="chung thu1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eligendi ducimus eveniet cum animi est, minus amet eos odit, distinctio, laborum similique saepe mollitia ipsa ullam esse facilis optio. Eveniet nulla sequi quidem illum neque!</p>
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="h_content_right_under_COD">
-                                            <h4 class="h_h4_COD">Cash on delivery</h4>
-                                            <p id="h_h4_COD_content">Pay with cash upon delivery</p>
+                                        <div class="h_content_right_under_COD" >
+                                            <h4 class="h_h4_COD"  ng-click="clickDBT($event)" data-class="thu2">Cash on delivery</h4>
+                                            <p id="h_h4_COD_content " class="chung thu2 h_hidden_checkout">Pay with cash upon delivery</p>
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="h_content_right_under_PP">
-                                            <h4 class="h_h4_PP">PayPal <span><a href="">What is paypal?</a></span><img src="images/hungimges/AM_mc_vs_ms_ae_UK.png" alt=""></h4>
-                                            <p id="h_h4_PP_content">pay via Paypal, you can </p>
+                                        <div class="h_content_right_under_PP " >
+                                            <h4 class="h_h4_PP"  ng-click="clickDBT($event)" data-class="thu3">PayPal <span><a href="">What is paypal?</a></span><img src="images/hungimges/AM_mc_vs_ms_ae_UK.png" alt=""></h4>
+                                            <p id="h_h4_PP_content " class="chung thu3 h_hidden_checkout">pay via Paypal, you can </p>
                                         </div>
                                     </li>
                                 </ul>
